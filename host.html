@@ -1,0 +1,74 @@
+<!-- host.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kamoulox - Écran Central & Animateur</title>
+    <style>
+        body { font-family: 'Courier New', Courier, monospace; background: #000; color: #fff; display: flex; margin: 0; }
+        .hidden { display: none !important; }
+        #central-screen { width: 68%; padding: 20px; border-right: 2px solid #444; position: relative; }
+        #animator-screen { width: 32%; padding: 20px; background: #111; box-sizing: border-box; }
+        #phase-banner { font-size: 14px; color: #aaa; text-align: center; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .history { font-size: 22px; line-height: 1.5; height: 55vh; overflow-y: auto; }
+        .replique-j1 { color: #4CAF50; }
+        .replique-j2 { color: #2196F3; }
+        .replique-anim { color: #FFEB3B; }
+        .replique-system { color: #F44336; font-weight: bold; }
+
+        .alert-rouge { animation: borderBlink 0.5s 3; }
+        @keyframes borderBlink { 50% { border: 6px solid red; box-shadow: 0 0 30px red inset; } }
+
+        #board-container { display: none; width: 100%; aspect-ratio: 1012 / 616; background: url('kamoulox-plateau-visuel.png') center/cover; position: relative; transition: all 0.5s ease; margin-bottom: 10px; }
+        #board-container.mini { width: 160px; aspect-ratio: 1012/616; position: absolute; top: 40px; right: 10px; z-index: 5; }
+        #pion { width: 30px; height: 30px; background: orange; border: 2px solid #000; border-radius: 50%; position: absolute; transition: all 0.8s ease-in-out; box-shadow: 0 0 6px #000; }
+
+        #kamoulox-central-banner { display: none; font-size: 70px; color: red; text-align: center; margin-top: 30px; text-shadow: 0 0 20px red; }
+
+        button { font-family: inherit; }
+        .btn-anim { display: block; width: 100%; padding: 16px; margin-bottom: 10px; background: #555; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 15px; }
+        .btn-anim:hover:not(:disabled) { background: #777; }
+        .btn-anim:disabled { background: #2a2a2a; color: #666; cursor: not-allowed; }
+        .btn-anim.green { background: #2e7d32 !important; color: #fff; animation: pulseGreen 1s infinite; }
+        @keyframes pulseGreen { 50% { opacity: 0.7; } }
+        #btn-opposition { background: #b71c1c; }
+        #turn-indicator { text-align: center; margin-bottom: 14px; font-size: 16px; }
+        #zone-attente { text-align: center; color: #888; margin-top: 60px; font-size: 18px; }
+        #mystere-valider-manche { background: #6a1b9a; }
+    </style>
+</head>
+<body>
+    <div id="central-screen">
+        <h1 style="text-align:center;">KAMOULOX</h1>
+        <div id="phase-banner"></div>
+
+        <div id="board-container"><div id="pion"></div></div>
+        <div id="dialogue-history" class="history"></div>
+        <div id="kamoulox-central-banner">KAMOULOX !</div>
+    </div>
+
+    <div id="animator-screen">
+        <h2>Animateur</h2>
+
+        <button id="btn-lancer" class="btn-anim hidden">LANCER LA PARTIE</button>
+
+        <button id="btn-appuyez-ici" class="btn-anim hidden">APPUYEZ ICI</button>
+
+        <div id="zone-attente" class="hidden"></div>
+
+        <div id="bar-jeu" class="hidden">
+            <div id="turn-indicator"></div>
+            <button id="btn-continuer" class="btn-anim">CONTINUER</button>
+            <button id="btn-opposition" class="btn-anim">OPPOSITION</button>
+            <button id="btn-carte-mystere" class="btn-anim">CARTE MYSTÈRE</button>
+            <button id="btn-valider" class="btn-anim">VALIDER (contre)</button>
+            <button id="mystere-valider-manche" class="btn-anim hidden">Valider ma réplique (carte mystère)</button>
+        </div>
+
+        <button id="btn-conclure" class="btn-anim hidden">CONCLURE LA PARTIE</button>
+        <button id="btn-generique-final" class="btn-anim hidden">LANCER LE GÉNÉRIQUE</button>
+    </div>
+
+    <script type="module" src="host.js"></script>
+</body>
+</html>

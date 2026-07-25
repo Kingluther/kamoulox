@@ -1,0 +1,60 @@
+<!-- animateur.html -->
+<!-- Écran de CONTRÔLE uniquement — à ouvrir sur le téléphone/ordinateur de
+     l'animateur. L'affichage public est dans ecran-central.html (autre appareil). -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamoulox - Animateur</title>
+    <style>
+        body { font-family: 'Courier New', Courier, monospace; background: #111; color: #fff; margin: 0; padding: 20px; box-sizing: border-box; }
+        .hidden { display: none !important; }
+        h2 { text-align: center; }
+        #phase-banner { text-align: center; color: #888; font-size: 12px; text-transform: uppercase; margin-bottom: 4px; }
+        #derniere-replique { text-align: center; color: #ccc; font-size: 14px; margin-bottom: 20px; min-height: 20px; font-style: italic; }
+        #presentation-segment { text-align: center; color: #ffa726; font-size: 16px; margin-bottom: 10px; text-transform: uppercase; }
+        #turn-indicator { text-align: center; margin-bottom: 14px; font-size: 17px; }
+
+        button { font-family: inherit; }
+        .btn-anim { display: block; width: 100%; padding: 18px; margin-bottom: 12px; background: #444; color: white;
+                    border: none; border-radius: 8px; cursor: pointer; font-size: 16px; box-sizing: border-box; }
+        .btn-anim:hover:not(:disabled) { background: #666; }
+        .btn-anim:disabled { background: #222; color: #555; cursor: not-allowed; }
+        .btn-anim.green { background: #2e7d32 !important; animation: pulse 1s infinite; }
+        @keyframes pulse { 50% { opacity: 0.7; } }
+        #btn-opposition { background: #b71c1c; }
+        #btn-lancer, #btn-generique-final, #btn-conclure { background: #2e7d32; font-size: 20px; padding: 26px; }
+        #btn-appuyez-ici { min-height: 90px; }
+        #zone-attente { text-align: center; color: #888; margin-top: 60px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h2>Animateur</h2>
+    <div id="phase-banner"></div>
+    <div id="derniere-replique"></div>
+
+    <button id="btn-lancer" class="btn-anim hidden">LANCER LA PARTIE</button>
+
+    <div id="btn-appuyez-ici-wrap" class="hidden">
+        <div id="presentation-segment"></div>
+        <button id="btn-appuyez-ici" class="btn-anim">APPUYEZ ICI</button>
+    </div>
+
+    <div id="zone-attente" class="hidden"></div>
+
+    <div id="bar-jeu" class="hidden">
+        <div id="turn-indicator"></div>
+        <button id="btn-continuer" class="btn-anim">CONTINUER</button>
+        <button id="btn-opposition" class="btn-anim">OPPOSITION</button>
+        <button id="btn-carte-mystere" class="btn-anim">CARTE MYSTÈRE</button>
+        <button id="btn-valider" class="btn-anim">VALIDER (contre)</button>
+        <button id="mystere-valider-manche" class="btn-anim hidden">Valider ma réplique (carte mystère)</button>
+    </div>
+
+    <button id="btn-conclure" class="btn-anim hidden">CONCLURE LA PARTIE</button>
+    <button id="btn-generique-final" class="btn-anim hidden">LANCER LE GÉNÉRIQUE</button>
+
+    <script type="module" src="animateur.js"></script>
+</body>
+</html>
