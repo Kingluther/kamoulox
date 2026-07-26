@@ -1,0 +1,85 @@
+<!-- player.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamoulox - Joueur</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #3a7bd5; color: #fff; text-align: center; margin: 0; padding: 12px; box-sizing: border-box; }
+        .hidden { display: none !important; }
+        h2#player-id-display { background: #fff; color: #222; border-radius: 8px; padding: 10px; margin: 0 0 14px 0; font-size: 20px; }
+
+        .card-perso { display: inline-block; width: 90px; height: 120px; margin: 6px; background: #fff; color: #222;
+                      border: 2px solid #222; border-radius: 10px; font-size: 15px; font-weight: bold; cursor: pointer; }
+
+        #wait-screen { margin-top: 80px; font-size: 20px; }
+
+        #appuyez-screen { margin-top: 100px; }
+        #btn-appuyez-joueur { width: 220px; height: 220px; border-radius: 50%; background: #2e7d32; color: #fff;
+                               font-size: 22px; font-weight: bold; border: 4px solid #fff; cursor: pointer; }
+
+        .grid-wrap { position: relative; width: 100%; max-width: 340px; margin: 0 auto; }
+        .grid4 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .card-phrase { background: #fff; color: #222; border: 2px solid #222; border-radius: 8px; padding: 18px 8px;
+                       font-size: 15px; min-height: 70px; cursor: pointer; }
+        .card-phrase.selected { background: #4CAF50; color: #fff; }
+        #btn-et { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                  width: 56px; height: 56px; border-radius: 50%; background: #FF9800; color: #fff;
+                  font-weight: bold; border: 3px solid #fff; cursor: pointer; z-index: 2; }
+        #btn-et:disabled { background: #aaa; }
+
+        #btn-courte { display: block; width: 100%; max-width: 340px; margin: 14px auto 0; padding: 16px;
+                      background: #fff; color: #222; border: 2px solid #222; border-radius: 8px; font-size: 15px; cursor: pointer; }
+        #btn-contre { display: block; width: 100%; max-width: 340px; margin: 10px auto 0; padding: 14px;
+                      background: #FF9800; color: #fff; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        #btn-kamoulox { display: block; width: 100%; max-width: 340px; margin: 16px auto 0; padding: 0;
+                        border: none; cursor: pointer; opacity: 0.4; }
+        #btn-kamoulox img, #btn-kamoulox .fallback { width: 100%; border-radius: 8px; }
+        #btn-kamoulox.glow { opacity: 1; animation: blink 0.8s infinite; }
+        @keyframes blink { 50% { opacity: 0.4; } }
+        .fallback { display: block; background: linear-gradient(#e65100,#3e2723); color: #fff; font-size: 26px;
+                    font-weight: bold; padding: 20px; border-radius: 8px; }
+
+        #btn-mystere-retourner { width: 200px; height: 280px; border-radius: 12px; background: url('carte.jpg') center/cover;
+                                  border: 4px solid #fff; margin-top: 60px; cursor: pointer;
+                                  animation: carteSpin 0.6s ease-out; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+        @keyframes carteSpin { from { transform: rotateY(180deg) scale(0.6); opacity: 0; } to { transform: rotateY(0) scale(1); opacity: 1; } }
+    </style>
+</head>
+<body>
+    <h2 id="player-id-display">Connexion…</h2>
+
+    <div id="wait-screen" class="hidden"></div>
+
+    <div id="appuyez-screen" class="hidden">
+        <button id="btn-appuyez-joueur">APPUYEZ ICI</button>
+    </div>
+
+    <div id="selection-screen" class="hidden">
+        <h3>Choisissez votre personnage</h3>
+        <div id="character-list"></div>
+    </div>
+
+    <div id="mystere-screen" class="hidden">
+        <button id="btn-mystere-retourner"></button>
+    </div>
+
+    <div id="ending-words-screen" class="hidden">
+        <h3>Un petit mot avant de se quitter…</h3>
+        <div id="ending-words-list"></div>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <div class="grid-wrap">
+            <div id="phrase-pool"></div>
+            <button id="btn-et">ET</button>
+        </div>
+        <button id="btn-courte" class="hidden"></button>
+        <button id="btn-contre" class="hidden"></button>
+        <button id="btn-kamoulox"><span class="fallback" style="background:url('logo.jpg') center/cover; min-height:70px;"></span></button>
+    </div>
+
+    <script type="module" src="player.js"></script>
+</body>
+</html>
