@@ -1,0 +1,2498 @@
+{
+  "personnages": [
+    {
+      "nom": "Damien",
+      "sketch": "Damien vs Jean-François",
+      "dialogue": [
+        "Bonsoir, je m'appelle Damien Nigaud, j'ai 29 ans j'habite à Aigreville, et je suis imitateur d'objets.",
+        "Et quel objet pouvez-vous imiter pour nous Damien ?",
+        "Bah plusieurs... par exemple la tronçonneuse : gnèm gnèm gnèmgnèmgnèm",
+        "Oui bravo !",
+        "Euh, la mobylette",
+        "Oh la la, c'est très très impressionnant !",
+        "Je sais faire un animal aussi très bien, le canard : gnèm... gnèm... gnèm... gnèm",
+        "C'est bon, merci.",
+        "Je peux aussi...",
+        "Non, écoutez, franchement, ça ira Damien. Vous êtes marié ?",
+        "Euh. J'étais",
+        "Ah, pardon, elle vous a quitté ?",
+        "Non, non, « Jette », c'est son prénom. Jette Miranda elle s'appelle, elle est d'origine espagnole.",
+        "Ah, d'accord ! Vous avez un passe-temps Damien ?",
+        "Jean-Michel Jarre. J'ai tous ses disques ! Oxygène 1, Oxygène 2, Oxygène 3, Oxygène 4, euh... Oxygène 5, Oxygène 6..."
+      ]
+    },
+    {
+      "nom": "Jean-François",
+      "sketch": "Damien vs Jean-François",
+      "dialogue": [
+        "Bonsoir, Je m'appelle Jean-François Colissimo, j'ai 37 ans et je suis fabriquant de bermuda en polystyrène à Niort.",
+        "Depuis longtemps ?",
+        "Euh, 8 mois, avant je fabriquais des gilets pare-balles en nénuphar mais ça a pas marché terrible.",
+        "Marié ? Des enfants Jean François ?",
+        "J'ai malheureusement perdu ma petite famille au cours des tests de gilets pare-balles.",
+        "Au temps pour moi. Vous avez un hobby ?",
+        "Oui, moi, comme mon adversaire, c'est la musique et plus particulièrement Chopin. J'attends d'ailleurs avec impatience son prochain album."
+      ]
+    },
+    {
+      "nom": "Herbert",
+      "sketch": "Herbert vs Steeve",
+      "dialogue": [
+        "Bonsoir, je m'appelle Herbert Molard, j'ai 43 ans j'habite à Narbonne, et je suis majorette.",
+        "Marié ? Des enfants ?",
+        "Non, je n'ai pas mon permis.",
+        "Une passion ?",
+        "Oui ! Toute la cinématologie de Vandamme",
+        "Un film en particulier peut-être ?",
+        "euh... « le réplicant » où Vandamme y joue deux personnages très différents. Je crois que c'est une grande leçon d'actologie."
+      ]
+    },
+    {
+      "nom": "Steeve",
+      "sketch": "Herbert vs Steeve",
+      "dialogue": [
+        "Bonsoir, je m'appelle Steeve Nathalie, j'ai 28 ans, j'habite à Trets et je suis maitre nageur à Marineland",
+        "En quoi consiste votre travail Steeve ?",
+        "J'apprends à nager aux dauphins et aux orques, et ils sont très très doués.",
+        "Marié ?",
+        "Oui.",
+        "Une petite progéniture ?",
+        "Non, non ! Une française.",
+        "Passion ? hobby ?",
+        "J'aime bien les animaux. Je suis passionné de zoophilie."
+      ]
+    },
+    {
+      "nom": "René",
+      "sketch": "René vs Etienne",
+      "dialogue": [
+        "Bonsoir, je m'appelle René Grachon, j'ai 28 ans je suis éléboniste à Rouen.",
+        "Et pouvez-vous nous dire ce qu'est un éléboniste René ?",
+        "Euh, mon métier consiste à aller dans toutes les piscines de la région et de me baigner avant tout le monde et de voir si elle est bonne... elle-est-bonne-iste",
+        "Très bien. Vous êtes marié ?",
+        "Non. Je suis fan de Jean-Luc Lahaye",
+        "Hmmm, je comprends. Une passion ?",
+        "Oui. Je collectionne toutes les ampoules de vestibule, j'en ai 400.000 !"
+      ]
+    },
+    {
+      "nom": "Etienne",
+      "sketch": "René vs Etienne",
+      "dialogue": [
+        "'soir, je m'appelle Etienne Mlé, j'ai 32 ans, et je suis sardine à Nice",
+        "Et encore un métier méconnu. Qu'est-ce qu'un sardine ?",
+        "C'est comme une maquereau, mais en moins bien.",
+        "Vous êtes marié ? Vous avez des enfants ?",
+        "Oui, parfois.",
+        "Un hobby ? Un passe-temps ?",
+        "Oui, je suis aussi collectionneur. Moi c'est les sachets de Royco minut'soupe à la tomate. J'en ai 580.000."
+      ]
+    },
+    {
+      "nom": "Dominique",
+      "sketch": "Dominique vs Didier",
+      "dialogue": [
+        "Oui, bien sûr ! Dominique-nique-nique, Dominique comme un domino, etc. etc. etc...",
+        "parfait ! Présentez-vous à nos téléspectateurs s'il vous plait Dominique.",
+        "Bien ! Je m'appelle donc Dominique Quéquette, j'ai 35 ans, je suis avocat pour animaux à Thoiry",
+        "Une affaire en ce moment ?",
+        "Oui. Une affaire d'adultère entre un pigeon de Birmanie et une girafe. Une affaire très difficile.",
+        "Vous êtes marié ?",
+        "Non je n'ai pas encore trouvé l'âme sœur.",
+        "Ah bon ! Un joli garçon comme vous ! Qu'est-ce que vous faites de vos loisirs Dominique ?",
+        "Alors je me construis ma future maison en excréments de tortues."
+      ]
+    },
+    {
+      "nom": "Didier",
+      "sketch": "Dominique vs Didier",
+      "dialogue": [
+        "Bonsoir, je m'appelle Didier, j'ai 47 ans, j'habite à Lyon et je suis professeur de karaoké synchronisé.",
+        "Qu'est-ce que c'est ?",
+        "C'est du karaoké dans une piscine, tout simplement.",
+        "Des enfants ?",
+        "Où ça ??",
+        "Non c'est une question Didier, je voulais savoir si vous aviez des enfants...",
+        "Ah, non non non.",
+        "Un passe-temps ?",
+        "Non. Pas d'enfants et pas de nains non plus."
+      ]
+    },
+    {
+      "nom": "Germain",
+      "sketch": "Germain vs Noël",
+      "dialogue": [
+        "Bonsoir, je m'appelle Germain Sumo, j'ai 32 ans, j'habite à Nîmes et je suis jedi depuis 5 ans.",
+        "Vous êtes marié ?",
+        "Ui.",
+        "Des enfants ?",
+        "Non, je suis allergique.",
+        "Une passion ?",
+        "Ui, je pratique le mime en amateur.",
+        "Une petite démonstration peut-être ?",
+        "Ui, si vous voulez ! Euh... la porte... (faire semblant de marcher et d'ouvrir une porte). Euh... la fenêtre (pareil mais en ouvrant à deux mains) Euh... la baie vitrée aussi... (pareil mais en poussant à deux mains de la droite vers la gauche)... la..."
+      ]
+    },
+    {
+      "nom": "Noël",
+      "sketch": "Germain vs Noël",
+      "dialogue": [
+        "Bonsoir, je m'appelle Noël Java, j'ai 29 ans, j'habite à Sedanon et je suis réalisateur de films un petit peu olé-olé...",
+        "Vous voulez dire un petit peu érotiques ??",
+        "Non non, des films sur la corrida...",
+        "Ah, d'accord. Marié ?",
+        "Euh, non. Je suis fan de Phil Barney.",
+        "Mmm mmm. Passion ? Hobby ?",
+        "Oui. Je dessine des portraits d'animateurs de M6 avec mon pipi dans la neige."
+      ]
+    },
+    {
+      "nom": "Michel",
+      "sketch": "Michel vs Gérald",
+      "dialogue": [
+        "Bonsoir, je m'appelle Michel Colune, j'ai 34 ans je suis pécheur professionnel à la truite dans le Morvan.",
+        "Vous pêchez la truite, c'est bien ça ?",
+        "euh, non, la pêche à la truite, c'est une technique de pêche. La truite c'est l'appât.",
+        "Et c'est pour attraper quoi ?",
+        "Bah... des mouches...",
+        "Evidemment ! Vous êtes marié Michel ?",
+        "Euh, non. Je vis avec une femme mariée, mais je ne peux pas dire qui est cette femme à la télévision puisque c'est la femme de mon frère.",
+        "Je comprends Michel. Comptez sur nous pour la discrétion. Vous avez un passe-temps Michel ? Un loisir ?",
+        "Oui. Comme j'habite à proximité d'une voie de TGV avec des copains on a inventé un jeu qui consiste à compter le plus de voyageurs du TGV qui passe à fond."
+      ]
+    },
+    {
+      "nom": "Gérald",
+      "sketch": "Michel vs Gérald",
+      "dialogue": [
+        "Bonsoir, Je m'appelle Gerald Guillermo, j'ai 54 ans je suis pilote de ligne",
+        "Air France ?",
+        "Non, la RATP. La ligne B du RER.",
+        "Marié ? avec des enfants Gérald ?",
+        "Non, non ! Je suis pas marié avec des enfants, moi. Je suis pas un détraqué. Je suis équilibriste dans ma tête tout va bien.",
+        "Non, je voulais dire, excusez-moi Gérald, si vous étiez marié et si vous aviez des enfants ?",
+        "Ah non ! Non non, je suis divorcé de naissance.",
+        "Vous avez un loisir ? un hobby Gérald ?",
+        "Oui oui, je fais un petit peu de modélisme le soir avant de me coucher",
+        "Vous faites des maquettes de bateaux d'avions ? ce genre de choses ?",
+        "Non, non, juste du modélisme."
+      ]
+    },
+    {
+      "nom": "Gilou",
+      "sketch": "Gilou vs Hervé",
+      "dialogue": [
+        "Oui, Bonsoir, je m'appelle Gilou, j'ai 32 ans, je suis agnesthésiste à l'hôpital de Lyon.",
+        "Agnesthésiste ?",
+        "Oui, c'est-à-dire que je n'endors que les femmes qui s'appellent Agnès.",
+        "Très bien. Vous êtes marié ?",
+        "Euh, je me marie la semaine prochaine.",
+        "Ah oui ! Et comment s'appelle l'heureuse élue ?",
+        "Je sais pas encore",
+        "Un hobby ?",
+        "Non, un zodiaque à moteur. J'aime pas la voile."
+      ]
+    },
+    {
+      "nom": "Hervé",
+      "sketch": "Gilou vs Hervé",
+      "dialogue": [
+        "Bonsoir, je m'appelle Hervé Morille, j'ai 47 ans, et je suis l'ancien chanteur de Kiss",
+        "Non !!! C'était vous ? Vous pouvez nous faire un petit air de Kiss pour que tout le monde se souvienne ?",
+        "(chanté n'importe comment) *I was made for loving you baby*",
+        "Parfait ! vous êtes marié ?",
+        "Oui. Avec l'ancien chanteur de Motorhead.",
+        "une passion ? un passe-temps ?",
+        "La peinture",
+        "Quel style ?",
+        "Les volets. J'aime bien peindre les volets."
+      ]
+    },
+    {
+      "nom": "Jérôme",
+      "sketch": "Jérôme vs Laurent",
+      "dialogue": [
+        "Bonsoir, je m'appelle Jérôme, je suis apprenti sorcier à Aix en Provence.",
+        "Quelle est votre spécialité Jérôme ?",
+        "La disparition",
+        "Une petite démonstration peut-être ?",
+        "Bah, si vous voulez. (visant son adversaire) hocus pocus, j'ai du malus (rien ne se passe). Bah, je ne suis que commis apprenti.",
+        "Vous êtes marié vous avez des enfants ?",
+        "Oui, oui, tout ça là, oui.",
+        "Cher Jérôme, avez-vous une passion ?",
+        "Oui, alors j'aime bien faire des herbiers.",
+        "Ah ! Les feuilles de marronnier, d'érable, de platane, que l'on colle sur son cahier de classe pour qu'il sèche pour l'éternité !",
+        "Oui. J'avais 5.899 espèces différentes de feuilles magnifiques.",
+        "Vous « aviez » Jérôme ?",
+        "Oui. Tout a été détruit dans l'incendie de Chicago en 1924. (pleure)"
+      ]
+    },
+    {
+      "nom": "Laurent",
+      "sketch": "Jérôme vs Laurent",
+      "dialogue": [
+        "Bonsoir à tous, je m'appelle Laurent Lubo, j'ai 38 ans, l'âge du Christ comme on dit, et je suis fabriquant de chiens.",
+        "Quelle race Laurent ?",
+        "Euh, avant je fabriquais du Terre-Neuve, mais depuis 4 ans j'ai des problèmes de lombaire avec mon âge, donc je fais du caniche nain. C'est moins fatigant.",
+        "Vous avez des enfants ?",
+        "euh, je les ai perdus il y a un an.",
+        "Un accident ?",
+        "Non, non. Au poker avec Patrick Bruel."
+      ]
+    },
+    {
+      "nom": "Sylvain",
+      "sketch": "Sylvain vs Bertrand (+ verre d'eau)",
+      "dialogue": [
+        "Bonsoir, je m'appelle Sylvain Tournevis, j'ai 48 ans j'habite à Marseille, et je suis éclaireur chez les sudistes",
+        "Mm-mm marié Sylvain ?",
+        "Bah non, je mets encore des badges de Trust !",
+        "Hobby ?",
+        "Oui, je suis champion des Bouches du Rhône de body painting sur personnes âgées."
+      ]
+    },
+    {
+      "nom": "Bertrand",
+      "sketch": "Sylvain vs Bertrand (+ verre d'eau)",
+      "dialogue": [
+        "Oui bonsoir, je m'appelle Bertrand Plastique, j'ai 31 ans, j'habite à Avalon et je suis dealer",
+        "Marié ? Des enfants ?",
+        "J'ai malheureusement perdu toute ma petite famille.",
+        "Un accident ?",
+        "Non, au rami.",
+        "un passe-temps ?",
+        "Oui, le karaoké OK.",
+        "Qu'est-ce que c'est ?",
+        "C'est faire le karaoké avec le hoquet."
+      ]
+    },
+    {
+      "nom": "Théo",
+      "sketch": "Théo vs Sam",
+      "dialogue": [
+        "Oui, bonsoir, je m'appelle Théo Chuilà, j'ai 54 ans j'habite à Paris, et je suis Patricia Kaas chez Michou.",
+        "Marié Théo ?",
+        "Non ! Je conduis avec des gants.",
+        "mmm. Je comprends. Une passion ? Un hobby ?",
+        "Oui ! Je suis passionné d'histoire.",
+        "Napoléon ?",
+        "Non. Guy Montagné."
+      ]
+    },
+    {
+      "nom": "Sam",
+      "sketch": "Théo vs Sam",
+      "dialogue": [
+        "Bonsoir, Je m'appelle Sam Glacière, j'ai 34 ans, j'habite à Béziers et je suis crottedenétologue.",
+        "Qu'est-ce que c'est exactement ?",
+        "C'est l'étude des crottes de nez depuis son apparition jusqu'à nos jours.",
+        "Alors : en quelle année est apparue la première crotte de nez, justement Sam ?",
+        "C'est une question qu'on me pose beaucoup. En 1865, pendant la Terreur, c'est un jeune paysan de la cour de Louis XVI qui a eu la première crotte de nez en France. Une véritable révolution !",
+        "Alors, est-ce qu'on connait le nom de ce paysan ?",
+        "Oui, Bien sûr ! C'est le célèbre Félicien Morve !",
+        "Oui. Tout s'explique. En tout cas, très intéressant Sam. Est-ce que vous êtes marié ?",
+        "Non, j'ai un paillasson « Welcome ».",
+        "Je comprends. Une passion ? Un passe-temps ?",
+        "Les putes !"
+      ]
+    },
+    {
+      "nom": "Nervieux",
+      "sketch": "Nervieux vs Paul",
+      "dialogue": [
+        "Bonsoir, je m'appelle Nervieux Tanzien, j'ai 43 ans je suis chauffagiste animalier à Montrouge dans le 92.",
+        "Expliquez nous...",
+        "Les Hauts-de-Seine si vous préférez...",
+        "Ah, ok ! Vous êtes marié Nervieux...",
+        "Ah bon !!??",
+        "Non, c'est une question...",
+        "Ah, pardon, non non, je vis en covoiturage.",
+        "D'accord. Vous avez un passe-temps Nervieux ?",
+        "Oui, oui, je suis passionné d'Histoire de l'Art.",
+        "Quelle période ?",
+        "De maintenant à nos jours."
+      ]
+    },
+    {
+      "nom": "Paul",
+      "sketch": "Nervieux vs Paul",
+      "dialogue": [
+        "Tout à fait ! Je suis béké ! Je m'apelle donc Paul Septivon, je suis dans ma 42^ème^ année, j'habite à Sainte Anne en Basseterre et je suis disquaire spécialiste en musique antillaise et plus particulièrement Philippe Lavil.",
+        "Marié, Paul ?",
+        "Tout à fait je suis dans ma 14^ème^ année de mariage",
+        "Des enfants ?",
+        "J'ai deux enfants : Philippe, et le dernier Philippe... comme Philippe Lavil.",
+        "Vous avez une passion ?",
+        "Ah oui, tout à fait, toute la carrière de Philippe Lavil depuis « il tape sur des bambous » jusqu'à... depuis« il tape sur des bambous »"
+      ]
+    },
+    {
+      "nom": "Gaël",
+      "sketch": "Gaël vs Michel",
+      "dialogue": [
+        "Bonsoir, je m'appelle Gaël Enduit, j'ai 45 ans j'habite à Lyon, et je suis auteur de sketches.",
+        "mm mm, vous travaillez pour qui ?",
+        "Le téléachat de Laurent Cabrol",
+        "Une femme ?",
+        "Où ça ?",
+        "Non, je vous demande si vous êtes marié...",
+        "Ah, non non, j'ai encore du duvet...",
+        "Une passion ? un passe-temps ?",
+        "Oui"
+      ]
+    },
+    {
+      "nom": "Michel",
+      "sketch": "Gaël vs Michel",
+      "dialogue": [
+        "Bonsoir, Je m'appelle Michel Brun, je suis cousin de Michel Roux, hein, j'ai 43 ans, j'habite à Joigny, je suis épouvantail.",
+        "Marié ?",
+        "Oui, j'ai deux enfants.",
+        "Qui s'appellent ?",
+        "Starsky et Hutch",
+        "Une passion ?",
+        "Euh, pas vraiment une passion, mais ça se voit un petit peu, je suis le sosie officiel de Fiona Gelin."
+      ]
+    },
+    {
+      "nom": "Yvon",
+      "sketch": "Yvon vs Daniel",
+      "dialogue": [
+        "Bonsoir, je m'appelle Yvon Dédécartepostalemèzossidécrayons, j'ai 34 ans j'habite à Saint-Etienne, et je suis gogo danseur ambulant.",
+        "Vous dansez nu ?",
+        "Sur les marchés, oui.",
+        "Marié ?",
+        "oui. Ma femme est gogo danseuse à l'hôpital.",
+        "Vous avez des enfants ?",
+        "Oui. Brandon et Jordan, 6 et 8 ans. Ils sont go...",
+        "Oh, non Yvon !",
+        "Gauchers tous les deux, si ! si !",
+        "Ah bon !",
+        "Et comme ils sont gogo danseurs, c'est pas pratique."
+      ]
+    },
+    {
+      "nom": "Daniel",
+      "sketch": "Yvon vs Daniel",
+      "dialogue": [
+        "Bonsoir, Je m'appelle Daniel Yoyo, j'habite à Royan et je suis voyant. *Rectum* le voyant.",
+        "mmm... drôle de nom « rectum »...",
+        "C'est parce que je lis l'avenir dans l'anus.",
+        "Bien. Vous êtes marié Daniel ?",
+        "Non, je mets des Burlington",
+        "Ah, oui. Je comprends. Une passion ?",
+        "Lama",
+        "« Je suis malade », « les petites femmes de Pigalle », tout ça ?",
+        "Non, non. Bernard Lama"
+      ]
+    },
+    {
+      "nom": "Bertrand",
+      "sketch": "Bertrand (+ perruque + dessin moche) vs Gilles",
+      "dialogue": [
+        "Oui, bonsoir, je m'appelle Bertrand Collardeau, je suis Président de l'association « SOS terre battue » j'ai 56 ans et je porte une perruque pour ce sketch.",
+        "Vous avez des enfants ?",
+        "Oui. Euh... 4 ou 5... attendez, je sais plus... Non ! 3 pardon. Non ! c'est 4. Attendez... j'ai deux filles... Bon, je sais plus...",
+        "Des hobbies ?",
+        "Euh... je parle pas le tahitien, excusez-moi...",
+        "Je voulais dire : avez-vous des passe-temps ?",
+        "Ah, oui pardon. Oui, je reproduis des grands acteurs français avec des pignons de pin.",
+        "Et je crois savoir que vous êtes venu avec une de vos œuvres...",
+        "Voilà, tout à fait...",
+        "De qui s'agit-il ?",
+        "Ben c'est Christophe Lambert !"
+      ]
+    },
+    {
+      "nom": "Gilles",
+      "sketch": "Bertrand (+ perruque + dessin moche) vs Gilles",
+      "dialogue": [
+        "Bonsoir, Je m'appelle Gilles Vesse, j'ai 43 ans, je suis actuellement à la recherche d'un emploi dans le domaine de la médecine.",
+        "Et quoi en particulier ?",
+        "Euh... docteur, anesthésiste, réanimateur, n'importe quoi au point où j'en suis-je vais pas faire le difficile...",
+        "Vous êtes marié ?",
+        "Non, je suis actuellement à la recherche d'une épouse dans le domaine de la mode.",
+        "Quoi en particulier ?",
+        "Un mannequin si possible..."
+      ]
+    },
+    {
+      "nom": "Kamel",
+      "sketch": "Kamel vs Hector",
+      "dialogue": [
+        "Bonsoir Monsieur, je m'appelle Kamel Pilosité, j'ai 34 ans, j'habite à Herblay, et je suis éleveur de supporters.",
+        "De football ?",
+        "non, non, non ! De badminton, j'ai un tout petit élevage.",
+        "Marié ?",
+        "Non. Je suis végétarien.",
+        "Une passion ? Un passe-temps ?",
+        "Oui. Je collectionne les filles au pair."
+      ]
+    },
+    {
+      "nom": "Hector",
+      "sketch": "Kamel vs Hector",
+      "dialogue": [
+        "Oui, bonsoir, je m'appelle Hector Roulade, j'ai 40 ans, j'habite à Saint-Moret, et je suis chattier.",
+        "Chattier ??",
+        "Ben, c'est comme barbier, mais pour les chattes...",
+        "Mm mm... des enfants ?",
+        "Oui oui, je viens d'accoucher de mon troisième enfant.",
+        "Un hobby ?",
+        "Le hautbois."
+      ]
+    },
+    {
+      "nom": "Laurent",
+      "sketch": "Laurent vs Lilian",
+      "dialogue": [
+        "Oui, bonsoir, je m'appelle Laurent Sirtaki, j'habite Paris, j'ai 41 ans, je travaille dans le cinéma. Je suis cacascadeur.",
+        "C'est-à-dire ?",
+        "Euh, je double les acteurs pour les scènes où ils font caca... dans le film c'est moi qui fait caca à leur place...",
+        "Dans quel film par exemple ?",
+        "Le plus récent c'est *Vercingétorix*. Euh, quand on voit Christophe Lambert qui va faire caca au moment de rencontrer César, et ben, c'est pas Christophe Lambert, c'est moi.",
+        "Vous êtes marié Laurent ?",
+        "Pas exactement, non.",
+        "Fiancé ?",
+        "Pas exactement",
+        "Célibataire ?",
+        "Exactement !",
+        "Un hobby ? Un passe-temps ?",
+        "Euh, j'aime bien la BD",
+        "Quel genre ?",
+        "New look, Playboy, Union... tout ça quoi..."
+      ]
+    },
+    {
+      "nom": "Lilian",
+      "sketch": "Laurent vs Lilian",
+      "dialogue": [
+        "Bonsoir, je m'appelle Lilian Ricola, j'ai 41 ans tous ronds, j'habite à Créteil et je suis pouléro.",
+        "Et c'est quoi un pouléro Lilian ?",
+        "Ben, c'est comme un toréro, mais avec des poules.",
+        "Parfait. Vous êtes marié, Lilian ?",
+        "Non, j'ai une BX...",
+        "Je comprends. Une passion ? un hobby ?",
+        "La musique.",
+        "Quel style ?",
+        "Ben « La musique », la chanson de Nicoletta... *La musique*... J'aime que cette chanson."
+      ]
+    },
+    {
+      "nom": "Sacha",
+      "sketch": "Sacha vs Renaud",
+      "dialogue": [
+        "Oui, bonsoir, je m'appelle Sacha Félicie, j'ai 26 ans, j'habite Dampierre et je suis plongeur à la Calypso.",
+        "Quel honneur !",
+        "Non, c'est pas ce que vous croyez, je fais la vaisselle au restaurant la Calypso.",
+        "Ah, très bien. Vous êtes marié Sacha ?",
+        "Boh, je crois ouais...",
+        "Des enfants ?",
+        "Non, non, je pars souvent en vacances...",
+        "Une passion ? Un passe-temps ?",
+        "Je prends des cours de tango panaché"
+      ]
+    },
+    {
+      "nom": "Renaud",
+      "sketch": "Sacha vs Renaud",
+      "dialogue": [
+        "Bonsoir, je m'appelle Renaud Quatorze, j'ai 42 ans, j'habite à Bordeaux et je suis traiteur.",
+        "Quelle est la spécialité cette saison ?",
+        "Les gens aiment bien être traités de connards en ce moment.",
+        "mm mm. Vous êtes marié ?",
+        "Non, je dors en jogging",
+        "Je comprends oui. Une passion ?",
+        "Les chattes.",
+        "L'animal ?",
+        "Oui. Tout à fait.",
+        "Et quoi d'autre ?",
+        "Les nichons..."
+      ]
+    },
+    {
+      "nom": "Bernard",
+      "sketch": "Spéciale jumeaux",
+      "dialogue": [
+        "Moi c'est Bernard",
+        "Philippe !",
+        "Oui, je porte une montre, et mon frère non. C'est comme ça que nos amis nous reconnaissent.",
+        "Bien, Bernard, présentez vous...",
+        "Bonsoir, je m'appelle Bernard Hivernage, j'ai 43 ans, et je suis dentiste pour animaux.",
+        "Des animaux en particulier ?",
+        "Les poissons...",
+        "Et ça marche ?",
+        "Non, pas trop, non.",
+        "Vous êtes marié ? Vous avez des enfants ?",
+        "Euh, j'ai été marié, mais je crois que j'étais un petit peu trop jeune.",
+        "Quel âge aviez-vous ?",
+        "Trois ans et demi",
+        "En effet. Un hobby ?",
+        "Oui. Je fais du dickboxing",
+        "De quoi s'agit-il ?",
+        "Bah, c'est du karaté en écoutant Dick Rivers. Dickboxing..."
+      ]
+    },
+    {
+      "nom": "Philippe",
+      "sketch": "Spéciale jumeaux",
+      "dialogue": [
+        "Oui, c'est ça. Bonsoir, je m'appelle Philippe Hivernage, j'ai 38 ans, je suis chasseur.",
+        "Dans un hôtel ?",
+        "Non, dans les toilettes de la gare. C'est moi qui tire la chasse quand les gens y z'ont oublié quoi. Chasseur.",
+        "Marié ?",
+        "Non, je mets le parfum Adjani",
+        "On comprend. Vous avez une passion Philippe ?",
+        "Euh, oui, je fabrique des voitures de collection miniature en cérumen de chauve-souris, comme celle-ci que j'ai ramenée sur le plateau."
+      ]
+    },
+    {
+      "nom": "Didier",
+      "sketch": "Didier vs Raoul",
+      "dialogue": [
+        "Oui, bonsoir, je m'appelle Didier Tagueule, j'ai 42 ans, j'habite à Lorient et je suis Fantomas",
+        "Vous êtes marié Didier ?",
+        "Le lundi uniquement.",
+        "Des enfants ?",
+        "J'ai déjà des perruches, ça suffit !",
+        "Un hobby ? une passion ?",
+        "La roulette russe indienne",
+        "Et c'est quoi ?",
+        "C'est la roulette russe avec un arc !"
+      ]
+    },
+    {
+      "nom": "Raoul",
+      "sketch": "Didier vs Raoul",
+      "dialogue": [
+        "Ouais bonsoir, je m'appelle Raoul Multiprise, j'ai 32 ans j'habite à Sarlat et je suis artisan taxi en retraite.",
+        "A 32 ans ?",
+        "J'ai commencé à 6 mois, c'est pour ça aussi !",
+        "Marié ?",
+        "Non, j'ai des santiags.",
+        "Passion ? Hobby ?",
+        "Je collectionne les porte-avions de la deuxième guerre mondiale"
+      ]
+    },
+    {
+      "nom": "Gaspard",
+      "sketch": "Gaspard vs Francis",
+      "dialogue": [
+        "Bonsoir je m'appelle Gaspard Riad, j'ai 28 ans, je suis professeur d'Atakotu",
+        "C'est un art martial japonais ?",
+        "Non c'est de la cuisine du Languedoc, je donne des cours de cuisine.",
+        "Vous êtes marié ?",
+        "Oh ! Ça va pas non ?",
+        "Vous avez une passion ? un hobby ?",
+        "Je suis collectionneur",
+        "Quel genre de collection Gaspard ?",
+        "Je collectionne depuis 20 ans les joints en mastic usagés des fenêtres à double battant. J'en ai 12.689 exactement."
+      ]
+    },
+    {
+      "nom": "Francis",
+      "sketch": "Gaspard vs Francis",
+      "dialogue": [
+        "Bonsoir. Je m'appelle Francis Moins, j'ai 34 ans, je suis spationaute.",
+        "Vous travaillez à Kourou ?",
+        "Non, à Marne la Vallée, je répare le Space Mountain.",
+        "Vous êtes marié ? Vous avez des enfants et tout ça ?",
+        "Oui, oui. Je suis marié, j'ai des enfants et tout ça.",
+        "Passion ? Hobby ?",
+        "Non ! Philippe et Nicole ils s'appellent !",
+        "Je vous demande si vous avez un passe-temps favori ?",
+        "Oui. Oui, oui, je regarde la télé. J'aime bien la télé, j'aime bien les gens qui font de la télé, ils me font rêver avec leurs beaux habits."
+      ]
+    },
+    {
+      "nom": "Virginie",
+      "sketch": "Virginie (nouveau)",
+      "dialogue_explicite": [
+        {
+          "role": "ANIM",
+          "text": "Bonsoir Virginie"
+        },
+        {
+          "role": "J",
+          "text": "Bonsoir"
+        },
+        {
+          "role": "ANIM",
+          "text": "Que faites-vous dans la vie Virginie ?"
+        },
+        {
+          "role": "J",
+          "text": "Je suis charmeur de serpent."
+        },
+        {
+          "role": "ANIM",
+          "text": "Dans quel secteur ?"
+        },
+        {
+          "role": "J",
+          "text": "Pour l'instant c'est dans l'agroalimentaire."
+        },
+        {
+          "role": "ANIM",
+          "text": "Très bien, est-ce qu'on peut vous demander votre âge ?"
+        },
+        {
+          "role": "J",
+          "text": "Oui, en ce moment j'ai 32 ans."
+        },
+        {
+          "role": "ANIM",
+          "text": "Ah, très bien. 32 ans. Mariée Virginie ?"
+        },
+        {
+          "role": "J",
+          "text": "Oui, je suis mariée depuis une semaine."
+        },
+        {
+          "role": "ANIM",
+          "text": "Félicitations, comment s'appelle-t-elle ?"
+        },
+        {
+          "role": "J",
+          "text": "Je sais plus !"
+        },
+        {
+          "role": "ANIM",
+          "text": "Très bien. Euh… des hobbies ?"
+        },
+        {
+          "role": "J",
+          "text": "Oui, la peinture sur Dave."
+        }
+      ]
+    },
+    {
+      "nom": "Olivier",
+      "sketch": "Olivier (nouveau)",
+      "dialogue_explicite": [
+        {
+          "role": "ANIM",
+          "text": "Je vous présente Olivier. Comment ça va Olivier ? D'où venez-vous ?"
+        },
+        {
+          "role": "J",
+          "text": "De Lille"
+        },
+        {
+          "role": "ANIM",
+          "text": "Laquelle ?"
+        },
+        {
+          "role": "J",
+          "text": "Lille dans le Nord"
+        },
+        {
+          "role": "ANIM",
+          "text": "La Réunion ? L'île de la Réunion sans doute ? Très bien. Vous êtes ? Quel métier ?"
+        },
+        {
+          "role": "J",
+          "text": "Je suis infirmière"
+        },
+        {
+          "role": "ANIM",
+          "text": "Non, « une » fermière, pas « un fermière ». Attention à ce que vous dites."
+        },
+        {
+          "role": "J",
+          "text": "Pardon"
+        },
+        {
+          "role": "ANIM",
+          "text": "Vous avez des enfants ?"
+        },
+        {
+          "role": "J",
+          "text": "Oui, 3."
+        },
+        {
+          "role": "ANIM",
+          "text": "Comment s'appellent-ils ?"
+        },
+        {
+          "role": "J",
+          "text": "Euh, Riri, Fifi et…"
+        },
+        {
+          "role": "ANIM",
+          "text": "Loulou"
+        },
+        {
+          "role": "ADVERSAIRE",
+          "text": "Oui, c'est moi !"
+        },
+        {
+          "role": "ANIM",
+          "text": "Non, tout à l'heure !"
+        },
+        {
+          "role": "J",
+          "text": "Non, Jean-Claude Vandamme le dernier ! Il a un accent."
+        },
+        {
+          "role": "ANIM",
+          "text": "Très bien, merci et bonne chance !"
+        }
+      ],
+      "note": "seul personnage avec une intervention de l'adversaire au milieu de sa propre présentation"
+    },
+    {
+      "nom": "Mickaël",
+      "sketch": "Mickaël (nouveau)",
+      "dialogue_explicite": [
+        {
+          "role": "ANIM",
+          "text": "Notre dernier candidat c'est Mickaël, bonsoir Mickaël"
+        },
+        {
+          "role": "J",
+          "text": "…"
+        },
+        {
+          "role": "J",
+          "text": "Oui, bonsoir !"
+        },
+        {
+          "role": "ANIM",
+          "text": "Quel âge avez-vous Mickaël ?"
+        },
+        {
+          "role": "J",
+          "text": "…"
+        },
+        {
+          "role": "J",
+          "text": "Oui, 40 ans."
+        },
+        {
+          "role": "ANIM",
+          "text": "Vous êtes marié ? Vous avez des enfants ?"
+        },
+        {
+          "role": "J",
+          "text": "…"
+        },
+        {
+          "role": "J",
+          "text": "Oui, je suis marié, j'ai 4 enfants."
+        },
+        {
+          "role": "ANIM",
+          "text": "Que faites-vous dans la vie ?"
+        },
+        {
+          "role": "J",
+          "text": "…"
+        },
+        {
+          "role": "J",
+          "text": "Je suis envoyé spécial à Pékin pour le journal télévisé"
+        },
+        {
+          "role": "ANIM",
+          "text": "Est-ce que ça vous ennuie de parler normalement pendant le jeu s'il-vous-plaît ?"
+        },
+        {
+          "role": "J",
+          "text": "…"
+        },
+        {
+          "role": "J",
+          "text": "Ah, oui ! Pas de problème !"
+        },
+        {
+          "role": "ANIM",
+          "text": "Merci !"
+        }
+      ],
+      "note": "chaque « … » mime un délai de 2 secondes (satellite) ; le joueur reclique pour faire apparaître sa vraie réponse"
+    }
+  ],
+  "personnages_a_relire": [
+    {
+      "titre": "François vs Vincent",
+      "repliques": [
+        "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats",
+        "Oui, bonsoir, je m'appelle François Chemise, hein, j'ai 41 ans, hein, j'habite à Martigues, hein, et je suis jongleur invisible.",
+        "C'est-à-dire François ?",
+        "Je jongle avec des objets invisibles.",
+        "Est-ce que vous pourriez nous faire une petite démonstration ?",
+        "Mais bien-sûr.",
+        "Et vous jonglez avec quoi là ?",
+        "Avec des moteurs de BX",
+        "Impressionnant ! Vous êtes marié ?",
+        "Non, je dors avec une alèse...",
+        "Une passion ?",
+        "Elvis Presley, je vais à tous ses concerts.",
+        "Mais, il est mort !",
+        "Ouais, c'est ça, oui !",
+        "Bien, bonne chance François. A vos côtés nous avons Vincent.",
+        "Oui, bonsoir, je m'appelle Vincent Journal, j'ai 39 ans, j'habite à la Queue-en-brie, et je suis garagiste pour fromage.",
+        "Marié ? Des enfants ?",
+        "Non, j'ai cassé la semaine dernière.",
+        "Un passe-temps ?",
+        "Oui je réalise des sculptures en crème solaire. Indice 15 uniquement.",
+        "Et bien merci Vincent, et bonne chance. Messieurs... est-ce que vous êtes prêts pour cette nouvelle partie de Kamoulox ?",
+        "Je ne sais pas...",
+        "Ca dépend...",
+        "A vous la main François.",
+        "Euh, je noie ma chatte et je mange un monte charge.",
+        "Joli coup. Vincent ?",
+        "Saucisse sèche et pain à la mouille",
+        "Alors : à... la... mouille... Bien joué, vous avancez de trois pansements et vous tombez en case *Génésis*, 5 secondes de Phil Collins...",
+        "*One more night...*",
+        "François ?",
+        "Je tente le double Bourvil",
+        "Alors... A...da...da... c'est une carte mystère.",
+        "Taïau, taïau, taïau...",
+        "Luminaire répondit l'écho. Bien joué, vous gardez votre réserve à crottin. Vincent : Savannah ou Jethro Tull ?",
+        "Euh... ... je torche un requin et vire Jordi d'un peep-show.",
+        "Double 10. François ?",
+        "Marc Lavoine",
+        "Je contre",
+        "Vous ne pouvez pas, il y a Benjamin Castaldi qui visite la France miniature avec son père. Vincent ?",
+        "Euh, je tape sur Bambou et je pète sur Bruce Willis",
+        "mm mm, 30 et dix de der. François ?",
+        "Je brûle un cheval et...",
+        "Kamoulox !",
+        "Bravo Vincent ! Vous êtes notre nouveau champion au Kamoulox. Un petit mot avant de se quitter, Messsieurs, s'il vous plaît.",
+        "Bol",
+        "Pile",
+        "Bonsoir, merci, et à demain."
+      ],
+      "note": "name_hits=2 start_found=False"
+    },
+    {
+      "titre": "Bruno vs Jules",
+      "repliques": [
+        "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats.",
+        "Bonsoir, je m'appelle Bruno Chouquette, j'ai 37 ans, j'habite à Reims, et je suis houhouteur",
+        "Dans quelle branche ?",
+        "Le spectacle.",
+        "Heu... on peut peut-être rappeler ce qu'est un houhouteur Bruno...",
+        "Oui, tout à fait. Et bien c'est quelqu'un qui houhoute un spectacle quand il est pas bien.",
+        "Une petite démonstration s'il vous plait.",
+        "Oui, si vous voulez : hou hou hou ! C'est pas bien ! hou hou *(14 fois)*. Voilà...",
+        "Vous êtes marié Bruno ?",
+        "Non, j'ai pris espagnol en 4^ème^.",
+        "Une passion ? Un hobby ?",
+        "Les concours de branlette",
+        "Merci Bruno et bonne chance. A vos côtés... Jules.",
+        "Bonsoir, je m'appelle Jules Klaxon, j'ai 43 ans, j'habite à Limoges, et je suis crieur de feu.",
+        "Alors, vous faites quoi exactement ?",
+        "Et bien, je me positionne au niveau d'un feu tricolore et dès qu'il passe au vert, je crie « C'est vert ! » pour prévenir l'automobiliste qui s'est assoupi.",
+        "Mm mm... marié ?",
+        "Oui oui.",
+        "Des enfants ?",
+        "Oui 3.",
+        "Ils s'appellent comment ?",
+        "Athos, Porthos et Aramis.",
+        "Un passe-temps ?",
+        "La drogue.",
+        "Merci Jules et bonne chance pour cette partie de Kamoulox. Attention : je sens des lacets ?",
+        "Saint Exupéry",
+        "Je souffle",
+        "A vous la main Bruno.",
+        "Troubadour et Jane Campion",
+        "60 croutons d'entrée. Bien joué Bruno. Jules ?",
+        "Je termine mon bounty et je loue « Voyance et manigance »",
+        "Dieu...don...né, et vous tombez en case brumisateur. Bruno : cachalot ou baise-en-ville ?",
+        "Je gerbe dans l'ascenseur et je fais couler Amarande.",
+        "Vous ne pouvez pas, il y a Philippe Risoli qui cuit des bananes en opposition. Vous retournez en case épinoche. Jules ?",
+        "Je tente le retourné créole...",
+        "Je contre !",
+        "10 de mieux Jules ! Galopin ou ravioli ?",
+        "J'essaye un nouveau chasuble et je téléphone à Jean-Louis Aubert.",
+        "Double carpette. Bien joué Jules. Bruno : canoë ou rififi ?",
+        "Je sonne chez l'abbé Pierre et je me rase le pubis.",
+        "Po...ti...ron... c'est une carte mystère.",
+        "« Qui c'est les plus forts ? Evidemment c'est les verts »",
+        "On a un bon public et les meilleurs supporters. Bien joué, vous marquez 5. Jules, c'est à vous !",
+        "Je fais du poney dans mon salon et je tète Noël Mamère !",
+        "30 merguez pour vous. Vous remontez. Bruno ?",
+        "Je regarde une pie qui pète et je... euh...",
+        "Kamoulox !!",
+        "Bravo Jules ! Vous êtes notre nouveau champion. Un petit mot, Messsieurs, avant de se quitter.",
+        "Bâche",
+        "Bulbe",
+        "Merci, bonsoir, et à demain."
+      ],
+      "note": "name_hits=2 start_found=False"
+    }
+  ],
+  "demi_phrases": [
+    "j'achète un hôtel",
+    "j'embrasse une mouche",
+    "j'essaie une robe de mariée",
+    "j'essaye un nouveau chasuble",
+    "j'imite le serpent",
+    "j'imite une brosse à dents",
+    "j'inonde mon cerf-volant",
+    "j'invite une tanche",
+    "j'écris au Pape",
+    "je barbouille un anglais",
+    "je bois du cirage",
+    "je bois un couscous",
+    "je brûle mes mocassins",
+    "je brûle un J9",
+    "je caresse un pompier",
+    "je colle une tomette",
+    "je coupe le cordon",
+    "je crapote à Montrouge",
+    "je distribue Paris boum boum",
+    "je déguise un poireau",
+    "je démonte une poule",
+    "je démonte une soupière",
+    "je fais du poney dans mon salon",
+    "je farcis un scout",
+    "je gerbe dans l'ascenseur",
+    "je jète une deuxième télé",
+    "je mange un tire-fesse",
+    "je mets un protège-slip à ma voiture",
+    "je mouche un serpentin",
+    "je nettoie mon savon",
+    "je nettoie un paysan",
+    "je noie une poule",
+    "je passe mon C.A.P.",
+    "je photocopie du sable",
+    "je pêche un tire fesse",
+    "je saigne des cheveux",
+    "je savonne Pépita",
+    "je savonne un scout",
+    "je sonne chez l'abbé Pierre",
+    "je soule mon chien",
+    "je tague un mormon",
+    "je termine mon bounty",
+    "je termine mon plat",
+    "je tire la chasse",
+    "je vends du cuir à 14 heures",
+    "je vends un plaid à Michou",
+    "je ventile jusqu'à Créteil",
+    "je vomis un store",
+    "je voyage avec mon cousin",
+    "j'achète un hôtel.",
+    "j'achète un triporteur.",
+    "j'achète un zodiaque",
+    "j'apprivoise un corner",
+    "j'attrape le scorbut.",
+    "j'enregistre Navarro",
+    "j'envoie un fa à Noël Mamère",
+    "j'habite dans ma bite",
+    "j'insulte un pingouin.",
+    "j'insulte une mouette",
+    "je broute un minou.",
+    "je couche avec du parquet flottant.",
+    "je danse avec une boite à gants",
+    "je danse le MIA",
+    "je doigte un bonhomme de neige",
+    "je déplume une girafe",
+    "je fais couler Amarande.",
+    "je fais des couettes à Pierre Bonte !",
+    "je fais le maillot à Pierre Douglas",
+    "je fais une bite au cirage à mon cheval.",
+    "je grille un Wasa.",
+    "je lave ma mère au karcher.",
+    "je loue Georges Beller.",
+    "je loue « Voyance et manigance »",
+    "je m'assois sur le visage de Rosanna Arquette.",
+    "je m'habille comme Tex.",
+    "je mange un Frère Jacques",
+    "je mange un scout d'Europe",
+    "je me marie avec Philippe Lavil",
+    "je me rase le pubis.",
+    "je me rase les jambes",
+    "je parfume un dos d'âne.",
+    "je pique le sac de Philippe Dana.",
+    "je promène les frères Nacash",
+    "je promène un Bee Gees",
+    "je pue du pull",
+    "je ressemble à Philippe Bouvard",
+    "je soule Alain Juppé",
+    "je soule Alizée au Champomy.",
+    "je suce une famille esquimau.",
+    "je traie le labrador de Bernard Montiel.",
+    "je tète Noël Mamère !",
+    "je téléphone à Jean-Louis Aubert.",
+    "je vais danser à la main jaune.",
+    "je visite Jean-Pierre Castaldi",
+    "je visite Rika Zaraï",
+    "je repasse un panini",
+    "ma femme s'appelle Maurice",
+    "je jongle avec un moine",
+    "je tète Amira Casar",
+    "je mets un protège-slip à ma voiture",
+    "je promène les frères Nacash",
+    "j'échange ma sœur",
+    "je maquille Franck Michaël",
+    "je ponce mes chaussettes",
+    "je faxe un mammouth",
+    "je défrise Darry Cowl",
+    "j'insulte un gin tonic",
+    "je mange les chaussettes de Mireille Dumas",
+    "je ranime un couscous au méchoui",
+    "j'essaie une popstar",
+    "je sniffe une merguez",
+    "je descends les poubelles",
+    "j'imite Gary Cooper",
+    "je sors l'apéro",
+    "je noie deux chatons",
+    "j'achète un hôtel",
+    "j'achète une Autobianchi",
+    "je ramasse un espagnol",
+    "j'évite le zorro",
+    "je lèche mon cousin",
+    "je pousse ma fuego",
+    "je siffle sur Henri Leconte",
+    "je ramasse une merguez",
+    "je plume une poule",
+    "je me teins en blond",
+    "j'épile le chien de Michel Drucker",
+    "je caresse le géant vert",
+    "je mange une gourmette",
+    "je décapite un chat",
+    "je visite la France miniature",
+    "je visite une figue",
+    "j'invite Alain Delon chez Flunch",
+    "je danse le zouk",
+    "j'empaille un mormon",
+    "je passe mon bac",
+    "je pète sur du parquet flottant",
+    "je rote en V-lib",
+    "j'aspire un pitbull",
+    "je rabote un sans papier",
+    "je tête Sandy Valentino",
+    "je mange une soutane",
+    "je tutoie David Charvet",
+    "je saute sur Olivier Minne",
+    "je respire du cirage",
+    "je noie une mini-miss",
+    "je lave Bernard Pivot au karcher",
+    "je tache un mur porteur",
+    "je raccompagne Joël Robuchon",
+    "je rhabille une dorade"
+  ],
+  "tentatives_mini_jeux_libres": [
+    "Je tente l'estomac",
+    "Je tente la cagette !",
+    "Je tente le *tostaki*",
+    "Je tente le Luis Régo",
+    "Je tente le double Bourvil",
+    "Je tente le double madras",
+    "Je tente le double pignon.",
+    "Je tente le motocrottes",
+    "Je tente le placoplatre ?",
+    "Je tente le retourné créole...",
+    "Je tente le sombrero malgache.",
+    "Je tente le tiramisu malgache",
+    "Je tente le traversin magique",
+    "Je tente le « tu l'as vu »"
+  ],
+  "transitions": [
+    "10 de Pâques. Bien joué ! [joueur adverse] : repoussoir ou quart de lune ?",
+    "10 de mieux et vous tombez en case « tubes de merde ». 5 secondes de pop-corn",
+    "10 de plus, vous avancez sans bouger. La main change de couleur. [joueur adverse] ?",
+    "148 + 10 vous avancez de 5 coquilles. [joueur adverse] ?",
+    "2 secondes de larsen",
+    "2+2 égalent la tête à Robert Lamoureux. Bien joué [joueur actuel] vous doublez vos gains. [joueur adverse] Bonnet de bain ou poutre apparente ?",
+    "50 points dans votre réserve à moutarde. C'est très bien joué [joueur actuel]! [joueur adverse]: Istanbul ou Gilles Jacob ?",
+    "60 croutons d'entrée. Bien joué [joueur actuel]. [joueur adverse] ?",
+    "Alors : à... la... mouille... Bien joué, vous avancez de trois pansements et vous tombez en case Génésis, 5 secondes de Phil Collins...",
+    "Bien joué ! 20 de plus, [joueur adverse] ?",
+    "Bien joué ! Vous gardez votre joker. [joueur adverse] ?",
+    "Bien joué [joueur actuel], vous marquez 8 ronrons d'entrée. [joueur adverse] : Afrique Simone ou pissenlit ?",
+    "Bien joué [joueur actuel]! Vous gardez la main.",
+    "Bien joué [joueur actuel]! [joueur adverse] : sauce malgache ou spermogramme ?",
+    "Bien joué [joueur actuel], vous gardez la main et vous avancez de 50. [joueur adverse] : Berlingo ou whisky coca ?",
+    "Bien joué vous marquez 8 merguez. [joueur adverse] : mercantile ou Savana ?",
+    "Bien joué. [joueur adverse] : Risoli ou du bédouin ?",
+    "Bien joué. Vous gardez votre permis de chasse pendant 2 secondes et vous filez en case risotto. [joueur adverse] : roubignoles ou omoplates ?",
+    "Bien joué. Vous soufflez l'as de cake et vous avancez en case bisounours. [joueur adverse] ?",
+    "Bonne réponse. Camembert vert ! [joueur adverse] ?",
+    "C'est bien joué, mais vous perdez votre joker. Attention [joueur actuel], vous n'avez plus le droit à l'erreur. [joueur adverse] : brûle tampon ou ragnagnas ?",
+    "C'est bien joué, troubadour d'entrée. Vous marquez 8. [joueur adverse] ! électron ou profiteroles ?",
+    "Camembert jaune. [joueur adverse] vous n'avez plus le choix ! Allumette ou Sisteron ?",
+    "Camembert jaune. [joueur adverse] ?",
+    "Camembert rouge. Kamel Reykjavik ou « qui suce qui ? »",
+    "Cas...tal...di... Bien joué. 4 de louche, vous tombez en case Youki. 4 secondes de Gotainer...",
+    "Chamois d'or d'entrée ! Bien joué [joueur actuel]! [joueur adverse] : Ford tonus ou la bite à Jojo ?",
+    "Double carpette. Bien joué [joueur actuel]. [joueur adverse] : canoë ou rififi ?",
+    "Double torche d'entrée. C'est très bien joué Kamel. [joueur adverse] : Istanbul ou bermuda ?",
+    "Double tranche, vous reculez pour mieux roter. Bien joué [joueur actuel]. [joueur adverse] : ratatouille ou picon-bière ?",
+    "Egalent la tête à Obispo. Bien joué. [joueur adverse] ?",
+    "Egalité ! 2 secondes de Gilles de la Tourette.",
+    "Es...to...mac... et vous tombez en case catogan. 5 secondes de Francis Lalanne.",
+    "Joli coup ! Vous faites trois tours en diagonale et vous libérez le monstre.",
+    "Joli coup. [joueur adverse] ?",
+    "Bien joué, joker blanc et dix de der. [joueur adverse] ?",
+    "Passe de 8 dans votre réserve à moutarde. Vous avancez de 65. [joueur adverse] : Jules et Jim ou carpaccio ?",
+    "Poil de 4 sur un double bingo. Bien joué. [joueur adverse] : minidou ou baygon vert ?",
+    "Vous avancez de 6 bulots. [joueur adverse] ?",
+    "Vous avancez de trois cases... [joueur adverse] : frangipane ou shampooing démêlant ?",
+    "Vous marquez 6 merguez. [joueur adverse] ?",
+    "mouais, joli coup [joueur actuel]. Vous gardez 60 et vous prenez la tête. [joueur adverse], il faut réagir là !",
+    "Bien joué vous engrangez 10 spéciales. [joueur adverse] ?",
+    "Joli coup d'entrée. Vous stoppez un mormon et vous remontez en case catogan. [joueur adverse] ?",
+    "Dix quenelles de mieux vous choisissez quelle couleur ?",
+    "Bien joué, [joueur adverse] ?",
+    "40 de plus dans votre réserve à lunettes. [joueur adverse] ?",
+    "C'est astucieux. Vous marquez trois sifflettes qui vont directement dans votre réserve. Vous tombez ou vous prenez la main ?",
+    "Bien joué vous avancez de trois melons. Nichonade ou livarot ?",
+    "Claquette ! Qu'est-ce que vous faites [joueur adverse] ?",
+    "Bien joué [joueur actuel], vous reculez mais vous ouvrez un nouveau tiroir. [joueur adverse] : magicien ou thermomètre ?",
+    "Bien joué c'est à [joueur adverse] de parler",
+    "1, 2, 3 je m'en vais au bois. 4, 5, 6 me teindre le pubis",
+    "Fraise afghane en opposition vous avancez encore de trois dos d'âne",
+    "Oui, bonne pioche et dix de der.",
+    "Oui, bravo ! Vous doublez votre capital point et vous tirez une carte mystère"
+  ],
+  "mini_defis_imitation": [
+    {
+      "transition": "1, 2, 3 et c'est le retour à la case « c'est mon vélo ». 3 secondes de Bourvil",
+      "consigne_joueur": "vous devez imiter Bourvil",
+      "consigne_animateur": "attendez que le joueur ait imité Bourvil"
+    },
+    {
+      "transition": "2 secondes de larsen",
+      "consigne_joueur": "vous devez imiter le bruit du larsen",
+      "consigne_animateur": "attendez que le joueur ait imité le larsen"
+    },
+    {
+      "transition": "Camembert jaune vous avancez de trente et vous tombez en case Canal+. 5 secondes de maxi-têtes.",
+      "consigne_joueur": "vous devez imiter le jingle Canal+ façon Guignols",
+      "consigne_animateur": "attendez la fin de l'imitation",
+      "exemple_reponse": "CA-NAL- + - C'EST - PLUS !"
+    },
+    {
+      "transition": "Bien joué vous avancez en diagonale et vous tombez en case Don Camillo. 2 secondes de Pierre Douglas.",
+      "consigne_joueur": "vous devez imiter Pierre Douglas",
+      "consigne_animateur": "attendez la fin de l'imitation",
+      "exemple_reponse": "c't'un scandale !"
+    },
+    {
+      "transition": "10 de mieux et vous tombez en case « tubes de merde ». 5 secondes de pop-corn",
+      "consigne_joueur": "Imitez le bruit du pop-corn qui explose pendant 5 secondes",
+      "consigne_animateur": "Attendez que le joueur ait imité le bruit du pop-corn",
+      "duree_secondes": 5,
+      "apres": "la main passe à [joueur adverse] après une phrase de transition"
+    },
+    {
+      "transition": "Vous ne pouvez pas, il y a Michel Drucker qui fait du vélo sur du jonc de mer. Vous reculez en case triporteur. Trois secondes de Darry Cowl",
+      "case_plateau": "Triporteur",
+      "consigne_joueur": "p p pp pp pp p p pp petit canaillou, va !",
+      "consigne_animateur": "Attendre que le joueur ait imité Darry Cowl",
+      "duree_secondes": 3,
+      "suite_animateur": "Petit canaillou !",
+      "apres": "phrase de transition qui donne la main à [joueur adverse]"
+    }
+  ],
+  "oppositions": [
+    "Aïe aïe aie [joueur actuel]! Vous ne pouvez pas ! Il y a Simon et Garfunkel qui font un concours de branlette en opposition. Il faut vous concentrer ! [joueur adverse] Grenadine ou Lee Majors ?",
+    "Et non, vous ne pouvez pas ! Il y a Bernard Darniche qui mange sa perruque en opposition. Désolé, vous retournez en case Raffarin. [joueur adverse] ?",
+    "Impossible, vous avez Madonna qui jongle avec ses seins en opposition. [joueur adverse] : 1, 2, 3... - Nous irons au bois - 4, 5, 6... - Manger du pastis",
+    "Non, non, non, non. Vous ne pouvez pas, il y a Michel Jonasz qui fait des couettes à son scooter en opposition. Vous reculez de 10 et vous tombez en case macumba. 3 secondes de reverb'.",
+    "Vous ne pouvez pas, [joueur actuel], il y a Georges Beller qui rote dans une église en opposition. Vous reculez de 50. [joueur adverse] : fantaisie ou Rod Stewart ?",
+    "Vous ne pouvez pas, il y a Phil Barney qui repeint son manteau en opposition. Vous reculez de 60 graillons, [joueur adverse] : « Y a qu'à pas » ou « hématome » ?",
+    "Vous ne pouvez pas, il y a Philippe Risoli qui cuit des bananes en opposition. Vous retournez en case épinoche. [joueur adverse] ?",
+    "Ah non ! Vous ne pouvez pas, il y a Linda Lemay qui mange sa culotte en diagonale, vous reculez donc de trois espadrilles. [joueur adverse] ?",
+    "Et non ! Regardez [joueur actuel], vous ne pouvez pas ! Il y a Michel Leeb qui peint avec de la féta en diagonale ! Vous reculez de 8 merguez. [joueur adverse] : Aladin ou Juvamine ?",
+    "Impossible [joueur actuel] : il y a Pierre Vaneck qui dessine un volcan dans sa purée en diagonale. Vous reculez de 50 et vous perdez votre carte chance. [joueur adverse] ?",
+    "Vous ne pouvez pas [joueur actuel], il y a Dany Brillant qui mange sa litière. Vous reculez de trois bémols. C'est à [joueur adverse] de parler.",
+    "Non, vous ne pouvez pas [joueur actuel], il y a Laurent Romejko qui part en classe de neige en opposition. Vous perdez votre joker. [joueur adverse] : dominos ou Bilalian ?",
+    "Vous ne pouvez pas [joueur actuel]. Vous avez Maria Carrey qui se rase la langue en opposition.",
+    "Non, [joueur actuel], vous ne pouvez pas ! Il y a Adamo qui regarde le vent en diagonale.",
+    "Impossible vous ne pouvez pas : Bruno Masure n'est jamais allé à Center Park avec un gnou. Vous filez directement en case « bouche à oreille ». [joueur adverse] : Charles Aznavour ou pizza 4 fromages ?",
+    "Non, vous ne pouvez pas, il y a un piège, Roch Voisine n'embrasse jamais avec la langue. [joueur adverse] ?",
+    "Et non, vous ne pouvez pas [joueur actuel] il y a Maître Gims qui s'autocoiffe en case risotto",
+    "Ah, non, impossible il y a Anouck Aimée qui repeint son bas ventre en diagonale. Je suis désolé vous reculez de douze canettes."
+  ],
+  "cartes_mystere_aleatoires": [
+    {
+      "declencheur": "Ma... ni... tou... carte mystère.",
+      "manches": [
+        {
+          "joueur": "0 + 0 ?",
+          "animateur": "Egalent la tête à Obispo. Bien joué. [joueur adverse] ?"
+        }
+      ]
+    },
+    {
+      "declencheur": "Ha ha ! Carte mystère...",
+      "manches": [
+        {
+          "joueur": "Tchin tchin ?",
+          "animateur": "D'Afflelou. Bien joué. Vous avancez de trois griottes. Camembert jaune. Qui a sonné à la cantine ? (la main passe au joueur adverse)"
+        }
+      ]
+    },
+    {
+      "declencheur": "Vous avez le droit, et vous avancez de deux quenelles... Ah, euh, carte mystère tout de suite pour vous !",
+      "manches": [
+        {
+          "joueur": "Allo ?",
+          "animateur": "A l'huile. Bien joué [joueur actuel]! [joueur adverse] : Véronique ou Davina ?"
+        }
+      ]
+    },
+    {
+      "declencheur": "mm mm Pi...Ka...Chu... Pi... ka... chu je répète. Carte Mystère",
+      "manches": [
+        {
+          "joueur": "Mystère... Ali ?",
+          "animateur": "Bomayé. Bien joué, vous avancez en case poupée russe. [joueur adverse] ?"
+        }
+      ]
+    },
+    {
+      "declencheur": "8 et 8 égalent 8 et c'est la carte mystère.",
+      "manches": [
+        {
+          "joueur": "Euh... B...E...N...Y...B",
+          "animateur": "Mon nom à moi c'est Benny B, oui tu l'as deviné ! Bien joué, vous marquez encore trois tapenades. [joueur adverse] ?"
+        }
+      ]
+    },
+    {
+      "declencheur": "Alors ro...to...to... c'est une carte mystère.",
+      "manches": [
+        {
+          "joueur": "Batchi fortchou tambor",
+          "animateur": "Atchi katchi katchi katchi katchac ! Bien joué, vous marquez 30 cagettes et vous passez un tour. [joueur adverse] ?"
+        }
+      ]
+    },
+    {
+      "declencheur": "10 de plus, vous avancez de 6 cases. Et c'est la carte mystère...",
+      "manches": [
+        {
+          "joueur": "C'est qui Bruno ?",
+          "animateur": "Celui qui t'encule dans le métro. Bien joué. Vous gardez vos jokers et vous attrapez une gastro. [joueur adverse] : pile ou danse ?"
+        }
+      ]
+    },
+    {
+      "declencheur": "Po...ti...ron... c'est une carte mystère.",
+      "manches": [
+        {
+          "joueur": "« Qui c'est les plus forts ? Evidemment c'est les verts »",
+          "animateur": "On a un bon public et les meilleurs supporters. Bien joué, vous marquez 5. [joueur adverse], c'est à vous !"
+        }
+      ]
+    },
+    {
+      "declencheur": "carte mystère...",
+      "manches": [
+        {
+          "joueur": "qui a bu...",
+          "animateur": "boira"
+        },
+        {
+          "joueur": "qui a vu...",
+          "animateur": "verra"
+        },
+        {
+          "joueur": "qui a mu...",
+          "animateur": "Bernard Murat. Bien joué. 40 voleurs pour vous, [joueur actuel], [joueur adverse], il faut se rattraper."
+        }
+      ],
+      "source": "Spéciale jumeaux (version authentique, remplace la transcription erronée précédente)"
+    },
+    {
+      "declencheur": "qui a bu ?",
+      "manches": [
+        {
+          "joueur": "Boira.",
+          "animateur": "Kyabi ?"
+        },
+        {
+          "joueur": "Boiru.",
+          "animateur": "Passoire américaine pour vous. [joueur actuel], que faites-vous ?"
+        }
+      ],
+      "source": "Jérôme vs Laurent — variante distincte de la carte 'qui a bu' de Spéciale jumeaux, conservée séparément",
+      "a_clarifier": "dans le texte d'origine, cet échange suit directement une opposition ; ici les rôles joueur/animateur sont inversés par rapport à la version Spéciale jumeaux"
+    },
+    {
+      "declencheur": "Carte mystère :",
+      "manches": [
+        {
+          "joueur": "sucer n'est pas tromper",
+          "animateur": "Et dans le cul ça compte pas ! Bien joué"
+        }
+      ]
+    },
+    {
+      "declencheur": "Carte mystère : [joueur actuel] Goldorak",
+      "manches": [
+        {
+          "joueur": "Anorak",
+          "animateur": "[joueur actuel] Michalak"
+        },
+        {
+          "joueur": "Cacolac",
+          "animateur": "[joueur actuel] Armagnac"
+        },
+        {
+          "joueur": "…",
+          "animateur": "et non [joueur actuel], Armagnac ne fait pas partie de la famille des mots rigolos qui se terminent en « ak », vous avez une pénalité de 10 secondes. [joueur adverse] : toile de jute ou bec de lièvre ?"
+        }
+      ]
+    },
+    {
+      "declencheur": "Carte mystère",
+      "manches": [
+        {
+          "joueur": "On s'en fout",
+          "animateur": "Laissez parler les gens"
+        },
+        {
+          "joueur": "On s'en fout",
+          "animateur": "Laissez parler les gens"
+        },
+        {
+          "joueur": "On s'en fout",
+          "animateur": "Oui, bonne réponse ! [joueur adverse]"
+        }
+      ],
+      "note": "l'animateur dit 'Laissez parler les gens' 3 fois, le joueur répond 'On s'en fout' 3 fois"
+    }
+  ],
+  "cartes_mystere_conditionnelles": [
+    {
+      "type": "demi_phrase",
+      "declencheur_action": "j'ai un retard de règles",
+      "declencheur": "tard...de...règles... et c'est une carte mystère.",
+      "manches": [
+        {
+          "joueur": "L'hiver...",
+          "animateur": "ça pèle."
+        },
+        {
+          "joueur": "euh, le voleur...",
+          "animateur": "ça pille."
+        },
+        {
+          "joueur": "Le roquefort ?",
+          "animateur": "ça pue ! Bien joué vous engrangez 10 spéciales. [joueur adverse] ?"
+        }
+      ]
+    },
+    {
+      "type": "demi_phrase",
+      "declencheur_action": "je saute sur Olivier Minne",
+      "declencheur": "O-li-vier-Minne, c'est la carte mystère.",
+      "manches": [
+        {
+          "joueur": "Vas-y ?",
+          "animateur": "Wasa. Bien joué, vous gardez votre joker. Vous avez 10 trouillons. [joueur adverse] : « vis ma vie » ou « sent du fion » ?"
+        }
+      ]
+    },
+    {
+      "type": "demi_phrase",
+      "declencheur_action": "j'attaque le Saint Moret",
+      "declencheur": "Saint... Mo... Ret... et c'est une carte mystère ?",
+      "manches": [
+        {
+          "joueur": "L...O...L...I...T...A...",
+          "animateur": "Je m'appelle Lolita. Bien joué [joueur actuel]. Vous marquez 60 points et vous sortez de prison. [joueur adverse] ?"
+        }
+      ]
+    },
+    {
+      "type": "mini_jeu",
+      "declencheur_action": "je tente le sombrero malgache",
+      "declencheur": "Alors attention : som...bré...ro... c'est une carte mystère !",
+      "manches": [
+        {
+          "joueur": "Loulou ?",
+          "animateur": "Oui, c'est moi ! Bien joué [joueur actuel], vous marquez 6 de mieux. [joueur adverse] il faut réagir !"
+        }
+      ]
+    },
+    {
+      "type": "demi_phrase",
+      "declencheur_action": "j'accompagne Guy Marchand au poney-club",
+      "declencheur": "Po...ney...club, vous tombez sur la case carte mystère.",
+      "manches": [
+        {
+          "joueur": "Maintenant que deviennent, que deviennent ?",
+          "animateur": "Les valses de Vienne. Bien joué, joker blanc et dix de der. [joueur adverse] ?"
+        }
+      ]
+    },
+    {
+      "type": "demi_phrase",
+      "declencheur_action": "je marie ma chatte",
+      "declencheur": "Ma...rie...ma...chatte. C'est la carte mystère.",
+      "manches": [
+        {
+          "joueur": "Et avec ceci ?",
+          "animateur": "Ah, ça sera tout. Merci. Bien joué. Vous garnissez votre salopette de 5 jetons. [joueur adverse] ?"
+        }
+      ]
+    },
+    {
+      "type": "mini_jeu",
+      "declencheur_action": "je tente le double Bourvil",
+      "declencheur": "Alors... A...da...da... c'est une carte mystère.",
+      "manches": [
+        {
+          "joueur": "Taïau, taïau, taïau...",
+          "animateur": "Luminaire répondit l'écho. Bien joué, vous gardez votre réserve à crottin. [joueur adverse] : Savannah ou Jethro Tull ?"
+        }
+      ]
+    },
+    {
+      "type": "mini_jeu",
+      "declencheur_action": "je tente le Luis Régo",
+      "declencheur": "Luis... Ré... go... c'est une carte mystère.",
+      "manches": [
+        {
+          "joueur": "J'voudrais bien",
+          "animateur": "Oui, mais j'peux point. Bien joué. 40 lingettes pour vous. [joueur adverse] ?"
+        }
+      ]
+    },
+    {
+      "type": "mini_jeu",
+      "declencheur_action": "je tente le tourniquet corse",
+      "declencheur": "Rou... ma... nov, c'est une carte mystère !",
+      "manches": [
+        {
+          "joueur": "Atchoum !",
+          "animateur": "A vos souhaits ! Bien joué, vous marquez 60. [joueur adverse] ?"
+        }
+      ],
+      "source": "Didier vs Raoul"
+    },
+    {
+      "type": "mini_jeu",
+      "declencheur_action": "je tente le tourniquet créole",
+      "declencheur": "Décalé catow décalé catow, carte mystère",
+      "manches": [
+        {
+          "joueur": "Tu pues du cul, tu sens du bec",
+          "animateur": "Tu prends mon cul pour une trompette ! Bravo. 6 de cœur ou reblochon ?"
+        }
+      ],
+      "source": "miettes"
+    }
+  ],
+  "demi_phrases_interdites_en_premiere_position": [
+    "j'ai un retard de règles",
+    "je saute sur Olivier Minne",
+    "j'attaque le Saint Moret",
+    "j'accompagne Guy Marchand au poney-club",
+    "je marie ma chatte",
+    "je visite Jean-Pierre Castaldi"
+  ],
+  "je_contre": [
+    "Je contre et j'arrive un lundi",
+    "Je contre rote !",
+    "Je contre et j'organise une boum avec l'Elysée",
+    "Je contre et je porte une gourmette en pull.",
+    "Je contre et j'avance en rotant"
+  ],
+  "echanges_duo": [
+    {
+      "nom": "pousse / lâche",
+      "j1": "Je pousse !",
+      "j2": "Je lâche !",
+      "animateur": "Bien joué [joueur actuel]! Vous gardez la main."
+    }
+  ],
+  "mini_jeux": [
+    {
+      "nom": "triple ousse",
+      "type": "chaine_devinettes",
+      "echange": [
+        "Je tente le triple « ousse »",
+        "Le savon ?",
+        "mousse ?",
+        "Le moteur ?",
+        "tousse ?",
+        "André ?",
+        "Pousse"
+      ],
+      "resolution": "50 points dans votre réserve à moutarde. C'est très bien joué [joueur actuel]! [joueur adverse] : Istanbul ou Gilles Jacob ?"
+    },
+    {
+      "nom": "traversin magique",
+      "type": "defi_imitation",
+      "echange": [
+        "Je tente le traversin magique",
+        "6 + 6 égalent la tête à Dominique Baudis et vous tombez en case St Tropez. 10 secondes de Galabru.",
+        "Ah ! Cruchot !"
+      ],
+      "a_clarifier": "notée comme 'extrait vidéo ?' par l'utilisateur - à trancher (texte seul ou clip vidéo)"
+    },
+    {
+      "nom": "grand couloir",
+      "type": "defi_rime",
+      "echange": [
+        "Oh, je tente le grand couloir…",
+        "Contre buse !",
+        "Point gamma. Attention je viens de Genève, je répète : « Danse si tu as la pointure »",
+        "J'aime ton cul…",
+        "qui pue",
+        "qui pète",
+        "Comme une trompette !"
+      ],
+      "resolution": "Bien joué vous avancez de trois melons. Nichonade ou livarot ?",
+      "a_clarifier": "attribution exacte des répliques (qui parle : joueur / animateur / adversaire) à confirmer"
+    },
+    {
+      "nom": "qu'est-ce qui est jaune et qui traverse les murs",
+      "type": "chaine_devinette_simple",
+      "echange": [
+        "Qu'est-ce qui est jaune et qui traverse les murs ?",
+        "Oscar Wilde"
+      ],
+      "resolution": "Oui, égalité, 10 à 4"
+    }
+  ],
+  "ouverture": [
+    {
+      "anim_intro": "Parfait. Messieurs nous allons pouvoir commencer. Rouge ou Battiston ?",
+      "reponse_j1": "Sylvain Mirouf.",
+      "reponse_j2": "Je rote !",
+      "tour_final": "C'est à vous [J1] de parler."
+    },
+    {
+      "anim_intro": "Bien, messieurs, bonne chance, nous allons commencer cette nouvelle partie de Kamoulox. Rouge, ou passe ?",
+      "reponse_j1": "Sylvie Vartan",
+      "reponse_j2": "Je casse",
+      "tour_final": "A vous [J2]."
+    },
+    {
+      "anim_intro": "Parfait ! [J1] et [J2], nous allons commencer la partie. Qui regarde ses pieds ?",
+      "reponse_j1": "La reine d'Angleterre en VTT",
+      "reponse_j2": "Euh, je passe...",
+      "tour_final": "Très bien. A vous [J2]. Jus de gomme ou parasol ?"
+    },
+    {
+      "anim_intro": "Bien ! On va pouvoir commencer cette partie de Kamoulox. Qui a dit ?",
+      "reponse_j1": "Jules Joffrin",
+      "reponse_j2": "Laurent Malet",
+      "tour_final": "Trois fois trois cérumen, c'est à [J2] de parler."
+    },
+    {
+      "anim_intro": "Bien ! Nous allons commencer cette partie de Kamoulox. Je passe sous la lune...",
+      "reponse_j1": "Herbert Léonard",
+      "reponse_j2": "Pas mieux...",
+      "tour_final": "A vous la main [J2]..."
+    },
+    {
+      "anim_intro": "D'accord [joueur actuel]. Le jeu peut commencer. Quelle couleur [J1] ?",
+      "reponse_j1": "Catherine de Médicis",
+      "reponse_j2": "[J2], le huit de pique... Carpette",
+      "tour_final": "C'est à [J1] de parler"
+    },
+    {
+      "anim_intro": "Bien. On va pouvoir commencer cette partie. Ma doudou joue du biniou",
+      "reponse_j1": "Pierre Billon",
+      "reponse_j2": "Je passe",
+      "tour_final": "A vous la main [J1]"
+    },
+    {
+      "anim_intro": "Bien ? Nous allons pouvoir commencer ce nouveau Kamoulox. Attention : qu'est-ce qui brille au fond du slip ?",
+      "reponse_j1": "Le colonel Moutarde ?",
+      "reponse_j2": "Un millefeuille ?",
+      "tour_final": "A vous la main [J2]."
+    },
+    {
+      "anim_intro": "Merci [joueur actuel]. Bien messieurs nous allons pouvoir commencer cette nouvelle partie de Kamoulox. Le tirage au sort vous a désigné [J1]. A vous de lancer le dé.",
+      "reponse_j1": "Le quatre.",
+      "reponse_j2": "Le seize !",
+      "etapes_finales": [
+        {
+          "role": "J1",
+          "text": "Je la laisse"
+        },
+        {
+          "role": "J2",
+          "text": "Je la prends."
+        },
+        {
+          "role": "J1",
+          "text": "Je contre !"
+        }
+      ],
+      "tour_final": "A vous [J2] !"
+    },
+    {
+      "anim_intro": "Bien ! Messieurs, bonne chance pour cette nouvelle partie de Kamoulox. [joueur actuel], vous êtes désigné, c'est à vous de lancer le dé.",
+      "reponse_j1": "Le 4.",
+      "reponse_j2": "Le 80 !",
+      "tour_final": "C'est à [joueur actuel] de commencer."
+    },
+    {
+      "anim_intro": "Messieurs, nous commençons. Kiss ou Britney Spears ?",
+      "reponse_j1": "Salade de fruit",
+      "reponse_j2": "oh, pas mieux.",
+      "tour_final": "A vous de jouer [J2]."
+    },
+    {
+      "anim_intro": "Bien, merci [joueur actuel] et bonne chance, je crois qu'il est temps de commencer cette nouvelle partie de Kamoulox. [J1], [J2], quelle est la couleur du vent ?",
+      "reponse_j1": "Etienne Chicot",
+      "reponse_j2": "XT 500 ?",
+      "tour_final": "A vous la main [J2]."
+    },
+    {
+      "anim_intro": "Bien. Nous allons pouvoir commencer cette partie de Kamoulox. [J1], [J2], attention : quelle était l'heure de son repas ?",
+      "reponse_j1": "Une pièce jaune ?",
+      "reponse_j2": "Sacha Distel ?",
+      "tour_final": "[J1], à vous de jouer"
+    },
+    {
+      "anim_intro": "Très bien messieurs, on va pouvoir commencer cette partie. [J1], à vous de jeter le dé.",
+      "reponse_j1": "Le 8",
+      "reponse_j2": "Le 3",
+      "tour_final": "A vous [J2]."
+    },
+    {
+      "anim_intro": "Bien nous allons pouvoir commencer. Messieurs... Laurent Cabrol...",
+      "reponse_j1": "1515 (affiché sur les 2 écrans en même temps avec retour haptique)",
+      "reponse_j2": null,
+      "tour_final": "A vous la main [premier joueur à avoir cliqué].",
+      "a_clarifier": "mini-jeu de rapidité (buzz) plutôt qu'un vrai dialogue - les 2 joueurs répondent en même temps"
+    },
+    {
+      "anim_intro": "Et bien merci [joueur actuel], et bonne chance. Messieurs... est-ce que vous êtes prêts pour cette nouvelle partie de Kamoulox ?",
+      "reponse_j1": "Je ne sais pas...",
+      "reponse_j2": "Ca dépend...",
+      "tour_final": "A vous la main [J1]."
+    },
+    {
+      "anim_intro": "Très bien nous allons pouvoir commencer cette partie, Messieurs. Pim, pam...",
+      "reponse_j1": "Ivry Gitlis",
+      "reponse_j2": "Je suis",
+      "tour_final": "A vous la main [J1]."
+    },
+    {
+      "anim_intro": "Merci [joueur actuel] et bonne chance pour cette partie de Kamoulox. Attention : je sens des lacets ?",
+      "reponse_j1": "Saint Exupéry",
+      "reponse_j2": "Je souffle",
+      "tour_final": "A vous la main [J2]."
+    },
+    {
+      "anim_intro": "Bien, d'accord, et bien bonne chance à vous aussi [joueur actuel] la partie peut commencer. [J1], [J2] : l'orteil est le meilleur ami de l'homme...",
+      "reponse_j1": "Natacha Amal",
+      "reponse_j2": "Je passe",
+      "tour_final": "A vous la main [J2]."
+    },
+    {
+      "anim_intro": "Bien, nous allons commencer cette nouvelle partie de Kamoulox. 4 et 4 ?",
+      "reponse_j1": "Michel Stroganoff",
+      "reponse_j2": "Je passe",
+      "tour_final": "C'est à vous la main [J2]."
+    },
+    {
+      "anim_intro": "Très bien, bonne chance à tous les deux la partie de Kamoulox peut commencer. [J1], [J2], donnez-moi un chiffre s'il-vous plaît.",
+      "reponse_j1": "Hertakit",
+      "reponse_j2": "Ah, sans moi !",
+      "tour_final": "A vous la main [J2] !",
+      "source": "Didier vs Raoul"
+    },
+    {
+      "anim_intro": "Je compte jusqu'à 5 et je tombe sur rouge, soit deux heures avant la lettre R, c'est à [J1] de commencer.",
+      "reponse_j1": null,
+      "reponse_j2": null,
+      "tour_final": "c'est à [J1] de commencer.",
+      "a_clarifier": "format court sans les 2 réponses rituelles habituelles",
+      "source": "Gaspard vs Francis"
+    },
+    {
+      "anim_intro": "[J1] le tirage au sort vous a désigné, c'est à vous d'ouvrir le bal. Amira Kasar ou Trivago ?",
+      "reponse_j1": null,
+      "reponse_j2": null,
+      "tour_final": "À vous [J1].",
+      "note": "pas de réponse de J2 ; J1 entame directement la partie, sans échange préalable"
+    },
+    {
+      "anim_intro": "Bien, maintenant que les présentations sont faites nous allons pouvoir commencer une nouvelle partie de Kamoulox. Qui a bu ?",
+      "reponse_j1": "Louis XIV",
+      "reponse_j2": null,
+      "tour_final": "Très bonne réponse, c'est à vous de parler [J1]",
+      "note": "aucune intervention de J2 attendue ici non plus"
+    }
+  ],
+  "fins": [
+    "Bravo ! Bien joué [gagnant] ! Vous êtes notre finaliste. On se retrouve demain pour un nouveau Kamoulox. Et, évidemment, un petit mot avant de se quitter. Messieurs...",
+    "Bravo ! Bien joué [gagnant] !! Vous êtes notre finaliste. On se retrouve demain pour un nouveau Kamoulox. Un petit mot avant de se quitter, messieurs...",
+    "Oh !! Bravo ! Bien joué [gagnant] ! Vous êtes notre finaliste. On se retrouve bien sûr demain pour un autre Kamoulox. Un dernier mot avant de se quitter Messieurs...",
+    "Ouh ! Bravo [gagnant] ! Vous êtes notre finaliste. Evidemment on se retrouve demain pour un autre Kamoulox. Et, un petit mot avant de se quitter. Messieurs...",
+    "Bravo [gagnant] ! Vous êtes notre nouveau champion. Un petit mot comme d'habitude, avant de se quitter...",
+    "Bravo [gagnant] ! Vous êtes notre nouveau finaliste. On se retrouve demain pour un nouveau Kamoulox. Un petit mot avant de se quitter Messieurs...",
+    "Bravo [gagnant] ! Vous êtes notre finaliste ! On se retrouve demain pour un autre Kamoulox et évidemment un p'tit mot avant de se quitter Messieurs...",
+    "Bravo [gagnant]. Vous êtes notre nouveau champion ! Messieurs un petit mot avant de se quitter s'il vous plait...",
+    "Bien joué [gagnant] ! Vous êtes notre nouveau finaliste. Et évidemment, un petit mot avant de se quitter messieurs ?",
+    "Bravo [gagnant]. Vous êtes notre finaliste ! On se retrouve bien sûr demain pour un autre kamoulox et évidemment, un petit mot avant de se quitter, messieurs...",
+    "Bravo [gagnant] ! [gagnant] vous êtes notre nouveau champion au Kamoulox. Messieurs un petit mot avant de se quitter...",
+    "Bravo [gagnant] ! Vous êtes notre nouveau champion. Une petite tradition, un petit mot avant de se quitter. Messieurs...",
+    "Bravo [gagnant] ! Vous êtes notre nouveau champion. Messieurs, la tradition, un petit mot avant de se quitter...",
+    "Bravo [gagnant] ! Vous êtes notre nouveau finaliste. On se retrouve demain pour un autre Kamoulox, et évidemment un petit mot avant de se quitter. Messieurs ?",
+    "Bravo [gagnant] ! Vous êtes notre finaliste. On se retrouve demain pour un autre Kamoulox. Et, évidemment, un petit mot avant de se quitter. Messieurs...",
+    "Bravo ! Bien joué [gagnant] ! Vous êtes notre finaliste. On se retrouve demain pour un nouveau Kamoulox. Et, évidemment, un petit mot avant de se quitter. Messieurs...",
+    "Bravo [gagnant] ! Vous êtes notre nouveau champion au Kamoulox. Un petit mot avant de se quitter, Messieurs, s'il vous plaît.",
+    "Bravo [gagnant] ! Vous êtes notre nouveau champion. Un petit mot avant de se quitter, Messieurs, s'il vous plaît.",
+    "Bravo [gagnant] ! Vous êtes notre nouveau champion. Un petit mot, Messieurs, avant de se quitter.",
+    "Bravo [gagnant] ! Vous êtes notre finaliste ! On se retrouve demain pour un autre Kamoulox et évidemment, un petit mot avant de se quitter Messieurs...",
+    "Et bravo [gagnant], vous êtes notre nouveau champion. Un petit mot avant de se quitter messieurs s'il vous plaît…"
+  ],
+  "notes_a_clarifier": [
+    "Nouvelle règle notée : après une opposition de l'animateur, la main passe toujours à l'adversaire (comportement à coder).",
+    "Nouvelle exigence notée : retour haptique (vibration) pour signaler à chacun (joueurs + animateur) que c'est à son tour de jouer.",
+    "Générique vidéo envisagé au tout début ET à la toute fin de la partie uniquement — pas d'autres sources externes (audio/vidéo) ailleurs dans le jeu pour limiter la complexité.",
+    "banque 'phrases_courtes' : premier jet (4 exemples vérifiés dans le corpus), à étoffer avant usage réel",
+    "Règle des 'je tente' : offertes UNE seule fois par partie, réservées au joueur prédéterminé perdant, en remplacement de sa case 'phrase courte' après quelques échanges."
+  ],
+  "plateau_visuel": {
+    "statut": "mécanique identifiée, déclenchement NON géré pour le moment (mis de côté volontairement)",
+    "principe": "Un plateau avec des icônes s'affiche derrière les candidats. Un curseur se déplace au hasard dessus dès qu'un mot de 3 syllabes est découpé dans une réponse. La case atteinte n'a aucun impact réel, c'est un pur effet visuel.",
+    "asset": "image fournie par l'utilisateur (grille 5x5, icônes : banane, bateau, triporteur, ciseaux, fromage, Youki, parapluie, tambour, 'c'est mon vélo', oreilles, St Tropez, catogan, lunettes, 'au théâtre ce soir', panneau interdiction, as de pique, plusieurs cases '?')"
+  },
+  "demi_phrases_a_trier": [
+    "sous-pull rouge et jambe en skaï",
+    "michoko et jupe culotte",
+    "frangipane et porte battante",
+    "je risque 5 croutons, mais je demande à la banque de brosser calepin (structure avec 'mais' au lieu de 'et')",
+    "je dramatise et je repeins mon voisin (précédé de « je crois que j'ai vraiment pas le choix »)",
+    "une reine sans champignons",
+    "mouflon en D4 vous faites quoi ?",
+    "serviette à trou"
+  ],
+  "fragments_libres_a_trier": [
+    "Je garde"
+  ],
+  "phrases_intro_jeu": [
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats, voici [J1]. Bonsoir [J1].",
+      "sketch": "Damien vs Jean-François"
+    },
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats.",
+      "sketch": "Herbert vs Steeve"
+    },
+    {
+      "texte": "Bonsoir à tous et bienvenue au Kamoulox, avec deux nouveaux candidats qui vont se présenter. Tout d'abord [J1]. Bonsoir [J1].",
+      "sketch": "René vs Etienne"
+    },
+    {
+      "texte": "Bonsoir et bienvenue à cette nouvelle partie de Kamoulox, avec deux nouveaux candidats et parmi eux [J1] Quéquette. Bonsoir [J1]. J'imagine qu'on a dû vous faire plusieurs fois des petites allusions !",
+      "sketch": "Dominique vs Didier"
+    },
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats. A droite, [J1].",
+      "sketch": "Germain vs Noël"
+    },
+    {
+      "texte": "Bonsoir à tous et bienvenue dans le Kamoulox, avec deux nouveaux candidats, sur votre gauche [J1]. Bonsoir [J1].",
+      "sketch": "Michel vs Gérald"
+    },
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats. A gauche, [J1]. Bonsoir [J1].",
+      "sketch": "Gilou vs Hervé"
+    },
+    {
+      "texte": "Bonsoir à tous voici un nouveau Kamoulox, avec deux candidats, qui vont comme d'habitude se présenter. Bonsoir [J1].",
+      "sketch": "Jérôme vs Laurent"
+    },
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats.",
+      "sketch": "Sylvain vs Bertrand (+ verre d'eau)"
+    },
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats.",
+      "sketch": "Théo vs Sam"
+    },
+    {
+      "texte": "Bonsoir à tous et bienvenue au Kamoulox, avec deux nouveaux candidats que je vous présente. A ma gauche [J1]. Bonsoir [J1].",
+      "sketch": "Nervieux vs Paul"
+    },
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats.",
+      "sketch": "Gaël vs Michel"
+    },
+    {
+      "texte": "Bienvenue au Kamoulox, avec ce soir deux sympathiques candidats, à droite, c'est [J1]. Bonsoir [J1].",
+      "sketch": "Yvon vs Daniel"
+    },
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats. A droite, [J1]. Bonsoir [J1], pouvez-vous vous présenter ?",
+      "sketch": "Bertrand (+ perruque + dessin moche) vs Gilles"
+    },
+    {
+      "texte": "Bienvenue au Kamoulox, avec deux nouveaux candidats. Bonsoir [J1].",
+      "sketch": "Kamel vs Hector"
+    },
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats. Bonsoir [J1]",
+      "sketch": "Laurent vs Lilian"
+    },
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats. Bonsoir Laurent",
+      "sketch": "Sacha vs Renaud"
+    },
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox spécial jumeaux avec Philippe et [J1] Hivernage. Alors qui est Philippe, qui est [J1] ? C'est vrai qu'il n'est pas facile de vous différencier.",
+      "sketch": "Spéciale jumeaux"
+    },
+    {
+      "texte": "Bonsoir et bienvenue au Kamoulox avec deux nouveaux candidats.",
+      "sketch": "Didier vs Raoul"
+    },
+    {
+      "texte": "Bienvenue au Kamoulox avec deux nouveaux candidats. A droite [J1]. Bonsoir [J1]. Pouvez-vous vous présenter ?",
+      "sketch": "Gaspard vs Francis"
+    }
+  ],
+  "phrases_jonction": [
+    {
+      "texte": "Eh bien, bonne chance à vous [joueur actuel] car à vos côtés voici [J2]. Bonsoir [J2].",
+      "sketch": "Damien vs Jean-François"
+    },
+    {
+      "texte": "Merci [joueur actuel]! A vos côtés, [J2]...",
+      "sketch": "Herbert vs Steeve"
+    },
+    {
+      "texte": "Parfait. A vos côtés [J2]. Bonsoir [J2]",
+      "sketch": "René vs Etienne"
+    },
+    {
+      "texte": "Mmm mmm je comprends mieux. A vos côtés il y a [J2]. Bonsoir [J2] !",
+      "sketch": "Dominique vs Didier"
+    },
+    {
+      "texte": "Très très bien ! Merci : Très impressionnant ! A côté de vous [J2].",
+      "sketch": "Germain vs Noël"
+    },
+    {
+      "texte": "Parfait ! Merci [joueur actuel] ! A vos côtés, [J2]. Bonsoir [J2] !",
+      "sketch": "Michel vs Gérald"
+    },
+    {
+      "texte": "Ah bon ... non, pas grave, laissez tomber ! A vos côtés il y a [J2]. Bonsoir [J2].",
+      "sketch": "Gilou vs Hervé"
+    },
+    {
+      "texte": "Oh ! Désolé [joueur actuel] ! Bien à vos côtés [J2]. Bonsoir [J2]",
+      "sketch": "Jérôme vs Laurent"
+    },
+    {
+      "texte": "Merci [joueur actuel] et bonne chance ! A vos côtés, [J2].",
+      "sketch": "Sylvain vs Bertrand (+ verre d'eau)"
+    },
+    {
+      "texte": "Très bien, bonne chance [joueur actuel]. A vos côtés Nous avons [J2].",
+      "sketch": "Théo vs Sam"
+    },
+    {
+      "texte": "Très bien [joueur actuel]. Bonne chance à vous car à vos côtés il y a [J2] Septivon qui nous vient de Guadeloupe c'est bien ça ?",
+      "sketch": "Nervieux vs Paul"
+    },
+    {
+      "texte": "Merci [joueur actuel] et bonne chance. A vos côtés [J2].",
+      "sketch": "Gaël vs Michel"
+    },
+    {
+      "texte": "Ah, très bien. Bonne chance. [joueur actuel], à vos côtés il y a [J2]. Bonsoir [J2].",
+      "sketch": "Yvon vs Daniel"
+    },
+    {
+      "texte": "Merci [joueur actuel], et bonne chance. A vos côtés [J2].",
+      "sketch": "Bertrand (+ perruque + dessin moche) vs Gilles"
+    },
+    {
+      "texte": "Merci [joueur actuel]. A vos côtés... [J2].",
+      "sketch": "Kamel vs Hector"
+    },
+    {
+      "texte": "Parfait, bonne chance [joueur actuel]. A vos côtés, c'est [J2]. Bonsoir [J2].",
+      "sketch": "Laurent vs Lilian"
+    },
+    {
+      "texte": "Bien, à vos côtés, [J2].",
+      "sketch": "Sacha vs Renaud"
+    },
+    {
+      "texte": "Merci [joueur actuel]. A côté de vous votre frère jumeau [J2]. C'est bien ça ?",
+      "sketch": "Spéciale jumeaux"
+    },
+    {
+      "texte": "Très bien, bonne chance. [joueur actuel], à vos côtés [J2].",
+      "sketch": "Didier vs Raoul"
+    },
+    {
+      "texte": "Très bien [joueur actuel], bonne chance pour ce Kamoulox à côté de vous [J2]. Bonsoir [J2] !",
+      "sketch": "Gaspard vs Francis"
+    }
+  ],
+  "stats_personnages": {
+    "total_personnages": 40,
+    "prenoms_distincts": 36,
+    "prenoms_en_double": {
+      "Didier": [
+        "Dominique vs Didier",
+        "Didier vs Raoul"
+      ],
+      "Michel": [
+        "Michel vs Gérald",
+        "Gaël vs Michel"
+      ],
+      "Laurent": [
+        "Jérôme vs Laurent",
+        "Laurent vs Lilian"
+      ],
+      "Bertrand": [
+        "Sylvain vs Bertrand (+ verre d'eau)",
+        "Bertrand (+ perruque + dessin moche) vs Gilles"
+      ]
+    }
+  },
+  "phrases_courtes": [
+    "Junker à lunettes !",
+    "Force jaune...",
+    "Jacques Balutin !!",
+    "Mocambo !",
+    "Tonton Mayonnaise",
+    "Dynamo et broute chou-fleur ?",
+    "Histoire naturelle et Michel Strogoff",
+    "Pâté de foie",
+    "Je mise une motocrotte en rouge de cœur",
+    "Code barre et chapeau melon",
+    "Salade de fruit et crème anglaise",
+    "J'inonde un pense-bête",
+    "J'écris mon nom dans la neige avec mon urine",
+    "Tatayé",
+    "Barbabulle",
+    "Café turc et collagène"
+  ],
+  "monosyllabes": [
+    "Pipe",
+    "Caisse",
+    "Poulpe",
+    "Bic",
+    "Pâte",
+    "Buse",
+    "Bulle",
+    "Bague",
+    "Zut",
+    "Splash",
+    "Ouf",
+    "Clic"
+  ],
+  "board_grid": {
+    "cols": 5,
+    "rows": 5,
+    "image": "plateau.jpg",
+    "cellules_nommees": {
+      "St Tropez": {
+        "row": 2,
+        "col": 4
+      },
+      "Catogan": {
+        "row": 3,
+        "col": 2
+      },
+      "Au théâtre ce soir": {
+        "row": 4,
+        "col": 0
+      },
+      "Triporteur": {
+        "row": 0,
+        "col": 3
+      },
+      "Youki": {
+        "row": 1,
+        "col": 2
+      },
+      "Don Camillo": {
+        "row": 0,
+        "col": 0
+      },
+      "C'est mon vélo !": {
+        "row": 2,
+        "col": 1
+      }
+    },
+    "note": "grille 5x5, image 1012x616px ; positions calculées en % pour s'adapter à la taille affichée ; les cases '?' sont réservées aux cartes mystère et exclues des déplacements aléatoires neutres",
+    "cellules_interdites_hasard": [
+      {
+        "row": 1,
+        "col": 0
+      },
+      {
+        "row": 1,
+        "col": 4
+      },
+      {
+        "row": 2,
+        "col": 2
+      },
+      {
+        "row": 3,
+        "col": 1
+      },
+      {
+        "row": 4,
+        "col": 3
+      }
+    ]
+  },
+  "tentatives_mini_jeux": [
+    {
+      "nom": "double pignon",
+      "type": "carte_mystere_libre"
+    },
+    {
+      "nom": "triple ousse",
+      "type": "dialogue_chain_then_transition",
+      "echange": [
+        "Le savon ?",
+        "mousse ?",
+        "Le moteur ?",
+        "tousse ?",
+        "André ?",
+        "Pousse"
+      ],
+      "transition_apres": true
+    },
+    {
+      "nom": "motocrottes",
+      "type": "carte_mystere_libre"
+    },
+    {
+      "nom": "placoplatre",
+      "type": "repeat_tap",
+      "repetitions": 9,
+      "texte_repete": "L'abeille coule, l'abeille coule…",
+      "texte_final": "La belle couille !",
+      "haptique_a_chaque_fois": true
+    },
+    {
+      "nom": "sombrero malgache",
+      "type": "carte_mystere_conditionnelle_ref",
+      "ref": "je tente le sombrero malgache"
+    },
+    {
+      "nom": "morve au nez",
+      "type": "dialogue_chain_then_transition",
+      "echange": [
+        "Qui a du caca kaki ?",
+        "Collé au cucul ?"
+      ],
+      "transition_apres": true
+    },
+    {
+      "nom": "traversin magique",
+      "type": "imitation_avec_case",
+      "case": "St Tropez",
+      "duree_secondes": 10,
+      "personnalite": "Galabru",
+      "consigne_joueur": "Imitez Galabru dans « Le gendarme à St Tropez » — indice : vous pouvez utiliser « Ah ! Cruchot ! »",
+      "consigne_animateur": "Attendez que le joueur ait imité Galabru",
+      "formule": "6 + 6 égalent la tête à Dominique Baudis et vous tombez en case St Tropez. 10 secondes de Galabru."
+    },
+    {
+      "nom": "tiramisu malgache",
+      "type": "forced_opposition",
+      "note": "l'animateur doit utiliser une opposition, même si le joueur ciblé en a déjà subi une (exception à la règle d'1 fois par candidat)"
+    },
+    {
+      "nom": "Jean de Florette",
+      "type": "carte_mystere_libre_ref",
+      "ref_declencheur": "qui a bu ?",
+      "note": "utilise la carte mystère 'qui a bu / Kyabi' (variante Jérôme vs Laurent)"
+    },
+    {
+      "nom": "double madras",
+      "type": "carte_mystere_libre"
+    },
+    {
+      "nom": "tu l'as vu",
+      "type": "repeat_tap_reveal",
+      "intro": "Attention vous avez 5 secondes.",
+      "repetitions": 2,
+      "texte_repete": "…",
+      "texte_final": "Sacha Guitry !"
+    },
+    {
+      "nom": "tostaki",
+      "type": "dialogue_chain_then_transition",
+      "echange": [
+        "Claude-Jean Philippe ?",
+        "Philippe Katherine",
+        "Catherine Larra ?",
+        "Lara Fabian !"
+      ],
+      "transition_apres": true
+    },
+    {
+      "nom": "estomac",
+      "type": "imitation_avec_case",
+      "case": "Catogan",
+      "duree_secondes": 5,
+      "personnalite": "Francis Lalanne",
+      "consigne_joueur": "vous devez chanter : « La première fois qu'on m'a dit je t'ai-ai-ai-aime, c'est un mac qui me l'a dit » (ou une autre phrase de Francis Lalanne)",
+      "consigne_animateur": "Attendez que le joueur ait imité Francis Lalanne",
+      "formule": "Es...to...mac... et vous tombez en case catogan. 5 secondes de Francis Lalanne."
+    },
+    {
+      "nom": "cagette",
+      "type": "imitation_flash",
+      "formule": "2 secondes de larsen",
+      "duree_secondes": 2,
+      "consigne_joueurs": "(fermez les yeux, serrez les dents)",
+      "consigne_animateur": "Imitez un bruit de larsen le plus fort possible pendant 2 secondes en vous bouchant les oreilles",
+      "effet_visuel": "grosse lumière rouge clignotante"
+    },
+    {
+      "nom": "double Bourvil",
+      "type": "carte_mystere_conditionnelle_ref",
+      "ref": "je tente le double Bourvil"
+    },
+    {
+      "nom": "retourné créole",
+      "type": "forced_contre_adversaire",
+      "note": "l'adversaire doit contrer, même s'il a déjà utilisé son contre (exception à la règle d'1 fois par partie) ; bouton contre mis en surbrillance avec retour haptique"
+    },
+    {
+      "nom": "Luis Régo",
+      "type": "carte_mystere_conditionnelle_ref",
+      "ref": "je tente le Luis Régo"
+    },
+    {
+      "nom": "tourniquet corse",
+      "type": "carte_mystere_conditionnelle_ref",
+      "ref": "je tente le tourniquet corse"
+    },
+    {
+      "nom": "grand couloir",
+      "type": "forced_contre_adversaire_scripted",
+      "contre_force_texte": "Contre buse !",
+      "echange": [
+        "Point gamma. Attention je viens de Genève, je répète : « Danse si tu as la pointure »",
+        "J'aime ton cul…",
+        "qui pue",
+        "qui pète",
+        "Comme une trompette !"
+      ],
+      "transition_apres": true
+    },
+    {
+      "nom": "toupie manouche",
+      "type": "dialogue_chain_then_transition",
+      "echange": [
+        "Thor ?",
+        "pédo",
+        "Terre ?",
+        "minus",
+        "Tir ?",
+        "Lipimpon"
+      ],
+      "transition_apres": true,
+      "resolution_fixe": "Oui ! Bonne réponse ! Bien joué. Vous avancez de trois nems. [joueur adverse]."
+    },
+    {
+      "nom": "Manu Dibango",
+      "type": "carte_mystere_libre",
+      "note": "'Ma... nu... Di... Ban... Go...' déclenche une carte mystère (aléatoire, non conditionnelle)"
+    }
+  ],
+  "evenements_speciaux": [
+    {
+      "declencheur": "je pause",
+      "type": "compte_a_rebours_photo",
+      "consigne_joueur": "Prenez la pose pour une photo",
+      "effets_ecran_central": [
+        "compte à rebours 5-4-3-2-1",
+        "bruit d'obturateur photo (fichier à ajouter par l'utilisateur)",
+        "flash blanc"
+      ],
+      "apres": "la main passe à [joueur adverse]"
+    },
+    {
+      "declencheur_transition": "5 secondes de Gilles de la Tourette.",
+      "type": "haptique_double",
+      "texte_joueurs": "Vous êtes atteint du syndrome de Gilles de la Tourette",
+      "texte_animateur": "Les joueurs sont atteints du syndrome de Gilles de la Tourette",
+      "duree_secondes": 5,
+      "apres": "après les 5 secondes, une phrase de liaison donne la main à [joueur adverse]"
+    },
+    {
+      "declencheur_phrase_courte": "J'écris mon nom dans la neige avec mon urine",
+      "type": "tirade_surprise",
+      "echange": [
+        {
+          "role": "ANIM",
+          "text": "en majuscules ?"
+        },
+        {
+          "role": "J",
+          "text": "oui en majuscules"
+        },
+        {
+          "role": "ANIM",
+          "text": "combien pesez-vous [joueur actuel] ?"
+        },
+        {
+          "role": "J",
+          "text": "Gilberto Gill"
+        },
+        {
+          "role": "ANIM",
+          "text": "Très bien, vous gagnez 4 millions d'euros. Qui a dit ?"
+        },
+        {
+          "role": "J",
+          "text": "Caracas !"
+        },
+        {
+          "role": "ANIM",
+          "text": "Non ! c'est Emile Zola, vous nous devez 4 millions d'euros !"
+        }
+      ],
+      "note": "le joueur propose la phrase courte sans se douter de la tirade complète qui s'ensuit"
+    }
+  ],
+  "oppositions_speciales": [
+    {
+      "texte": "Impossible, il y a les frères Taloche qui matent un porno en diagonale... [joueur adverse] : Pile ou Rastirac ?",
+      "garde_la_main": true,
+      "note": "exception à la règle générale : la main reste au joueur actuel au lieu de passer à l'adversaire"
+    }
+  ],
+  "evenements_plateau_imitation": [
+    {
+      "source": "1, 2, 3 et c'est le retour à la case « c'est mon vélo ». 3 secondes de Bourvil",
+      "case_plateau": "C'est mon vélo !",
+      "consigne_joueur": "Imitez Bourvil",
+      "indice": "a dada, a dada",
+      "consigne_animateur": "Attendez que le joueur ait fini d'imiter Bourvil",
+      "duree_secondes": 3,
+      "apres": "la main passe à [joueur adverse]"
+    },
+    {
+      "source": "carte mystère conditionnelle 'pain à la mouille'",
+      "lie_a": "cartes_mystere_conditionnelles/pain à la mouille",
+      "deplacement_aleatoire_cases": 3,
+      "consigne_joueur": "Chantez comme Phil Collins",
+      "indice": "« one more night » ♪",
+      "consigne_animateur": "Attendez que le joueur ait chanté comme Phil Collins",
+      "duree_secondes": 5
+    },
+    {
+      "source": "Cas...tal...di... 4 de louche, vous tombez en case Youki. 4 secondes de Gotainer",
+      "declencheur_demi_phrase": "je visite Jean-Pierre Castaldi",
+      "case_plateau": "Youki",
+      "consigne_joueur": "Chantez comme Richard Gotainer",
+      "indice": "« Il était où, hein ? Le youki ? » ♪",
+      "consigne_animateur": "Attendez que le joueur ait chanté comme Richard Gotainer",
+      "duree_secondes": 4,
+      "note": "ne peut apparaître qu'après la demi-phrase 'je visite Jean-Pierre Castaldi', qui doit donc être en 2e position uniquement"
+    },
+    {
+      "source": "Dieu...don...né, et vous tombez en case brumisateur",
+      "deplacement_aleatoire_cases": 3,
+      "case_neutre": true
+    },
+    {
+      "source": "Double touche. Vous avancez en case motocrottes",
+      "deplacement_simple": 1,
+      "case_neutre": true,
+      "apres": "la main passe à [joueur adverse]"
+    },
+    {
+      "source": "Rin...tin...tin... et vous tombez en case aquarium. 5 secondes de Marie Myriam",
+      "deplacement_aleatoire_cases": 3,
+      "case_neutre": true,
+      "consigne_joueur": "Chantez en vous gargarisant",
+      "consigne_animateur": "Attendez que le joueur ait fini sa prestation",
+      "duree_secondes": 5
+    },
+    {
+      "source": "Ton... ton... Mayonnaise. Bien joué [joueur actuel], vous gardez la main et vous sentez des pieds",
+      "declencheur_phrase_courte": "Tonton Mayonnaise",
+      "deplacement_aleatoire_cases": 3,
+      "case_neutre": true,
+      "garde_la_main": true
+    },
+    {
+      "source": "Vous avancez de trois mouflons et vous tombez en case Roland Garros. 5 secondes d'échange en double",
+      "deplacement_aleatoire_cases": 3,
+      "case_neutre": true,
+      "consigne_joueur": "Tournez la tête comme si vous regardiez un match de tennis",
+      "consigne_animateur": "Attendez que le joueur ait fini de regarder son match",
+      "duree_secondes": 5
+    },
+    {
+      "source": "Vous avancez directement en case Cuba libre / vous avancez en case scoubidou",
+      "deplacement_simple": 1,
+      "case_neutre": true,
+      "apres": "la main passe à [joueur adverse]"
+    },
+    {
+      "source": "Vous gardez votre permis de chasse... case risotto / vous avancez en case Nabucco",
+      "deplacement_simple": 1,
+      "case_neutre": true
+    },
+    {
+      "source": "Vous marquez trois sifflettes... Vous tombez ou vous prenez la main ?",
+      "garde_la_main": true
+    },
+    {
+      "source": "Vous n'avez pas le droit. Vous avancez de 6 mouflons et vous tombez en case « grosses têtes ». 3 secondes de Philippe Bouvard",
+      "reclasser_en": "opposition",
+      "deplacement_aleatoire_cases": 6,
+      "case_neutre": true,
+      "consigne_joueur": "Imitez Philippe Bouvard",
+      "indice": "« Une question de Môssieur Nougat de Montélimar… hihi »",
+      "consigne_animateur": "Attendez que le joueur ait fini d'imiter Philippe Bouvard",
+      "duree_secondes": 3
+    },
+    {
+      "source": "Vous ne pouvez pas, vous retournez en case mouillette. Pile ou Laurent Malet ?",
+      "reclasser_en": "opposition",
+      "case_neutre": true,
+      "note": "contre simple de l'animateur suivi d'une relance 'ou' ; pas de catégorie dédiée pour un seul exemple, à revoir si d'autres cas apparaissent"
+    },
+    {
+      "source": "vous avancez en diagonale et vous tombez en case Don Camillo. 2/3 secondes de Pierre Douglas",
+      "case_plateau": "Don Camillo",
+      "consigne_joueur": "Imitez Pierre Douglas",
+      "indice": "« c'est un scandale ! »",
+      "consigne_animateur": "Attendez que le joueur ait imité Pierre Douglas",
+      "duree_secondes": 3
+    },
+    {
+      "source": "Ta... ta... yé... et vous tombez en case Star'Ac. 15 secondes de Michal",
+      "declencheur_phrase_courte": "Tatayé",
+      "deplacement_aleatoire_cases": 3,
+      "case_neutre": true,
+      "consigne_joueur": "Chantez comme Michal",
+      "indice": "Qui a volé, a volé, a volé, a volé l'orange. Non c'est pas moi qui a volé l'orange de Guy Marchand ! Vous vous trompez je marchais dans la montagne. ♪",
+      "consigne_animateur": "Attendez que le joueur ait imité Michal",
+      "duree_secondes": 15
+    },
+    {
+      "source": "Vous filez directement en case comique : 10 secondes de Laspalès et Chevalier.",
+      "case_neutre": true,
+      "consigne_joueur": "Imitez Laspalès",
+      "indice": "y en a qui ont essayé, ils ont eu des problèmes, cela dit, il est très rapide. Mais bon, c'est vous qui voyez.",
+      "consigne_animateur": "Attendez que le joueur ait imité Laspalès",
+      "duree_secondes": 10,
+      "apres": "la main passe à [joueur adverse]"
+    }
+  ],
+  "reactions_modulaires": {
+    "statut": "intégré depuis le brouillon corrigé — pas encore branché dans la logique du jeu (animateur.js utilise toujours la banque 'transitions' à plat)",
+    "reactions_positives": [
+      "Bien joué",
+      "Bonne réponse",
+      "C'est astucieux",
+      "C'est bien joué",
+      "C'est très bien joué",
+      "Joli coup"
+    ],
+    "reactions_negatives": [
+      "Impossible",
+      "Vous ne pouvez pas"
+    ],
+    "recompenses_punitions": [
+      "10 de Pâques",
+      "10 de plus, vous avancez sans bouger. La main change de couleur. [joueur adverse] ?",
+      "148 + 10 vous avancez de 5 coquilles. [joueur adverse] ?",
+      "2+2 égalent la tête à Robert Lamoureux [joueur actuel] vous doublez vos gains",
+      "20 de plus, [joueur adverse] ?",
+      "40 de plus dans votre réserve à lunettes. [joueur adverse] ?",
+      "50 points dans votre réserve à moutarde [joueur actuel]",
+      "60 croutons d'entrée [joueur actuel]. [joueur adverse] ?",
+      "Camembert jaune",
+      "Camembert jaune. [joueur adverse] ?",
+      "Camembert vert ! [joueur adverse] ?",
+      "Chamois d'or d'entrée [joueur actuel]",
+      "Claquette ! Qu'est-ce que vous faites [joueur actuel] ?",
+      "Dix quenelles de mieux vous choisissez quelle couleur ?",
+      "Double carpette [joueur actuel]",
+      "d'entrée [joueur actuel]. Vous stoppez un mormon et vous remontez en case catogan. [joueur adverse] ?",
+      "mais vous perdez votre joker. Attention [joueur actuel], vous n'avez plus le droit à l'erreur",
+      "troubadour d'entrée. Vous marquez 8",
+      "Double tranche, vous reculez pour mieux roter [joueur actuel]",
+      "Passe de 8 dans votre réserve à moutarde. Vous avancez de 65",
+      "Poil de 4 sur un double bingo",
+      "Vous avancez de 6 bulots. [joueur adverse] ?",
+      "Vous avancez de trois cases",
+      "Vous faites trois tours en diagonale et vous libérez le monstre",
+      "Vous gardez votre joker. [joueur adverse] ?",
+      "Vous marquez 6 merguez. [joueur adverse] ?",
+      "Vous soufflez l'as de cake et vous avancez en case bisounours. [joueur adverse] ?",
+      "[joueur actuel]",
+      "[joueur actuel]! Vous gardez la main",
+      "[joueur actuel], vous gardez la main et vous avancez de 50",
+      "[joueur actuel], vous marquez 8 ronrons d'entrée",
+      "[joueur actuel], vous reculez mais vous ouvrez un nouveau tiroir",
+      "[joueur adverse] ?",
+      "c'est à [joueur adverse] de parler",
+      "joker blanc et dix de der. [joueur adverse] ?",
+      "mouais [joueur actuel]. Vous gardez 60 et vous prenez la tête. [joueur adverse], il faut réagir là",
+      "vous avancez de trois melons. Nichonade ou livarot ?",
+      "vous engrangez 10 spéciales. [joueur adverse] ?",
+      "vous marquez 8 merguez"
+    ],
+    "recompenses_punitions_oppositions": [
+      "[opposition] Ah non il y a Linda Lemay qui mange sa culotte en diagonale, vous reculez donc de trois espadrilles. [joueur adverse] ?",
+      "[opposition] Aïe aïe aie [joueur actuel] Il y a Simon et Garfunkel qui font un concours de branlette en opposition. Il faut vous concentrer",
+      "[opposition] Et non ! Regardez [joueur actuel] Il y a Michel Leeb qui peint avec de la féta en diagonale ! Vous reculez de 8 merguez",
+      "[opposition] Et non Il y a Bernard Darniche qui mange sa perruque en opposition. Désolé, vous retournez en case Raffarin. [joueur adverse] ?",
+      "[opposition] Non [joueur actuel], il y a Laurent Romejko qui part en classe de neige en opposition. Vous perdez votre joker",
+      "[opposition] Non, [joueur actuel] Il y a Adamo qui regarde le vent en diagonale",
+      "[opposition] [joueur actuel] : il y a Pierre Vaneck qui dessine un volcan dans sa purée en diagonale. Vous reculez de 50 et vous perdez votre carte chance. [joueur adverse] ?",
+      "[opposition] [joueur actuel], il y a Georges Beller qui rote dans une église en opposition. Vous reculez de 50",
+      "[opposition] il y a Phil Barney qui repeint son manteau en opposition. Vous reculez de 60 graillons",
+      "[opposition] il y a Philippe Risoli qui cuit des bananes en opposition. Vous retournez en case épinoche. [joueur adverse] ?",
+      "[opposition] vous avez Madonna qui jongle avec ses seins en opposition. [joueur adverse] : 1, 2, 3... - Nous irons au bois - 4, 5, 6... - Manger du pastis"
+    ],
+    "propositions_ou": [
+      "[joueur adverse] ! électron ou profiteroles ?",
+      "[joueur adverse] : Afrique Simone ou pissenlit ?",
+      "[joueur adverse] : Aladin ou Juvamine ?",
+      "[joueur adverse] : Berlingo ou whisky coca ?",
+      "[joueur adverse] : Ford tonus ou la bite à Jojo ?",
+      "[joueur adverse] : Istanbul ou bermuda ?",
+      "[joueur adverse] : Jules et Jim ou carpaccio ?",
+      "[joueur adverse] : [joueur adverse] Reykjavik ou « qui suce qui ? »",
+      "[joueur adverse] : Risoli ou du bédouin ?",
+      "[joueur adverse] : basse tension ou crêpe au sable ?",
+      "[joueur adverse] : brûle tampon ou ragnagnas ?",
+      "[joueur adverse] : cachalot ou baise-en-ville ?",
+      "[joueur adverse] : canoë ou rififi ?",
+      "[joueur adverse] : dominos ou Bilalian ?",
+      "[joueur adverse] : fantaisie ou Rod Stewart ?",
+      "[joueur adverse] : frangipane ou alvéole ?",
+      "[joueur adverse] : frangipane ou shampooing démêlant ?",
+      "[joueur adverse] : magicien ou thermomètre ?",
+      "[joueur adverse] : mercantile ou Savana ?",
+      "[joueur adverse] : minidou ou baygon vert ?",
+      "[joueur adverse] : ratatouille ou picon-bière ?",
+      "[joueur adverse] : repoussoir ou quart de lune ?",
+      "[joueur adverse] : roubignoles ou omoplates ?",
+      "[joueur adverse] : sauce malgache ou spermogramme ?",
+      "[joueur adverse] : « Y a qu'à pas » ou « hématome » ?",
+      "[joueur adverse] Bonnet de bain ou poutre apparente ?",
+      "[joueur adverse] Grenadine ou Lee Majors ?",
+      "[joueur adverse]: Istanbul ou Gilles Jacob ?",
+      "[joueur adverse] : Allumette ou Sisteron ?",
+      "[joueur adverse] : Sac à mâcher ou vis-ma-vie ?",
+      "[joueur adverse] : Lèche vitrine ou Lolita ?",
+      "[joueur adverse] : sexy-bus ou Romy Schneider ?",
+      "[joueur adverse] : Sac à moule ou RTT ?"
+    ]
+  }
+}
