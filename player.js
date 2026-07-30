@@ -12,6 +12,7 @@ let selectionPool = null;
 let firstHalf = null;
 let poolA = [];
 let poolB = [];
+let submitting = false; // verrou : évite qu'un re-rendu concurrent ne réaffiche les options pendant l'envoi
 let courteOffer = null;   // { kind:'courte', text } ou { kind:'tentative', tentative }
 
 get(ref(db, 'gamedata')).then(s => { gameData = s.val() || {}; render(); });
@@ -143,6 +144,8 @@ function hasSpoken(s) {
 }
 
 function renderGame() {
+    if (submitting) { show('wait-screen'); setWait('Envoi en cours…'); return; }
+
     // Défi chronométré (imitation/chant), quel que soit qui l'exécute : bloque tout jusqu'à validation animateur
     if (gameState.defiMinute) {
         show('game-screen');
@@ -198,7 +201,7 @@ function renderGame() {
             setInPool('En attente (l\'animateur peut valider, ou l\'adversaire peut contrer)…');
             el('btn-contre').classList.add('hidden');
         } else {
-            setInPool('Réponse courte de l\'adversaire !');
+            setInPool(gameState.courteAwaitingDecision.estContre ? 'L\'adversaire a contré !' : 'Réponse courte de l\'adversaire !');
             renderContre(false);
         }
         return;
@@ -309,6 +312,8 @@ function renderGrid(pool, autoSubmitOnPick) {
         b.innerText = txt;
         b.onclick = async () => {
             if (autoSubmitOnPick) {
+                if (submitting) return;
+                submitting = true;
                 document.querySelectorAll('#phrase-pool .card-phrase').forEach(x => { x.disabled = true; x.style.opacity = '0.5'; });
                 const full = joinPhrase(firstHalf, txt);
                 await submitLine(myId, full);
@@ -318,8 +323,8 @@ function renderGrid(pool, autoSubmitOnPick) {
                     turnCount: (s.turnCount || 0) + 1,
                     comboCount: (s.comboCount || 0) + 1,
                 });
-                firstHalf = null; poolA = []; poolB = [];
                 await checkConditionalTrigger(txt);
+                firstHalf = null; poolA = []; poolB = []; submitting = false;
             } else {
                 document.querySelectorAll('#phrase-pool .card-phrase').forEach(x => x.classList.remove('selected'));
                 b.classList.add('selected');
@@ -398,7 +403,11 @@ function renderContre(active) {
         const phrase = (gameData.je_contre && pick(gameData.je_contre)) || 'Je contre !';
         await submitLine(myId, phrase);
         const s = await fresh();
-        await patch({ [`contreUsed/${myId}`]: true, turnCount: (s.turnCount || 0) + 1, contrePending: true });
+        await patch({
+            [`contreUsed/${myId}`]: true,
+            courteAwaitingDecision: { by: myId, text: phrase, estContre: true },
+            hapticFor: otherId,
+        });
         firstHalf = null; poolA = []; poolB = [];
     };
 }

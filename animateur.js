@@ -14,6 +14,11 @@ onValue(ref(db, 'gamestate'), (snap) => { gameState = snap.val() || {}; render()
 
 // ---------- Utilitaires ----------
 function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+function pickUnused(arr, used) {
+    const usedSet = new Set(used || []);
+    const dispo = arr.filter(x => !usedSet.has(x));
+    return dispo.length ? pick(dispo) : pick(arr); // si tout a déjà servi, on recommence plutôt que planter
+}
 function otherOf(j) { return j === 'J1' ? 'J2' : 'J1'; }
 async function fresh() { return (await get(ref(db, 'gamestate'))).val() || {}; }
 
@@ -97,6 +102,7 @@ document.getElementById('btn-lancer').addEventListener('click', async () => {
         contreUsed: { J1: false, J2: false }, carteMystereUsed: false, tentativeUsed: false,
         turnCount: 0, loser: Math.random() < 0.5 ? 'J1' : 'J2',
         roles: (gameState.roles) || null, buzzerWinner: null, kamouloxStuckActive: false, kamouloxFrozenPhrase: null,
+        usedTransitions: [], usedOppositions: [],
     });
     setTimeout(async () => {
         const s = await fresh();
@@ -301,7 +307,7 @@ async function avancerTransition() {
     const forced = defiConditionnelEnAttente(s);
     if (forced) { await lancerDefi(s, forced, cur); return; }
 
-    const raw = pick(gameData.transitions);
+    const raw = pickUnused(gameData.transitions, s.usedTransitions);
     const defi = (gameData.defis_chronometres || []).find(e => e.declencheur === raw);
     if (defi) { await lancerDefi(s, defi, cur); return; }
 
@@ -310,7 +316,8 @@ async function avancerTransition() {
     const turnCount = (s.turnCount || 0) + 1;
     const threshold = s.carteMystereThreshold != null ? s.carteMystereThreshold : (Math.floor(Math.random() * 3) + 3);
     await update(ref(db, 'gamestate'), Object.assign(
-        { turn: otherOf(cur), turnCount, carteMystereThreshold: threshold, contrePending: false, courteAwaitingDecision: null },
+        { turn: otherOf(cur), turnCount, carteMystereThreshold: threshold, contrePending: false, courteAwaitingDecision: null,
+          usedTransitions: (s.usedTransitions || []).concat([raw]) },
         addLog(s, 'ANIM', text), boardSignal
     ));
 }
@@ -347,14 +354,14 @@ document.getElementById('btn-opposition').addEventListener('click', async () => 
     if (!hasSpoken(s)) return;
     const target = s.turn;
     if (s.oppositionUsedBy && s.oppositionUsedBy[target] && !s.mystereForced) return;
-    const raw = pick(gameData.oppositions);
+    const raw = pickUnused(gameData.oppositions, s.usedOppositions);
     const text = fillNames(raw, s, target, otherOf(target));
     await update(ref(db, 'gamestate'), Object.assign(
         {
             turn: otherOf(target), phase: 'playing', contrePending: false, courteAwaitingDecision: null,
             oppositionCount: (s.oppositionCount || 0) + 1,
             [`oppositionUsedBy/${target}`]: true, hapticFor: target,
-            oppositionFlashAt: Date.now(),
+            oppositionFlashAt: Date.now(), usedOppositions: (s.usedOppositions || []).concat([raw]),
         },
         addLog(s, 'ANIM', text)
     ));
@@ -421,7 +428,6 @@ onValue(ref(db, 'gamestate/tentativeRequest'), async (snap) => {
     const s = await fresh();
     const t = req.tentative;
     const cur = s.turn, adv = otherOf(cur);
-    await update(ref(db, 'gamestate'), addLog(s, cur, `Je tente le ${t.nom}…`));
 
     if (t.type === 'carte_mystere_libre' || t.type === 'carte_mystere_libre_ref') {
         const card = t.ref_declencheur

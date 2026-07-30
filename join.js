@@ -1,5 +1,5 @@
 // join.js
-import { db, ref, runTransaction, onValue, set } from './firebase-config.js';
+import { db, ref, runTransaction, onValue, set, update } from './firebase-config.js';
 
 new QRCode(document.getElementById('qrcode'), {
     text: window.location.href,
@@ -25,7 +25,7 @@ onValue(ref(db, 'gamestate/roles'), (snap) => {
 
     if (roles.J1 && roles.J2 && roles.animateur) {
         document.getElementById('status').innerText = 'Les 3 rôles sont pris — bascule sur l\'écran central…';
-        set(ref(db, 'gamestate/phase'), 'lobby');
+        update(ref(db, 'gamestate'), { phase: 'lobby', mots: null, history: [], players: null });
         setTimeout(() => { window.location.href = 'ecran-central.html'; }, 1500);
     }
 });

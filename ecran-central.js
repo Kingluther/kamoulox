@@ -119,7 +119,7 @@ function renderBoard() {
         lastBoardTs = b.ts;
         container.classList.remove('mini');
         clearTimeout(window._miniTimeout);
-        window._miniTimeout = setTimeout(() => container.classList.add('mini'), 4000);
+        window._miniTimeout = setTimeout(() => container.classList.add('mini'), 6500);
     }
 }
 
