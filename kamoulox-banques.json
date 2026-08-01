@@ -196,16 +196,44 @@
     {
       "nom": "Hervé",
       "sketch": "Gilou vs Hervé",
-      "dialogue": [
-        "Bonsoir, je m'appelle Hervé Morille, j'ai 47 ans, et je suis l'ancien chanteur de Kiss",
-        "Non !!! C'était vous ? Vous pouvez nous faire un petit air de Kiss pour que tout le monde se souvienne ?",
-        "(chanté n'importe comment) *I was made for loving you baby*",
-        "Parfait ! vous êtes marié ?",
-        "Oui. Avec l'ancien chanteur de Motorhead.",
-        "une passion ? un passe-temps ?",
-        "La peinture",
-        "Quel style ?",
-        "Les volets. J'aime bien peindre les volets."
+      "dialogue_explicite": [
+        {
+          "role": "J",
+          "text": "Bonsoir, je m'appelle Hervé Morille, j'ai 47 ans, et je suis l'ancien chanteur de Kiss"
+        },
+        {
+          "role": "ANIM",
+          "text": "Non !!! C'était vous ? Vous pouvez nous faire un petit air de Kiss pour que tout le monde se souvienne ?"
+        },
+        {
+          "role": "J",
+          "text": "I was made for loving you baby",
+          "chant": true
+        },
+        {
+          "role": "ANIM",
+          "text": "Parfait ! vous êtes marié ?"
+        },
+        {
+          "role": "J",
+          "text": "Oui. Avec l'ancien chanteur de Motorhead."
+        },
+        {
+          "role": "ANIM",
+          "text": "une passion ? un passe-temps ?"
+        },
+        {
+          "role": "J",
+          "text": "La peinture"
+        },
+        {
+          "role": "ANIM",
+          "text": "Quel style ?"
+        },
+        {
+          "role": "J",
+          "text": "Les volets. J'aime bien peindre les volets."
+        }
       ]
     },
     {

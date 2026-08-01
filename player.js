@@ -120,6 +120,19 @@ function renderPresentation() {
         return;
     }
 
+    if (line.role === myId && line.chant) {
+        show('appuyez-screen');
+        if (navigator.vibrate) navigator.vibrate(200);
+        const btn = el('btn-appuyez-joueur');
+        if (!gameState.chantEnCours) {
+            btn.innerText = `Chantez n'importe comment : « ${line.text} »`;
+            btn.onclick = () => patch({ chantEnCours: true });
+        } else {
+            btn.disabled = true;
+            btn.innerText = 'Prestation en cours…';
+        }
+        return;
+    }
     if (line.role === myId) {
         show('appuyez-screen');
         if (navigator.vibrate) navigator.vibrate(200);
@@ -322,6 +335,7 @@ function renderGrid(pool, autoSubmitOnPick) {
                     usedDemiPhrases: (s.usedDemiPhrases || []).concat([firstHalf, txt]),
                     turnCount: (s.turnCount || 0) + 1,
                     comboCount: (s.comboCount || 0) + 1,
+                    contrePending: false, courteAwaitingDecision: null,
                 });
                 await checkConditionalTrigger(txt);
                 firstHalf = null; poolA = []; poolB = []; submitting = false;
@@ -420,7 +434,7 @@ function renderEndingWords() {
         el('ending-words-list').innerHTML = `<p>Vous avez dit : <b>${mots[myId]}</b>. En attente de l'autre joueur…</p>`;
         return;
     }
-    const options = pickN(gameData.monosyllabes, 6, []);
+    const options = (gameState.motsOptions && gameState.motsOptions[myId]) || pickN(gameData.monosyllabes, 6, []);
     el('ending-words-list').innerHTML = '';
     options.forEach(mot => {
         const b = document.createElement('button');

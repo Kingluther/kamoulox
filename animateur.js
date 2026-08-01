@@ -76,6 +76,7 @@ function render() {
         : phase === 'playing' ? 'bar-jeu'
         : phase === 'kamoulox_declared' ? 'btn-conclure'
         : phase === 'ending_words' ? (Object.keys(gameState.mots || {}).length >= 2 ? 'btn-generique-final' : 'zone-attente')
+        : phase === 'ending' ? 'btn-recommencer'
         : 'zone-attente'
     );
 
@@ -88,10 +89,15 @@ function render() {
     if (phase === 'playing') renderJeuBar();
 }
 function showOnly(...ids) {
-    ['btn-lancer', 'btn-appuyez-ici-wrap', 'bar-jeu', 'btn-conclure', 'btn-generique-final', 'zone-attente']
+    ['btn-lancer', 'btn-appuyez-ici-wrap', 'bar-jeu', 'btn-conclure', 'btn-generique-final', 'btn-recommencer', 'zone-attente']
         .forEach(id => { const el = document.getElementById(id); if (el) el.classList.toggle('hidden', !ids.includes(id)); });
 }
 function setText(id, txt) { const el = document.getElementById(id); if (el) el.innerText = txt; }
+
+document.getElementById('btn-recommencer').addEventListener('click', async () => {
+    await set(ref(db, 'gamestate'), null);
+    window.location.href = 'join.html';
+});
 
 // ---------- 1) Lancement ----------
 document.getElementById('btn-lancer').addEventListener('click', async () => {
@@ -128,7 +134,7 @@ function pushDialogue(script, persona, monLabel, adverseLabel, segment) {
     if (persona.dialogue_explicite) {
         persona.dialogue_explicite.forEach(entry => {
             const role = entry.role === 'ANIM' ? 'ANIM' : entry.role === 'ADVERSAIRE' ? adverseLabel : monLabel;
-            script.push({ role, text: entry.text, segment });
+            script.push({ role, text: entry.text, segment, chant: !!entry.chant });
         });
     } else {
         (persona.dialogue || []).forEach((t, i) => script.push({ role: i % 2 === 0 ? monLabel : 'ANIM', text: t, segment }));
@@ -202,6 +208,16 @@ function renderPresentationStep() {
     if (line.role === 'ANIM') {
         btn.disabled = false; btn.classList.add('green'); btn.innerText = 'APPUYEZ ICI';
         btn.onclick = () => advancePresentation();
+    } else if (line.chant) {
+        btn.disabled = true; btn.classList.remove('green');
+        btn.innerText = `Attendez la fin de la prestation de ${displayRole(gameState, line.role)}…`;
+        btn.onclick = null;
+        // le bouton devient actif seulement quand le joueur a lancé sa prestation (voir onValue plus bas)
+        if (gameState.chantEnCours) {
+            btn.disabled = false; btn.classList.add('green');
+            btn.innerText = 'Valider la fin de la performance du joueur';
+            btn.onclick = () => advancePresentation();
+        }
     } else {
         btn.disabled = true; btn.classList.remove('green');
         btn.innerText = `En attente de ${displayRole(gameState, line.role)}…`;
@@ -224,7 +240,7 @@ async function advancePresentation() {
         if (line._buzzerFinal) text = text.split('[buzzer_gagnant]').join(names(s)[s.buzzerWinner] || '');
         const isLast = i === script.length - 1;
         await update(ref(db, 'gamestate'), Object.assign(
-            { presentationIndex: i + 1 },
+            { presentationIndex: i + 1, chantEnCours: false },
             addLog(s, line.role, text),
             isLast ? { phase: 'playing', turn: s.finalTurn || s.buzzerWinner || 'J1' } : {}
         ));
@@ -313,10 +329,11 @@ async function avancerTransition() {
 
     const text = fillNames(raw, s, cur, otherOf(cur));
     const boardSignal = maybeBoardPatch(text);
+    const garde = /vous gardez la main/i.test(raw);
     const turnCount = (s.turnCount || 0) + 1;
     const threshold = s.carteMystereThreshold != null ? s.carteMystereThreshold : (Math.floor(Math.random() * 3) + 3);
     await update(ref(db, 'gamestate'), Object.assign(
-        { turn: otherOf(cur), turnCount, carteMystereThreshold: threshold, contrePending: false, courteAwaitingDecision: null,
+        { turn: garde ? cur : otherOf(cur), turnCount, carteMystereThreshold: threshold, contrePending: false, courteAwaitingDecision: null,
           usedTransitions: (s.usedTransitions || []).concat([raw]) },
         addLog(s, 'ANIM', text), boardSignal
     ));
@@ -346,7 +363,7 @@ document.getElementById('btn-valider-prestation').addEventListener('click', asyn
         });
         return;
     }
-    await update(ref(db, 'gamestate'), { defiMinute: null, turn: otherOf(d.pourJoueur), turnCount: (s.turnCount || 0) + 1 });
+    await update(ref(db, 'gamestate'), { defiMinute: null, turn: otherOf(d.pourJoueur), turnCount: (s.turnCount || 0) + 1, courteAwaitingDecision: null, contrePending: false });
 });
 
 document.getElementById('btn-opposition').addEventListener('click', async () => {
@@ -401,6 +418,8 @@ document.getElementById('mystere-valider-manche').addEventListener('click', asyn
             carteMystereUsed: finished ? true : s.carteMystereUsed,
             mystereCard: finished ? null : s.mystereCard,
             turn: finished ? otherOf(s.turn) : s.turn,
+            courteAwaitingDecision: finished ? null : s.courteAwaitingDecision,
+            contrePending: finished ? false : s.contrePending,
         },
         addLog(s, 'ANIM', text)
     ));
@@ -412,7 +431,9 @@ document.getElementById('btn-conclure').addEventListener('click', async () => {
     const winner = s.winner;
     const raw = pick(gameData.fins);
     const text = fillNames(raw, s, winner, otherOf(winner)).split('[gagnant]').join(names(s)[winner]);
-    await update(ref(db, 'gamestate'), Object.assign({ phase: 'ending_words' }, addLog(s, 'ANIM', text)));
+    const shuffled = [...(gameData.monosyllabes || [])].sort(() => Math.random() - 0.5);
+    const motsOptions = { J1: shuffled.slice(0, 6), J2: shuffled.slice(6, 12) };
+    await update(ref(db, 'gamestate'), Object.assign({ phase: 'ending_words', motsOptions }, addLog(s, 'ANIM', text)));
 });
 
 document.getElementById('btn-generique-final').addEventListener('click', async () => {

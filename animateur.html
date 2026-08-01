@@ -23,8 +23,12 @@
                     border: none; border-radius: 8px; cursor: pointer; font-size: 16px; box-sizing: border-box; }
         .btn-anim:hover:not(:disabled) { background: #666; }
         .btn-anim:disabled { background: #222; color: #555; cursor: not-allowed; }
-        .btn-anim.green { background: #2e7d32 !important; animation: pulse 1s infinite; }
-        @keyframes pulse { 50% { opacity: 0.7; } }
+        .btn-anim.green {
+            background: #FFD500; color: #111; border: 5px solid black; border-radius: 18px;
+            box-shadow: 0 8px 0 #9c7400; font-size: 28px; font-weight: bold; text-transform: uppercase;
+            transition: all .1s; animation: none; opacity: 1;
+        }
+        .btn-anim.green:active { transform: translateY(5px); box-shadow: 0 3px 0 #9c7400; }
         #btn-opposition { background: #b71c1c; }
         #btn-lancer, #btn-generique-final, #btn-conclure { background: #2e7d32; font-size: 24px; padding: 26px; font-family: 'Bangers', cursive; letter-spacing: 1px; }
         #btn-appuyez-ici { min-height: 90px; font-family: 'Bangers', cursive; font-size: 22px; letter-spacing: 1px; }
@@ -69,6 +73,7 @@
 
     <button id="btn-conclure" class="btn-anim hidden">CONCLURE LA PARTIE</button>
     <button id="btn-generique-final" class="btn-anim hidden">LANCER LE GÉNÉRIQUE</button>
+    <button id="btn-recommencer" class="btn-anim hidden" style="background:#455a64;">🔄 RECOMMENCER UNE PARTIE</button>
 
     <script type="module" src="animateur.js"></script>
 </body>
