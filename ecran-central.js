@@ -113,8 +113,8 @@ function renderBoard() {
     if (!b || !b.ts) { container.style.display = 'none'; return; }
     container.style.display = 'block';
     const { leftPct, topPct } = cellPercent(b.row, b.col);
-    pion.style.left = `calc(${leftPct}% - 15px)`;
-    pion.style.top = `calc(${topPct}% - 15px)`;
+    pion.style.left = `calc(${leftPct}% - 28px)`;
+    pion.style.top = `calc(${topPct}% - 66px)`;
     if (b.ts !== lastBoardTs) {
         lastBoardTs = b.ts;
         container.classList.remove('mini');

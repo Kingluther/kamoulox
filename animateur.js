@@ -8,6 +8,7 @@ import { db, ref, onValue, update, get, set } from './firebase-config.js';
 
 let gameData = {};
 let gameState = {};
+let mimeAnimTimerIndex = null, mimeAnimReady = false, mimeAnimTimerHandle = null; // mime_unlock:'anim' — délai avant "Continuer"
 
 get(ref(db, 'gamedata')).then((snap) => { if (snap.exists()) gameData = snap.val(); });
 onValue(ref(db, 'gamestate'), (snap) => { gameState = snap.val() || {}; render(); });
@@ -205,7 +206,27 @@ function renderPresentationStep() {
         setText('zone-attente', `Buzzer en cours (${line.text}) — premier joueur à cliquer…`);
         return;
     }
-    if (line.role === 'ANIM') {
+    if (line.mime && line.mime_unlock === 'anim') {
+        if (mimeAnimTimerIndex !== i) {
+            mimeAnimTimerIndex = i;
+            mimeAnimReady = false;
+            clearTimeout(mimeAnimTimerHandle);
+            mimeAnimTimerHandle = setTimeout(() => { mimeAnimReady = true; render(); }, 5000);
+        }
+        if (!mimeAnimReady) {
+            btn.disabled = true; btn.classList.remove('green');
+            btn.innerText = line.mime_wait_anim || 'En attente du joueur…';
+            btn.onclick = null;
+        } else {
+            btn.disabled = false; btn.classList.add('green');
+            btn.innerText = 'Continuer';
+            btn.onclick = () => advancePresentation();
+        }
+    } else if (line.mime) {
+        btn.disabled = true; btn.classList.remove('green');
+        btn.innerText = line.mime_wait_anim || 'Attendez que le joueur ait fini son mime…';
+        btn.onclick = null;
+    } else if (line.role === 'ANIM') {
         btn.disabled = false; btn.classList.add('green'); btn.innerText = 'APPUYEZ ICI';
         btn.onclick = () => advancePresentation();
     } else if (line.chant) {
@@ -292,14 +313,13 @@ function renderJeuBar() {
     document.getElementById('btn-carte-mystere').disabled = !!gameState.mystereCard || !(gameState.mystereForced || (spoken && !gameState.carteMystereUsed && (gameState.turnCount || 0) >= (gameState.carteMystereThreshold || 3)));
     document.getElementById('btn-carte-mystere').classList.toggle('green', !gameState.mystereCard && (gameState.mystereForced || (!gameState.carteMystereUsed && spoken && (gameState.turnCount || 0) >= (gameState.carteMystereThreshold || 3))));
     document.getElementById('btn-valider').disabled = !gameState.contrePending;
-    document.getElementById('btn-valider').classList.toggle('green', !!gameState.contrePending);
-    const mvm = document.getElementById('mystere-valider-manche');
-    mvm.classList.toggle('hidden', !gameState.mystereCard);
+    const overlay = document.getElementById('mystere-anim-overlay');
+    overlay.classList.toggle('show', !!gameState.mystereCard);
     if (gameState.mystereCard) {
+        const mvm = document.getElementById('mystere-valider-manche');
         const attenteJoueur = !gameState.mystereRevealJoueur;
         mvm.disabled = attenteJoueur;
-        mvm.classList.toggle('green', !attenteJoueur);
-        document.getElementById('mystere-manche-info').innerText =
+        document.getElementById('mystere-anim-info').innerText =
             attenteJoueur ? `En attente de ${displayRole(gameState, gameState.turn)}…` : 'APPUYEZ ICI';
     }
 }

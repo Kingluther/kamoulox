@@ -23,16 +23,26 @@
                     border: none; border-radius: 8px; cursor: pointer; font-size: 16px; box-sizing: border-box; }
         .btn-anim:hover:not(:disabled) { background: #666; }
         .btn-anim:disabled { background: #222; color: #555; cursor: not-allowed; }
-        .btn-anim.green {
-            background: #FFD500; color: #111; border: 5px solid black; border-radius: 18px;
-            box-shadow: 0 8px 0 #9c7400; font-size: 28px; font-weight: bold; text-transform: uppercase;
+        .btn-anim.green, .btn-anim.red {
+            border: 5px solid black; border-radius: 18px;
+            font-size: 24px; font-weight: bold; text-transform: uppercase;
             transition: all .1s; animation: none; opacity: 1;
         }
-        .btn-anim.green:active { transform: translateY(5px); box-shadow: 0 3px 0 #9c7400; }
-        #btn-opposition { background: #b71c1c; }
+        .btn-anim.green { background: #2e7d32; color: #fff; box-shadow: 0 8px 0 #1b5e20; }
+        .btn-anim.green:active:not(:disabled) { transform: translateY(5px); box-shadow: 0 3px 0 #1b5e20; }
+        .btn-anim.red { background: #c62828; color: #fff; box-shadow: 0 8px 0 #7f0000; }
+        .btn-anim.red:active:not(:disabled) { transform: translateY(5px); box-shadow: 0 3px 0 #7f0000; }
+        .btn-anim.green:disabled, .btn-anim.red:disabled { background: #222; color: #555; box-shadow: none; border-color: #444; }
         #btn-lancer, #btn-generique-final, #btn-conclure { background: #2e7d32; font-size: 24px; padding: 26px; font-family: 'Bangers', cursive; letter-spacing: 1px; }
         #btn-appuyez-ici { min-height: 90px; font-family: 'Bangers', cursive; font-size: 22px; letter-spacing: 1px; }
         #zone-attente { text-align: center; color: #888; margin-top: 60px; font-size: 18px; }
+        #mystere-anim-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 100;
+            flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 50px; box-sizing: border-box; }
+        #mystere-anim-overlay.show { display: flex; }
+        #mystere-anim-card { width: 220px; height: 310px; border-radius: 14px; background: url('carte.jpg') center/cover;
+            border: 4px solid #fff; box-shadow: 0 10px 40px rgba(0,0,0,0.7); margin-bottom: 26px; }
+        #mystere-anim-info { color: #fff; font-size: 18px; text-align: center; padding: 0 20px 16px; }
+        #mystere-anim-overlay .btn-anim { width: 90%; max-width: 340px; }
     </style>
 </head>
 <body>
@@ -56,19 +66,22 @@
         <div id="turn-indicator"></div>
 
         <div id="bar-jeu-normale">
-            <button id="btn-continuer" class="btn-anim">CONTINUER</button>
-            <button id="btn-opposition" class="btn-anim">OPPOSITION</button>
-            <button id="btn-carte-mystere" class="btn-anim">CARTE MYSTÈRE</button>
-            <button id="btn-valider" class="btn-anim">VALIDER UN CONTRE</button>
-            <button id="mystere-valider-manche" class="btn-anim hidden" style="background:url('carte.jpg') center/cover; min-height:120px; border:3px solid #fff;">
-                <span id="mystere-manche-info" style="background:rgba(0,0,0,0.6); padding:4px 8px; border-radius:4px;"></span>
-            </button>
+            <button id="btn-continuer" class="btn-anim green">CONTINUER</button>
+            <button id="btn-opposition" class="btn-anim red">OPPOSITION</button>
+            <button id="btn-carte-mystere" class="btn-anim green">CARTE MYSTÈRE</button>
+            <button id="btn-valider" class="btn-anim green">VALIDER UN CONTRE</button>
         </div>
 
         <div id="bar-defi-minute" class="hidden">
             <p id="defi-consigne-anim" style="text-align:center; color:#ffa726;"></p>
             <button id="btn-valider-prestation" class="btn-anim green">VALIDER LA PRESTATION</button>
         </div>
+    </div>
+
+    <div id="mystere-anim-overlay">
+        <div id="mystere-anim-card"></div>
+        <p id="mystere-anim-info"></p>
+        <button id="mystere-valider-manche" class="btn-anim green">APPUYEZ ICI</button>
     </div>
 
     <button id="btn-conclure" class="btn-anim hidden">CONCLURE LA PARTIE</button>

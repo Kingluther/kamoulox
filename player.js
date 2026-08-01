@@ -14,6 +14,7 @@ let poolA = [];
 let poolB = [];
 let submitting = false; // verrou : évite qu'un re-rendu concurrent ne réaffiche les options pendant l'envoi
 let courteOffer = null;   // { kind:'courte', text } ou { kind:'tentative', tentative }
+let mimeTimerIndex = null, mimeReady = false, mimeTimerHandle = null; // mime_unlock:'player' — délai avant "Continuer"
 
 get(ref(db, 'gamedata')).then(s => { gameData = s.val() || {}; render(); });
 onValue(ref(db, 'gamestate'), (snap) => { gameState = snap.val() || {}; render(); });
@@ -117,6 +118,34 @@ function renderPresentation() {
                 show('wait-screen');
             }
         };
+        return;
+    }
+
+    if (line.role === myId && line.mime) {
+        show('appuyez-screen');
+        if (navigator.vibrate) navigator.vibrate(200);
+        const btn = el('btn-appuyez-joueur');
+        if (line.mime_unlock === 'anim') {
+            btn.disabled = true;
+            btn.innerText = line.mime;
+            btn.onclick = null;
+        } else {
+            if (mimeTimerIndex !== i) {
+                mimeTimerIndex = i;
+                mimeReady = false;
+                clearTimeout(mimeTimerHandle);
+                mimeTimerHandle = setTimeout(() => { mimeReady = true; render(); }, 5000);
+            }
+            if (!mimeReady) {
+                btn.disabled = true;
+                btn.innerText = line.mime;
+                btn.onclick = null;
+            } else {
+                btn.disabled = false;
+                btn.innerText = 'Continuer';
+                btn.onclick = () => patch({ presAdvanceRequest: true });
+            }
+        }
         return;
     }
 

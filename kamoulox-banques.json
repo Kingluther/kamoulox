@@ -3,22 +3,73 @@
     {
       "nom": "Damien",
       "sketch": "Damien vs Jean-François",
-      "dialogue": [
-        "Bonsoir, je m'appelle Damien Nigaud, j'ai 29 ans j'habite à Aigreville, et je suis imitateur d'objets.",
-        "Et quel objet pouvez-vous imiter pour nous Damien ?",
-        "Bah plusieurs... par exemple la tronçonneuse : gnèm gnèm gnèmgnèmgnèm",
-        "Oui bravo !",
-        "Euh, la mobylette",
-        "Oh la la, c'est très très impressionnant !",
-        "Je sais faire un animal aussi très bien, le canard : gnèm... gnèm... gnèm... gnèm",
-        "C'est bon, merci.",
-        "Je peux aussi...",
-        "Non, écoutez, franchement, ça ira Damien. Vous êtes marié ?",
-        "Euh. J'étais",
-        "Ah, pardon, elle vous a quitté ?",
-        "Non, non, « Jette », c'est son prénom. Jette Miranda elle s'appelle, elle est d'origine espagnole.",
-        "Ah, d'accord ! Vous avez un passe-temps Damien ?",
-        "Jean-Michel Jarre. J'ai tous ses disques ! Oxygène 1, Oxygène 2, Oxygène 3, Oxygène 4, euh... Oxygène 5, Oxygène 6..."
+      "dialogue_explicite": [
+        {
+          "role": "J",
+          "text": "Bonsoir, je m'appelle Damien Nigaud, j'ai 29 ans j'habite à Aigreville, et je suis imitateur d'objets."
+        },
+        {
+          "role": "ANIM",
+          "text": "Et quel objet pouvez-vous imiter pour nous Damien ?"
+        },
+        {
+          "role": "J",
+          "text": "Bah plusieurs... par exemple la tronçonneuse :",
+          "mime": "Imitez le bruit d'une tronçonneuse avec le son « gnèm » et mimez l'action de couper un arbre",
+          "mime_unlock": "anim"
+        },
+        {
+          "role": "ANIM",
+          "text": "Oui bravo !"
+        },
+        {
+          "role": "J",
+          "text": "Euh, la mobylette",
+          "mime": "Imitez le bruit d'une mobylette avec le même son « gnèm », changez juste le mime",
+          "mime_unlock": "anim"
+        },
+        {
+          "role": "ANIM",
+          "text": "Oh la la, c'est très très impressionnant !"
+        },
+        {
+          "role": "J",
+          "text": "Je sais faire un animal aussi très bien, le canard :",
+          "mime": "Imitez le bruit d'un canard, toujours avec le même son « gnèm »",
+          "mime_unlock": "anim"
+        },
+        {
+          "role": "ANIM",
+          "text": "C'est bon, merci."
+        },
+        {
+          "role": "J",
+          "text": "Je peux aussi..."
+        },
+        {
+          "role": "ANIM",
+          "text": "Non, écoutez, franchement, ça ira Damien. Vous êtes marié ?"
+        },
+        {
+          "role": "J",
+          "text": "Euh. J'étais"
+        },
+        {
+          "role": "ANIM",
+          "text": "Ah, pardon, elle vous a quitté ?"
+        },
+        {
+          "role": "J",
+          "text": "Non, non, « Jette », c'est son prénom. Jette Miranda elle s'appelle, elle est d'origine espagnole."
+        },
+        {
+          "role": "ANIM",
+          "text": "Ah, d'accord ! Vous avez un passe-temps Damien ?"
+        },
+        {
+          "role": "J",
+          "text": "Jean-Michel Jarre. J'ai tous ses disques ! Oxygène 1, Oxygène 2, Oxygène 3, Oxygène 4, euh... Oxygène 5, Oxygène 6..."
+        }
       ]
     },
     {
@@ -121,16 +172,64 @@
     {
       "nom": "Germain",
       "sketch": "Germain vs Noël",
-      "dialogue": [
-        "Bonsoir, je m'appelle Germain Sumo, j'ai 32 ans, j'habite à Nîmes et je suis jedi depuis 5 ans.",
-        "Vous êtes marié ?",
-        "Ui.",
-        "Des enfants ?",
-        "Non, je suis allergique.",
-        "Une passion ?",
-        "Ui, je pratique le mime en amateur.",
-        "Une petite démonstration peut-être ?",
-        "Ui, si vous voulez ! Euh... la porte... (faire semblant de marcher et d'ouvrir une porte). Euh... la fenêtre (pareil mais en ouvrant à deux mains) Euh... la baie vitrée aussi... (pareil mais en poussant à deux mains de la droite vers la gauche)... la..."
+      "dialogue_explicite": [
+        {
+          "role": "J",
+          "text": "Bonsoir, je m'appelle Germain Sumo, j'ai 32 ans, j'habite à Nîmes et je suis jedi depuis 5 ans."
+        },
+        {
+          "role": "ANIM",
+          "text": "Vous êtes marié ?"
+        },
+        {
+          "role": "J",
+          "text": "Ui."
+        },
+        {
+          "role": "ANIM",
+          "text": "Des enfants ?"
+        },
+        {
+          "role": "J",
+          "text": "Non, je suis allergique."
+        },
+        {
+          "role": "ANIM",
+          "text": "Une passion ?"
+        },
+        {
+          "role": "J",
+          "text": "Ui, je pratique le mime en amateur."
+        },
+        {
+          "role": "ANIM",
+          "text": "Une petite démonstration peut-être ?"
+        },
+        {
+          "role": "J",
+          "text": "Ui, si vous voulez ! Euh... la porte...",
+          "mime": "Faites semblant d'aller ouvrir une porte",
+          "mime_unlock": "player",
+          "mime_wait_anim": "Attendez que le joueur ait réalisé ses 3 mimes"
+        },
+        {
+          "role": "J",
+          "text": "Euh... la fenêtre",
+          "mime": "Faites semblant d'aller ouvrir une fenêtre à deux mains",
+          "mime_unlock": "player",
+          "mime_wait_anim": "Attendez que le joueur ait réalisé ses 3 mimes"
+        },
+        {
+          "role": "J",
+          "text": "Euh... la baie vitrée aussi...",
+          "mime": "Faites coulisser une baie vitrée imaginaire",
+          "mime_unlock": "player",
+          "mime_wait_anim": "Attendez que le joueur ait réalisé ses 3 mimes"
+        },
+        {
+          "role": "J",
+          "text": "…la"
+        }
       ]
     },
     {
@@ -239,20 +338,70 @@
     {
       "nom": "Jérôme",
       "sketch": "Jérôme vs Laurent",
-      "dialogue": [
-        "Bonsoir, je m'appelle Jérôme, je suis apprenti sorcier à Aix en Provence.",
-        "Quelle est votre spécialité Jérôme ?",
-        "La disparition",
-        "Une petite démonstration peut-être ?",
-        "Bah, si vous voulez. (visant son adversaire) hocus pocus, j'ai du malus (rien ne se passe). Bah, je ne suis que commis apprenti.",
-        "Vous êtes marié vous avez des enfants ?",
-        "Oui, oui, tout ça là, oui.",
-        "Cher Jérôme, avez-vous une passion ?",
-        "Oui, alors j'aime bien faire des herbiers.",
-        "Ah ! Les feuilles de marronnier, d'érable, de platane, que l'on colle sur son cahier de classe pour qu'il sèche pour l'éternité !",
-        "Oui. J'avais 5.899 espèces différentes de feuilles magnifiques.",
-        "Vous « aviez » Jérôme ?",
-        "Oui. Tout a été détruit dans l'incendie de Chicago en 1924. (pleure)"
+      "dialogue_explicite": [
+        {
+          "role": "J",
+          "text": "Bonsoir, je m'appelle Jérôme, je suis apprenti sorcier à Aix en Provence."
+        },
+        {
+          "role": "ANIM",
+          "text": "Quelle est votre spécialité Jérôme ?"
+        },
+        {
+          "role": "J",
+          "text": "La disparition"
+        },
+        {
+          "role": "ANIM",
+          "text": "Une petite démonstration peut-être ?"
+        },
+        {
+          "role": "J",
+          "text": "Bah, si vous voulez.",
+          "mime": "Visez votre adversaire et récitez la formule magique : « hocus pocus, j'ai du malus »",
+          "mime_unlock": "anim",
+          "mime_wait_anim": "En attente du joueur"
+        },
+        {
+          "role": "ANIM",
+          "text": "Rien ne semble se passer."
+        },
+        {
+          "role": "J",
+          "text": "Bah, je ne suis que commis apprenti."
+        },
+        {
+          "role": "ANIM",
+          "text": "Vous êtes marié vous avez des enfants ?"
+        },
+        {
+          "role": "J",
+          "text": "Oui, oui, tout ça là, oui."
+        },
+        {
+          "role": "ANIM",
+          "text": "Cher Jérôme, avez-vous une passion ?"
+        },
+        {
+          "role": "J",
+          "text": "Oui, alors j'aime bien faire des herbiers."
+        },
+        {
+          "role": "ANIM",
+          "text": "Ah ! Les feuilles de marronnier, d'érable, de platane, que l'on colle sur son cahier de classe pour qu'il sèche pour l'éternité !"
+        },
+        {
+          "role": "J",
+          "text": "Oui. J'avais 5.899 espèces différentes de feuilles magnifiques."
+        },
+        {
+          "role": "ANIM",
+          "text": "Vous « aviez » Jérôme ?"
+        },
+        {
+          "role": "J",
+          "text": "Oui. Tout a été détruit dans l'incendie de Chicago en 1924. (pleure)"
+        }
       ]
     },
     {
@@ -417,18 +566,53 @@
     {
       "nom": "Bertrand",
       "sketch": "Bertrand (+ perruque + dessin moche) vs Gilles",
-      "dialogue": [
-        "Oui, bonsoir, je m'appelle Bertrand Collardeau, je suis Président de l'association « SOS terre battue » j'ai 56 ans et je porte une perruque pour ce sketch.",
-        "Vous avez des enfants ?",
-        "Oui. Euh... 4 ou 5... attendez, je sais plus... Non ! 3 pardon. Non ! c'est 4. Attendez... j'ai deux filles... Bon, je sais plus...",
-        "Des hobbies ?",
-        "Euh... je parle pas le tahitien, excusez-moi...",
-        "Je voulais dire : avez-vous des passe-temps ?",
-        "Ah, oui pardon. Oui, je reproduis des grands acteurs français avec des pignons de pin.",
-        "Et je crois savoir que vous êtes venu avec une de vos œuvres...",
-        "Voilà, tout à fait...",
-        "De qui s'agit-il ?",
-        "Ben c'est Christophe Lambert !"
+      "dialogue_explicite": [
+        {
+          "role": "J",
+          "text": "Oui, bonsoir, je m'appelle Bertrand Collardeau, je suis Président de l'association « SOS terre battue » j'ai 56 ans et je porte une perruque pour ce sketch."
+        },
+        {
+          "role": "ANIM",
+          "text": "Vous avez des enfants ?"
+        },
+        {
+          "role": "J",
+          "text": "Oui. Euh... 4 ou 5... attendez, je sais plus... Non ! 3 pardon. Non ! c'est 4. Attendez... j'ai deux filles... Bon, je sais plus..."
+        },
+        {
+          "role": "ANIM",
+          "text": "Des hobbies ?"
+        },
+        {
+          "role": "J",
+          "text": "Euh... je parle pas le tahitien, excusez-moi..."
+        },
+        {
+          "role": "ANIM",
+          "text": "Je voulais dire : avez-vous des passe-temps ?"
+        },
+        {
+          "role": "J",
+          "text": "Ah, oui pardon. Oui, je reproduis des grands acteurs français avec des pignons de pin."
+        },
+        {
+          "role": "ANIM",
+          "text": "Et je crois savoir que vous êtes venu avec une de vos œuvres..."
+        },
+        {
+          "role": "J",
+          "text": "Voilà, tout à fait...",
+          "mime": "Montrez l'écran de votre téléphone à l'animateur et au joueur adverse",
+          "mime_unlock": "anim"
+        },
+        {
+          "role": "ANIM",
+          "text": "De qui s'agit-il ?"
+        },
+        {
+          "role": "J",
+          "text": "Ben c'est Christophe Lambert !"
+        }
       ]
     },
     {
@@ -919,6 +1103,146 @@
           "text": "Non, mais je ne mange pas de ce pain-là."
         }
       ]
+    },
+    {
+      "nom": "François",
+      "sketch": "François vs Vincent",
+      "dialogue_explicite": [
+        {
+          "role": "J",
+          "text": "Oui, bonsoir, je m'appelle François Chemise, hein, j'ai 41 ans, hein, j'habite à Martigues, hein, et je suis jongleur invisible."
+        },
+        {
+          "role": "ANIM",
+          "text": "C'est-à-dire François ?"
+        },
+        {
+          "role": "J",
+          "text": "Je jongle avec des objets invisibles."
+        },
+        {
+          "role": "ANIM",
+          "text": "Est-ce que vous pourriez nous faire une petite démonstration ?"
+        },
+        {
+          "role": "J",
+          "text": "Mais bien-sûr.",
+          "mime": "Faites semblant de jongler avec des objets invisibles",
+          "mime_unlock": "anim"
+        },
+        {
+          "role": "ANIM",
+          "text": "Et vous jonglez avec quoi là ?"
+        },
+        {
+          "role": "J",
+          "text": "Avec des moteurs de BX"
+        },
+        {
+          "role": "ANIM",
+          "text": "Impressionnant ! Vous êtes marié ?"
+        },
+        {
+          "role": "J",
+          "text": "Non, je dors avec une alèse..."
+        },
+        {
+          "role": "ANIM",
+          "text": "Une passion ?"
+        },
+        {
+          "role": "J",
+          "text": "Elvis Presley, je vais à tous ses concerts."
+        },
+        {
+          "role": "ANIM",
+          "text": "Mais, il est mort !"
+        },
+        {
+          "role": "J",
+          "text": "Ouais, c'est ça, oui !"
+        }
+      ]
+    },
+    {
+      "nom": "Vincent",
+      "sketch": "François vs Vincent",
+      "dialogue": [
+        "Oui, bonsoir, je m'appelle Vincent Journal, j'ai 39 ans, j'habite à la Queue-en-brie, et je suis garagiste pour fromage.",
+        "Marié ? Des enfants ?",
+        "Non, j'ai cassé la semaine dernière.",
+        "Un passe-temps ?",
+        "Oui je réalise des sculptures en crème solaire. Indice 15 uniquement."
+      ]
+    },
+    {
+      "nom": "Bruno",
+      "sketch": "Bruno vs Jules",
+      "dialogue_explicite": [
+        {
+          "role": "J",
+          "text": "Bonsoir, je m'appelle Bruno Chouquette, j'ai 37 ans, j'habite à Reims, et je suis houhouteur"
+        },
+        {
+          "role": "ANIM",
+          "text": "Dans quelle branche ?"
+        },
+        {
+          "role": "J",
+          "text": "Le spectacle."
+        },
+        {
+          "role": "ANIM",
+          "text": "Heu... on peut peut-être rappeler ce qu'est un houhouteur Bruno..."
+        },
+        {
+          "role": "J",
+          "text": "Oui, tout à fait. Et bien c'est quelqu'un qui houhoute un spectacle quand il est pas bien."
+        },
+        {
+          "role": "ANIM",
+          "text": "Une petite démonstration s'il vous plait."
+        },
+        {
+          "role": "J",
+          "text": "Oui, si vous voulez.",
+          "mime": "Huez « hou hou hou ! C'est pas bien ! hou hou hou ! Houuuouu »",
+          "mime_unlock": "anim"
+        },
+        {
+          "role": "ANIM",
+          "text": "Vous êtes marié Bruno ?"
+        },
+        {
+          "role": "J",
+          "text": "Non, j'ai pris espagnol en 4ème."
+        },
+        {
+          "role": "ANIM",
+          "text": "Une passion ? Un hobby ?"
+        },
+        {
+          "role": "J",
+          "text": "Les concours de branlette"
+        }
+      ]
+    },
+    {
+      "nom": "Jules",
+      "sketch": "Bruno vs Jules",
+      "dialogue": [
+        "Bonsoir, je m'appelle Jules Klaxon, j'ai 43 ans, j'habite à Limoges, et je suis crieur de feu.",
+        "Alors, vous faites quoi exactement ?",
+        "Et bien, je me positionne au niveau d'un feu tricolore et dès qu'il passe au vert, je crie « C'est vert ! » pour prévenir l'automobiliste qui s'est assoupi.",
+        "Mm mm... marié ?",
+        "Oui oui.",
+        "Des enfants ?",
+        "Oui 3.",
+        "Ils s'appellent comment ?",
+        "Athos, Porthos et Aramis.",
+        "Un passe-temps ?",
+        "La drogue."
+      ]
     }
   ],
   "personnages_a_relire": [
@@ -931,6 +1255,7 @@
         "Je jongle avec des objets invisibles.",
         "Est-ce que vous pourriez nous faire une petite démonstration ?",
         "Mais bien-sûr.",
+        "[interaction joueur (mime, 5s) → Continuer animateur : Faites semblant de jongler avec des objets invisibles]",
         "Et vous jonglez avec quoi là ?",
         "Avec des moteurs de BX",
         "Impressionnant ! Vous êtes marié ?",
@@ -985,7 +1310,8 @@
         "Heu... on peut peut-être rappeler ce qu'est un houhouteur Bruno...",
         "Oui, tout à fait. Et bien c'est quelqu'un qui houhoute un spectacle quand il est pas bien.",
         "Une petite démonstration s'il vous plait.",
-        "Oui, si vous voulez : hou hou hou ! C'est pas bien ! hou hou *(14 fois)*. Voilà...",
+        "Oui, si vous voulez.",
+        "[interaction joueur (mime, 5s) → Continuer animateur : Huez « hou hou hou ! C'est pas bien ! hou hou hou ! Houuuouu »]",
         "Vous êtes marié Bruno ?",
         "Non, j'ai pris espagnol en 4^ème^.",
         "Une passion ? Un hobby ?",
