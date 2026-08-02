@@ -12,8 +12,10 @@
         .hidden { display: none !important; }
         h2#player-id-display { background: #fff; color: #222; border-radius: 8px; padding: 10px; margin: 0 0 14px 0; font-size: 20px; }
 
-        .card-perso { display: inline-block; width: 90px; height: 120px; margin: 6px; background: #fff; color: #222;
+        .card-perso { display: inline-flex; align-items: center; justify-content: center; text-align: center;
+                      vertical-align: top; width: 90px; height: 120px; margin: 6px; background: #fff; color: #222;
                       border: 2px solid #222; border-radius: 10px; font-size: 15px; font-weight: bold; cursor: pointer; }
+        #character-list { line-height: 0; }
 
         #wait-screen { margin-top: 80px; font-size: 20px; }
 
@@ -49,6 +51,16 @@
                                   border: 4px solid #fff; margin-top: 60px; cursor: pointer;
                                   animation: carteSpin 0.6s ease-out; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
         @keyframes carteSpin { from { transform: rotateY(180deg) scale(0.6); opacity: 0; } to { transform: rotateY(0) scale(1); opacity: 1; } }
+
+        #defi-screen { margin-top: 20px; }
+        #defi-card { width: 260px; min-height: 380px; margin: 20px auto 0; background: #fff; color: #222;
+                     border: 5px solid #2e7d32; border-radius: 18px; box-shadow: 0 8px 0 #000;
+                     display: flex; flex-direction: column; align-items: center; justify-content: center;
+                     padding: 24px; box-sizing: border-box; text-align: center; }
+        #defi-card.alert { background: #c62828; color: #fff; border-color: #c62828; animation: blink 0.5s infinite; }
+        #defi-consigne { font-size: 20px; font-weight: bold; margin: 0 0 16px; }
+        #defi-indice { font-size: 14px; color: #666; margin: 0; }
+        #defi-card.alert #defi-indice { color: #ffe0e0; }
     </style>
 </head>
 <body>
@@ -67,6 +79,13 @@
 
     <div id="mystere-screen" class="hidden">
         <button id="btn-mystere-retourner"></button>
+    </div>
+
+    <div id="defi-screen" class="hidden">
+        <div id="defi-card">
+            <p id="defi-consigne"></p>
+            <p id="defi-indice"></p>
+        </div>
     </div>
 
     <div id="ending-words-screen" class="hidden">

@@ -24,14 +24,14 @@
         .btn-anim:hover:not(:disabled) { background: #666; }
         .btn-anim:disabled { background: #222; color: #555; cursor: not-allowed; }
         .btn-anim.green, .btn-anim.red {
-            border: 5px solid black; border-radius: 18px;
+            border: 5px solid; border-radius: 18px;
             font-size: 24px; font-weight: bold; text-transform: uppercase;
             transition: all .1s; animation: none; opacity: 1;
         }
-        .btn-anim.green { background: #2e7d32; color: #fff; box-shadow: 0 8px 0 #1b5e20; }
-        .btn-anim.green:active:not(:disabled) { transform: translateY(5px); box-shadow: 0 3px 0 #1b5e20; }
-        .btn-anim.red { background: #c62828; color: #fff; box-shadow: 0 8px 0 #7f0000; }
-        .btn-anim.red:active:not(:disabled) { transform: translateY(5px); box-shadow: 0 3px 0 #7f0000; }
+        .btn-anim.green { background: #2e7d32; color: #fff; border-color: #2e7d32; box-shadow: 0 8px 0 #000; }
+        .btn-anim.green:active:not(:disabled) { transform: translateY(5px); box-shadow: 0 3px 0 #000; }
+        .btn-anim.red { background: #c62828; color: #fff; border-color: #c62828; box-shadow: 0 8px 0 #000; }
+        .btn-anim.red:active:not(:disabled) { transform: translateY(5px); box-shadow: 0 3px 0 #000; }
         .btn-anim.green:disabled, .btn-anim.red:disabled { background: #222; color: #555; box-shadow: none; border-color: #444; }
         #btn-lancer, #btn-generique-final, #btn-conclure { background: #2e7d32; font-size: 24px; padding: 26px; font-family: 'Bangers', cursive; letter-spacing: 1px; }
         #btn-appuyez-ici { min-height: 90px; font-family: 'Bangers', cursive; font-size: 22px; letter-spacing: 1px; }

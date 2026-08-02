@@ -46,7 +46,7 @@ async function submitLine(role, text) {
 // ---------------- Rendu ----------------
 function el(id) { return document.getElementById(id); }
 function show(...ids) {
-    ['selection-screen', 'wait-screen', 'appuyez-screen', 'game-screen', 'mystere-screen', 'ending-words-screen']
+    ['selection-screen', 'wait-screen', 'appuyez-screen', 'game-screen', 'mystere-screen', 'ending-words-screen', 'defi-screen']
         .forEach(id => el(id) && el(id).classList.toggle('hidden', !ids.includes(id)));
 }
 
@@ -210,24 +210,31 @@ function renderGame() {
 
     // Défi chronométré (imitation/chant), quel que soit qui l'exécute : bloque tout jusqu'à validation animateur
     if (gameState.defiMinute) {
-        show('game-screen');
-        el('btn-et').classList.add('hidden'); el('btn-courte').classList.add('hidden');
-        el('btn-contre').classList.add('hidden'); el('btn-kamoulox').classList.add('hidden');
+        show('defi-screen');
         const d = gameState.defiMinute;
+        const card = el('defi-card');
+        card.classList.remove('alert');
         if (d.quiExecute === 'les_deux_joueurs') {
             if (navigator.vibrate) navigator.vibrate([200, 100, 200, 100, 200]);
-            el('phrase-pool').innerHTML = `<div style="background:#c62828; padding:24px; border-radius:10px; font-size:20px; font-weight:bold; animation: blink 0.5s infinite;">${d.consigne}</div>`;
+            card.classList.add('alert');
+            el('defi-consigne').innerText = d.consigne;
+            el('defi-indice').innerText = '';
         } else if (d.quiExecute === 'animateur') {
             if (navigator.vibrate) navigator.vibrate([200, 100, 200, 100, 200]);
-            el('phrase-pool').innerHTML = d.consigneJoueursAlerte
-                ? `<div style="background:#c62828; padding:24px; border-radius:10px; font-size:20px; font-weight:bold; animation: blink 0.5s infinite;">${d.consigneJoueursAlerte}</div>`
-                : `<p>Regardez et écoutez l'animateur…</p>`;
+            if (d.consigneJoueursAlerte) {
+                card.classList.add('alert');
+                el('defi-consigne').innerText = d.consigneJoueursAlerte;
+            } else {
+                el('defi-consigne').innerText = 'Regardez et écoutez l\'animateur…';
+            }
+            el('defi-indice').innerText = '';
         } else if (d.pourJoueur === myId) {
             if (navigator.vibrate) navigator.vibrate(200);
-            el('phrase-pool').innerHTML = `<p style="font-size:20px;">${d.consigne}</p>` +
-                (d.indice ? `<p style="font-size:14px;color:#ccc;">indice : ${d.indice}</p>` : '');
+            el('defi-consigne').innerText = d.consigne;
+            el('defi-indice').innerText = d.indice || '';
         } else {
-            setInPool('Regardez et écoutez l\'écran central…');
+            el('defi-consigne').innerText = 'Regardez et écoutez l\'écran central…';
+            el('defi-indice').innerText = '';
         }
         return;
     }

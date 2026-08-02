@@ -70,13 +70,10 @@ function render() {
     const lastEl = document.getElementById('derniere-replique');
     if (lastEl) lastEl.innerText = last ? `${displayRole(gameState, last.role)} : ${last.text}` : '';
 
-    const sequenceActive = phase === 'playing' && gameState.sequenceScript && (gameState.sequenceIndex || 0) < gameState.sequenceScript.length;
-
     showOnly(
         phase === 'lobby' ? 'btn-lancer'
         : (phase === 'generique_debut' || phase === 'char_selection') ? 'zone-attente'
         : phase === 'presentation' ? 'btn-appuyez-ici-wrap'
-        : sequenceActive ? 'btn-appuyez-ici-wrap'
         : phase === 'playing' ? 'bar-jeu'
         : phase === 'kamoulox_declared' ? 'btn-conclure'
         : phase === 'ending_words' ? (Object.keys(gameState.mots || {}).length >= 2 ? 'btn-generique-final' : 'zone-attente')
@@ -90,7 +87,6 @@ function render() {
         setText('zone-attente', `En attente du petit mot (${Object.keys(gameState.mots || {}).length}/2)…`);
     }
     if (phase === 'presentation') renderPresentationStep();
-    if (sequenceActive) { renderSequenceStepAnim(); return; }
     if (phase === 'playing') renderJeuBar();
 }
 function showOnly(...ids) {
@@ -287,48 +283,6 @@ onValue(ref(db, 'gamestate/presAdvanceRequest'), (snap) => {
     if (snap.val()) { set(ref(db, 'gamestate/presAdvanceRequest'), null); advancePresentation(); }
 });
 
-function renderSequenceStepAnim() {
-    const script = gameState.sequenceScript || [];
-    const i = gameState.sequenceIndex || 0;
-    const line = script[i];
-    const btn = document.getElementById('btn-appuyez-ici');
-    const label = document.getElementById('presentation-segment');
-    if (label) label.innerText = '';
-    if (!line) return;
-    if (line.role === 'ANIM') {
-        btn.disabled = false; btn.classList.add('green'); btn.innerText = 'APPUYEZ ICI';
-        btn.onclick = () => advanceSequence();
-    } else {
-        btn.disabled = true; btn.classList.remove('green');
-        btn.innerText = `En attente de ${displayRole(gameState, line.role)}…`;
-        btn.onclick = null;
-    }
-}
-
-let seqAdvancing = false;
-async function advanceSequence() {
-    if (seqAdvancing) return;
-    seqAdvancing = true;
-    try {
-        const s = await fresh();
-        const script = s.sequenceScript || [];
-        const i = s.sequenceIndex || 0;
-        const line = script[i];
-        if (!line) return;
-        const isLast = i === script.length - 1;
-        const patchObj = Object.assign({ sequenceIndex: i + 1 }, addLog(s, line.role, line.text));
-        if (isLast) {
-            patchObj.sequenceScript = null;
-            patchObj.turn = s.sequenceAfterTurn != null ? s.sequenceAfterTurn : s.turn;
-            patchObj.contrePending = true;
-        }
-        await update(ref(db, 'gamestate'), patchObj);
-    } finally { seqAdvancing = false; }
-}
-onValue(ref(db, 'gamestate/sequenceAdvanceRequest'), (snap) => {
-    if (snap.val()) { set(ref(db, 'gamestate/sequenceAdvanceRequest'), null); advanceSequence(); }
-});
-
 // ---------- 5) Boucle principale ----------
 function hasSpoken(state) {
     const last = (state.history || [])[(state.history || []).length - 1];
@@ -352,10 +306,10 @@ function renderJeuBar() {
     const oppCount = gameState.oppositionCount || 0;
 
     const btnContinuer = document.getElementById('btn-continuer');
-    btnContinuer.disabled = !spoken || !!gameState.mystereCard || !!gameState.mystereForced;
-    btnContinuer.classList.toggle('green', spoken && !gameState.mystereCard && !gameState.mystereForced && !gameState.contrePending);
+    btnContinuer.disabled = !spoken || !!gameState.mystereCard;
+    btnContinuer.classList.toggle('green', spoken && !gameState.mystereCard && !gameState.contrePending);
 
-    document.getElementById('btn-opposition').disabled = !spoken || !!gameState.mystereCard || oppUsedTarget || oppCount >= 2 || !!gameState.mystereForced;
+    document.getElementById('btn-opposition').disabled = !spoken || !!gameState.mystereCard || oppUsedTarget || oppCount >= 2;
     document.getElementById('btn-carte-mystere').disabled = !!gameState.mystereCard || !(gameState.mystereForced || (spoken && !gameState.carteMystereUsed && (gameState.turnCount || 0) >= (gameState.carteMystereThreshold || 3)));
     document.getElementById('btn-carte-mystere').classList.toggle('green', !gameState.mystereCard && (gameState.mystereForced || (!gameState.carteMystereUsed && spoken && (gameState.turnCount || 0) >= (gameState.carteMystereThreshold || 3))));
     document.getElementById('btn-valider').disabled = !gameState.contrePending;
@@ -366,7 +320,7 @@ function renderJeuBar() {
         const attenteJoueur = !gameState.mystereRevealJoueur;
         mvm.disabled = attenteJoueur;
         document.getElementById('mystere-anim-info').innerText =
-            attenteJoueur ? `En attente de ${displayRole(gameState, gameState.turn)}…` : '';
+            attenteJoueur ? `En attente de ${displayRole(gameState, gameState.turn)}…` : 'APPUYEZ ICI';
     }
 }
 
@@ -383,7 +337,7 @@ function defiConditionnelEnAttente(s) {
 
 async function avancerTransition() {
     const s = await fresh();
-    if (!hasSpoken(s) && !s.courteAwaitingDecision && !s.contrePending) return;
+    if (!hasSpoken(s) && !s.courteAwaitingDecision) return;
     const cur = s.turn;
 
     const forced = defiConditionnelEnAttente(s);
@@ -392,16 +346,6 @@ async function avancerTransition() {
     const raw = pickUnused(gameData.transitions, s.usedTransitions);
     const defi = (gameData.defis_chronometres || []).find(e => e.declencheur === raw);
     if (defi) { await lancerDefi(s, defi, cur); return; }
-
-    if (raw === 'Oui, bravo ! Vous doublez votre capital point et vous tirez une carte mystère') {
-        const text = fillNames(raw, s, cur, otherOf(cur));
-        await update(ref(db, 'gamestate'), Object.assign(
-            { mystereForced: true, turnCount: (s.turnCount || 0) + 1, contrePending: false, courteAwaitingDecision: null,
-              usedTransitions: (s.usedTransitions || []).concat([raw]) },
-            addLog(s, 'ANIM', text)
-        ));
-        return;
-    }
 
     const text = fillNames(raw, s, cur, otherOf(cur));
     const boardSignal = maybeBoardPatch(text);
@@ -433,13 +377,19 @@ document.getElementById('btn-valider-prestation').addEventListener('click', asyn
     const s = await fresh();
     const d = s.defiMinute;
     if (!d) return;
+    const adv = otherOf(d.pourJoueur);
+    const hist = addLog(s, 'ANIM', `${displayRole(s, adv)} ?`);
     if (d.apres === 'contre_force_adversaire') {
-        await update(ref(db, 'gamestate'), {
-            defiMinute: null, contreForce: otherOf(d.pourJoueur), turn: otherOf(d.pourJoueur),
-        });
+        await update(ref(db, 'gamestate'), Object.assign(
+            { defiMinute: null, contreForce: adv, turn: adv },
+            hist
+        ));
         return;
     }
-    await update(ref(db, 'gamestate'), { defiMinute: null, turn: otherOf(d.pourJoueur), turnCount: (s.turnCount || 0) + 1, courteAwaitingDecision: null, contrePending: false });
+    await update(ref(db, 'gamestate'), Object.assign(
+        { defiMinute: null, turn: adv, turnCount: (s.turnCount || 0) + 1, courteAwaitingDecision: null, contrePending: false },
+        hist
+    ));
 });
 
 document.getElementById('btn-opposition').addEventListener('click', async () => {
@@ -448,31 +398,10 @@ document.getElementById('btn-opposition').addEventListener('click', async () => 
     const target = s.turn;
     if (s.oppositionUsedBy && s.oppositionUsedBy[target] && !s.mystereForced) return;
     const raw = pickUnused(gameData.oppositions, s.usedOppositions);
-    const adv = otherOf(target);
-
-    if (raw.startsWith('Impossible, vous avez Madonna qui jongle avec ses seins en opposition.')) {
-        const decl = fillNames('Impossible, vous avez Madonna qui jongle avec ses seins en opposition.', s, target, adv);
-        const hist = (s.history || []).concat([
-            { role: 'ANIM', text: decl },
-            { role: 'ANIM', text: '1, 2, 3...' },
-            { role: adv, text: 'Nous irons au bois' },
-            { role: 'ANIM', text: '4, 5, 6...' },
-            { role: adv, text: 'Manger du pastis' },
-            { role: 'ANIM', text: fillNames("C'est encore à vous [joueur actuel]", s, adv, target) },
-        ]);
-        await update(ref(db, 'gamestate'), {
-            history: hist, turn: adv, phase: 'playing', contrePending: false, courteAwaitingDecision: null,
-            oppositionCount: (s.oppositionCount || 0) + 1,
-            [`oppositionUsedBy/${target}`]: true, hapticFor: target,
-            oppositionFlashAt: Date.now(), usedOppositions: (s.usedOppositions || []).concat([raw]),
-        });
-        return;
-    }
-
-    const text = fillNames(raw, s, target, adv);
+    const text = fillNames(raw, s, target, otherOf(target));
     await update(ref(db, 'gamestate'), Object.assign(
         {
-            turn: adv, phase: 'playing', contrePending: false, courteAwaitingDecision: null,
+            turn: otherOf(target), phase: 'playing', contrePending: false, courteAwaitingDecision: null,
             oppositionCount: (s.oppositionCount || 0) + 1,
             [`oppositionUsedBy/${target}`]: true, hapticFor: target,
             oppositionFlashAt: Date.now(), usedOppositions: (s.usedOppositions || []).concat([raw]),
@@ -509,17 +438,21 @@ document.getElementById('mystere-valider-manche').addEventListener('click', asyn
     const text = fillNames(manche.animateur, s, s.turn, otherOf(s.turn));
     const next = s.mystereManche + 1;
     const finished = next >= s.mystereCard.manches.length;
-    await update(ref(db, 'gamestate'), Object.assign(
-        {
-            mystereManche: next, mystereRevealJoueur: false,
-            carteMystereUsed: finished ? true : s.carteMystereUsed,
-            mystereCard: finished ? null : s.mystereCard,
-            turn: finished ? otherOf(s.turn) : s.turn,
-            courteAwaitingDecision: finished ? null : s.courteAwaitingDecision,
-            contrePending: finished ? false : s.contrePending,
-        },
-        addLog(s, 'ANIM', text)
-    ));
+    const garde = !!s.mystereCard.garde_la_main;
+    const nextTurn = finished ? (garde ? s.turn : otherOf(s.turn)) : s.turn;
+    let hist = (s.history || []).concat([{ role: 'ANIM', text }]);
+    if (finished && !garde) {
+        hist.push({ role: 'ANIM', text: `${displayRole(s, nextTurn)}, c'est à vous !` });
+    }
+    await update(ref(db, 'gamestate'), {
+        mystereManche: next, mystereRevealJoueur: false,
+        carteMystereUsed: finished ? true : s.carteMystereUsed,
+        mystereCard: finished ? null : s.mystereCard,
+        turn: nextTurn,
+        courteAwaitingDecision: finished ? null : s.courteAwaitingDecision,
+        contrePending: finished ? false : s.contrePending,
+        history: hist,
+    });
 });
 
 // ---------- Kamoulox déclaré -> conclure ----------
@@ -559,11 +492,6 @@ onValue(ref(db, 'gamestate/tentativeRequest'), async (snap) => {
         const raw = pick(gameData.oppositions);
         const text = fillNames(raw, s, cur, adv);
         await update(ref(db, 'gamestate'), Object.assign({ turn: adv, oppositionFlashAt: Date.now() }, addLog(s, 'ANIM', text)));
-    } else if (t.type === 'forced_contre_adversaire_scripted' && t.echange) {
-        const roles = ['ANIM', cur, adv, cur, 'ANIM'];
-        const script = [{ role: adv, text: t.contre_force_texte || 'Je contre !' }]
-            .concat(t.echange.map((l, i) => ({ role: roles[i % roles.length], text: fillNames(l, s, cur, adv) })));
-        await update(ref(db, 'gamestate'), { sequenceScript: script, sequenceIndex: 0, sequenceAfterTurn: adv });
     } else if (t.type === 'forced_contre_adversaire' || t.type === 'forced_contre_adversaire_scripted') {
         const line = t.contre_force_texte || (gameData.je_contre && pick(gameData.je_contre)) || 'Je contre !';
         let hist = (s.history || []).concat([{ role: adv, text: line }]);
