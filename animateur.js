@@ -219,7 +219,7 @@ function renderPresentationStep() {
             btn.onclick = null;
         } else {
             btn.disabled = false; btn.classList.add('green');
-            btn.innerText = 'Continuer';
+            btn.innerText = 'Valider la performance du joueur';
             btn.onclick = () => advancePresentation();
         }
     } else if (line.mime) {

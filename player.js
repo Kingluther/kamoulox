@@ -122,13 +122,15 @@ function renderPresentation() {
     }
 
     if (line.role === myId && line.mime) {
-        show('appuyez-screen');
+        show('defi-screen');
         if (navigator.vibrate) navigator.vibrate(200);
-        const btn = el('btn-appuyez-joueur');
+        const card = el('defi-card');
+        card.classList.remove('alert');
+        el('defi-consigne').innerText = line.mime;
+        el('defi-indice').innerText = '';
+        const contBtn = el('btn-defi-continuer');
         if (line.mime_unlock === 'anim') {
-            btn.disabled = true;
-            btn.innerText = line.mime;
-            btn.onclick = null;
+            contBtn.classList.add('hidden');
         } else {
             if (mimeTimerIndex !== i) {
                 mimeTimerIndex = i;
@@ -136,15 +138,9 @@ function renderPresentation() {
                 clearTimeout(mimeTimerHandle);
                 mimeTimerHandle = setTimeout(() => { mimeReady = true; render(); }, 5000);
             }
-            if (!mimeReady) {
-                btn.disabled = true;
-                btn.innerText = line.mime;
-                btn.onclick = null;
-            } else {
-                btn.disabled = false;
-                btn.innerText = 'Continuer';
-                btn.onclick = () => patch({ presAdvanceRequest: true });
-            }
+            contBtn.classList.remove('hidden');
+            contBtn.disabled = !mimeReady;
+            contBtn.onclick = () => patch({ presAdvanceRequest: true });
         }
         return;
     }

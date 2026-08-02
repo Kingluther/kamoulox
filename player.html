@@ -61,6 +61,7 @@
         #defi-consigne { font-size: 20px; font-weight: bold; margin: 0 0 16px; }
         #defi-indice { font-size: 14px; color: #666; margin: 0; }
         #defi-card.alert #defi-indice { color: #ffe0e0; }
+        #btn-defi-continuer:disabled { background: #555; cursor: not-allowed; }
     </style>
 </head>
 <body>
@@ -86,6 +87,8 @@
             <p id="defi-consigne"></p>
             <p id="defi-indice"></p>
         </div>
+        <button id="btn-defi-continuer" class="hidden" style="display:block; width:260px; margin:16px auto 0; padding:16px;
+                background:#2e7d32; color:#fff; border:none; border-radius:8px; font-weight:bold; cursor:pointer;">Continuer</button>
     </div>
 
     <div id="ending-words-screen" class="hidden">
