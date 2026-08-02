@@ -2138,7 +2138,8 @@
     },
     {
       "texte": "Bonsoir et bienvenue à cette nouvelle partie de Kamoulox, avec deux nouveaux candidats et parmi eux [J1] Quéquette. Bonsoir [J1]. J'imagine qu'on a dû vous faire plusieurs fois des petites allusions !",
-      "sketch": "Dominique vs Didier"
+      "sketch": "Dominique vs Didier",
+      "requires_persona": "Dominique"
     },
     {
       "texte": "Bonsoir et bienvenue au Kamoulox, avec deux nouveaux candidats. A droite, [J1].",

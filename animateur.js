@@ -144,7 +144,8 @@ function pushDialogue(script, persona, monLabel, adverseLabel, segment) {
 
 async function buildPresentationScript(nomJ1, nomJ2) {
     const p1 = findPersona(nomJ1), p2 = findPersona(nomJ2);
-    const accueil = pick(gameData.phrases_intro_jeu).texte.split('[J1]').join(nomJ1);
+    const accueilPool = gameData.phrases_intro_jeu.filter(e => !e.requires_persona || e.requires_persona === nomJ1);
+    const accueil = pick(accueilPool).texte.split('[J1]').join(nomJ1);
     const jonction = pick(gameData.phrases_jonction).texte.split('[joueur actuel]').join(nomJ1).split('[J2]').join(nomJ2);
     const ouv = pick(gameData.ouverture);
     const swap = Math.random() < 0.5;
