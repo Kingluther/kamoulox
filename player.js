@@ -165,7 +165,10 @@ function renderPresentation() {
     if (line.role === myId) {
         show('appuyez-screen');
         if (navigator.vibrate) navigator.vibrate(200);
-        el('btn-appuyez-joueur').onclick = () => patch({ presAdvanceRequest: true });
+        const btn = el('btn-appuyez-joueur');
+        btn.disabled = false;
+        btn.innerText = 'APPUYEZ ICI';
+        btn.onclick = () => patch({ presAdvanceRequest: true });
     } else {
         show('wait-screen');
         setWait('👀 Regardez l\'écran central');
@@ -396,11 +399,11 @@ function renderOffers(active) {
     if (!courteOffer) { btn.classList.add('hidden'); return; }
 
     btn.classList.remove('hidden');
-    btn.innerText = courteOffer.kind === 'tentative' ? `Je tente le ${courteOffer.tentative.nom}` : courteOffer.text;
+    btn.innerText = courteOffer.kind === 'tentative' ? `Je tente ${articleTentative(courteOffer.tentative.nom)}` : courteOffer.text;
     btn.onclick = async () => {
         const offer = courteOffer;
         if (offer.kind === 'tentative') {
-            await submitLine(myId, `Je tente le ${offer.tentative.nom}…`);
+            await submitLine(myId, `Je tente ${articleTentative(offer.tentative.nom)}…`);
             await patch({ tentativeUsed: true, tentativeRequest: { tentative: offer.tentative } });
         } else {
             await submitLine(myId, offer.text);
@@ -449,6 +452,7 @@ function renderContre(active) {
         await patch({
             [`contreUsed/${myId}`]: true,
             courteAwaitingDecision: { by: myId, text: phrase, estContre: true },
+            contrePending: true,
             hapticFor: otherId,
         });
         firstHalf = null; poolA = []; poolB = [];
@@ -477,6 +481,7 @@ function renderEndingWords() {
 }
 
 function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+function articleTentative(nom) { return /^[aeiouyhAEIOUYHÀÉÈÎ]/.test(nom) ? `l'${nom}` : `le ${nom}`; }
 
 async function checkConditionalTrigger(texteJoue) {
     const low = texteJoue.toLowerCase();

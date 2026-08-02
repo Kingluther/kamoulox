@@ -306,10 +306,10 @@ function renderJeuBar() {
     const oppCount = gameState.oppositionCount || 0;
 
     const btnContinuer = document.getElementById('btn-continuer');
-    btnContinuer.disabled = !spoken || !!gameState.mystereCard;
-    btnContinuer.classList.toggle('green', spoken && !gameState.mystereCard && !gameState.contrePending);
+    btnContinuer.disabled = !spoken || !!gameState.mystereCard || !!gameState.mystereForced;
+    btnContinuer.classList.toggle('green', spoken && !gameState.mystereCard && !gameState.mystereForced && !gameState.contrePending);
 
-    document.getElementById('btn-opposition').disabled = !spoken || !!gameState.mystereCard || oppUsedTarget || oppCount >= 2;
+    document.getElementById('btn-opposition').disabled = !spoken || !!gameState.mystereCard || oppUsedTarget || oppCount >= 2 || !!gameState.mystereForced;
     document.getElementById('btn-carte-mystere').disabled = !!gameState.mystereCard || !(gameState.mystereForced || (spoken && !gameState.carteMystereUsed && (gameState.turnCount || 0) >= (gameState.carteMystereThreshold || 3)));
     document.getElementById('btn-carte-mystere').classList.toggle('green', !gameState.mystereCard && (gameState.mystereForced || (!gameState.carteMystereUsed && spoken && (gameState.turnCount || 0) >= (gameState.carteMystereThreshold || 3))));
     document.getElementById('btn-valider').disabled = !gameState.contrePending;
@@ -320,7 +320,7 @@ function renderJeuBar() {
         const attenteJoueur = !gameState.mystereRevealJoueur;
         mvm.disabled = attenteJoueur;
         document.getElementById('mystere-anim-info').innerText =
-            attenteJoueur ? `En attente de ${displayRole(gameState, gameState.turn)}…` : 'APPUYEZ ICI';
+            attenteJoueur ? `En attente de ${displayRole(gameState, gameState.turn)}…` : '';
     }
 }
 
@@ -346,6 +346,16 @@ async function avancerTransition() {
     const raw = pickUnused(gameData.transitions, s.usedTransitions);
     const defi = (gameData.defis_chronometres || []).find(e => e.declencheur === raw);
     if (defi) { await lancerDefi(s, defi, cur); return; }
+
+    if (raw === 'Oui, bravo ! Vous doublez votre capital point et vous tirez une carte mystère') {
+        const text = fillNames(raw, s, cur, otherOf(cur));
+        await update(ref(db, 'gamestate'), Object.assign(
+            { mystereForced: true, turnCount: (s.turnCount || 0) + 1, contrePending: false, courteAwaitingDecision: null,
+              usedTransitions: (s.usedTransitions || []).concat([raw]) },
+            addLog(s, 'ANIM', text)
+        ));
+        return;
+    }
 
     const text = fillNames(raw, s, cur, otherOf(cur));
     const boardSignal = maybeBoardPatch(text);
