@@ -402,10 +402,31 @@ document.getElementById('btn-opposition').addEventListener('click', async () => 
     const target = s.turn;
     if (s.oppositionUsedBy && s.oppositionUsedBy[target] && !s.mystereForced) return;
     const raw = pickUnused(gameData.oppositions, s.usedOppositions);
-    const text = fillNames(raw, s, target, otherOf(target));
+    const adv = otherOf(target);
+
+    if (raw.startsWith('Impossible, vous avez Madonna qui jongle avec ses seins en opposition.')) {
+        const decl = fillNames('Impossible, vous avez Madonna qui jongle avec ses seins en opposition.', s, target, adv);
+        const hist = (s.history || []).concat([
+            { role: 'ANIM', text: decl },
+            { role: 'ANIM', text: '1, 2, 3...' },
+            { role: adv, text: 'Nous irons au bois' },
+            { role: 'ANIM', text: '4, 5, 6...' },
+            { role: adv, text: 'Manger du pastis' },
+            { role: 'ANIM', text: fillNames("C'est encore à vous [joueur actuel]", s, adv, target) },
+        ]);
+        await update(ref(db, 'gamestate'), {
+            history: hist, turn: adv, phase: 'playing', contrePending: false, courteAwaitingDecision: null,
+            oppositionCount: (s.oppositionCount || 0) + 1,
+            [`oppositionUsedBy/${target}`]: true, hapticFor: target,
+            oppositionFlashAt: Date.now(), usedOppositions: (s.usedOppositions || []).concat([raw]),
+        });
+        return;
+    }
+
+    const text = fillNames(raw, s, target, adv);
     await update(ref(db, 'gamestate'), Object.assign(
         {
-            turn: otherOf(target), phase: 'playing', contrePending: false, courteAwaitingDecision: null,
+            turn: adv, phase: 'playing', contrePending: false, courteAwaitingDecision: null,
             oppositionCount: (s.oppositionCount || 0) + 1,
             [`oppositionUsedBy/${target}`]: true, hapticFor: target,
             oppositionFlashAt: Date.now(), usedOppositions: (s.usedOppositions || []).concat([raw]),
