@@ -191,6 +191,23 @@ function hasSpoken(s) {
 function renderGame() {
     if (submitting) { show('wait-screen'); setWait('Envoi en cours…'); return; }
 
+    // Mini-jeu scripté à échanges (ex. "grand couloir") : chaque réplique validée clic par clic
+    if (gameState.sequenceScript && (gameState.sequenceIndex || 0) < gameState.sequenceScript.length) {
+        const line = gameState.sequenceScript[gameState.sequenceIndex || 0];
+        if (line.role === myId) {
+            show('appuyez-screen');
+            if (navigator.vibrate) navigator.vibrate(200);
+            const btn = el('btn-appuyez-joueur');
+            btn.disabled = false;
+            btn.innerText = 'APPUYEZ ICI';
+            btn.onclick = () => patch({ sequenceAdvanceRequest: true });
+        } else {
+            show('wait-screen');
+            setWait(line.role === 'ANIM' ? 'Écoutez l\'animateur…' : 'En attente de l\'adversaire…');
+        }
+        return;
+    }
+
     // Défi chronométré (imitation/chant), quel que soit qui l'exécute : bloque tout jusqu'à validation animateur
     if (gameState.defiMinute) {
         show('game-screen');

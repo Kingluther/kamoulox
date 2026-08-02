@@ -1103,146 +1103,6 @@
           "text": "Non, mais je ne mange pas de ce pain-là."
         }
       ]
-    },
-    {
-      "nom": "François",
-      "sketch": "François vs Vincent",
-      "dialogue_explicite": [
-        {
-          "role": "J",
-          "text": "Oui, bonsoir, je m'appelle François Chemise, hein, j'ai 41 ans, hein, j'habite à Martigues, hein, et je suis jongleur invisible."
-        },
-        {
-          "role": "ANIM",
-          "text": "C'est-à-dire François ?"
-        },
-        {
-          "role": "J",
-          "text": "Je jongle avec des objets invisibles."
-        },
-        {
-          "role": "ANIM",
-          "text": "Est-ce que vous pourriez nous faire une petite démonstration ?"
-        },
-        {
-          "role": "J",
-          "text": "Mais bien-sûr.",
-          "mime": "Faites semblant de jongler avec des objets invisibles",
-          "mime_unlock": "anim"
-        },
-        {
-          "role": "ANIM",
-          "text": "Et vous jonglez avec quoi là ?"
-        },
-        {
-          "role": "J",
-          "text": "Avec des moteurs de BX"
-        },
-        {
-          "role": "ANIM",
-          "text": "Impressionnant ! Vous êtes marié ?"
-        },
-        {
-          "role": "J",
-          "text": "Non, je dors avec une alèse..."
-        },
-        {
-          "role": "ANIM",
-          "text": "Une passion ?"
-        },
-        {
-          "role": "J",
-          "text": "Elvis Presley, je vais à tous ses concerts."
-        },
-        {
-          "role": "ANIM",
-          "text": "Mais, il est mort !"
-        },
-        {
-          "role": "J",
-          "text": "Ouais, c'est ça, oui !"
-        }
-      ]
-    },
-    {
-      "nom": "Vincent",
-      "sketch": "François vs Vincent",
-      "dialogue": [
-        "Oui, bonsoir, je m'appelle Vincent Journal, j'ai 39 ans, j'habite à la Queue-en-brie, et je suis garagiste pour fromage.",
-        "Marié ? Des enfants ?",
-        "Non, j'ai cassé la semaine dernière.",
-        "Un passe-temps ?",
-        "Oui je réalise des sculptures en crème solaire. Indice 15 uniquement."
-      ]
-    },
-    {
-      "nom": "Bruno",
-      "sketch": "Bruno vs Jules",
-      "dialogue_explicite": [
-        {
-          "role": "J",
-          "text": "Bonsoir, je m'appelle Bruno Chouquette, j'ai 37 ans, j'habite à Reims, et je suis houhouteur"
-        },
-        {
-          "role": "ANIM",
-          "text": "Dans quelle branche ?"
-        },
-        {
-          "role": "J",
-          "text": "Le spectacle."
-        },
-        {
-          "role": "ANIM",
-          "text": "Heu... on peut peut-être rappeler ce qu'est un houhouteur Bruno..."
-        },
-        {
-          "role": "J",
-          "text": "Oui, tout à fait. Et bien c'est quelqu'un qui houhoute un spectacle quand il est pas bien."
-        },
-        {
-          "role": "ANIM",
-          "text": "Une petite démonstration s'il vous plait."
-        },
-        {
-          "role": "J",
-          "text": "Oui, si vous voulez.",
-          "mime": "Huez « hou hou hou ! C'est pas bien ! hou hou hou ! Houuuouu »",
-          "mime_unlock": "anim"
-        },
-        {
-          "role": "ANIM",
-          "text": "Vous êtes marié Bruno ?"
-        },
-        {
-          "role": "J",
-          "text": "Non, j'ai pris espagnol en 4ème."
-        },
-        {
-          "role": "ANIM",
-          "text": "Une passion ? Un hobby ?"
-        },
-        {
-          "role": "J",
-          "text": "Les concours de branlette"
-        }
-      ]
-    },
-    {
-      "nom": "Jules",
-      "sketch": "Bruno vs Jules",
-      "dialogue": [
-        "Bonsoir, je m'appelle Jules Klaxon, j'ai 43 ans, j'habite à Limoges, et je suis crieur de feu.",
-        "Alors, vous faites quoi exactement ?",
-        "Et bien, je me positionne au niveau d'un feu tricolore et dès qu'il passe au vert, je crie « C'est vert ! » pour prévenir l'automobiliste qui s'est assoupi.",
-        "Mm mm... marié ?",
-        "Oui oui.",
-        "Des enfants ?",
-        "Oui 3.",
-        "Ils s'appellent comment ?",
-        "Athos, Porthos et Aramis.",
-        "Un passe-temps ?",
-        "La drogue."
-      ]
     }
   ],
   "personnages_a_relire": [
@@ -1567,9 +1427,8 @@
     "Camembert rouge. [joueur adverse] Reykjavik ou « qui suce qui ? »",
     "Chamois d'or d'entrée ! Bien joué [joueur actuel]! [joueur adverse] : Ford tonus ou la bite à Jojo ?",
     "Double carpette. Bien joué [joueur actuel]. [joueur adverse] : canoë ou rififi ?",
-    "Double torche d'entrée. C'est très bien joué Kamel. [joueur adverse] : Istanbul ou bermuda ?",
+    "Double torche d'entrée. C'est très bien joué [joueur actuel]. [joueur adverse] : Istanbul ou bermuda ?",
     "Double tranche, vous reculez pour mieux roter. Bien joué [joueur actuel]. [joueur adverse] : ratatouille ou picon-bière ?",
-    "Egalent la tête à Obispo. Bien joué. [joueur adverse] ?",
     "Joli coup ! Vous faites trois tours en diagonale et vous libérez le monstre.",
     "Joli coup. [joueur adverse] ?",
     "Bien joué, joker blanc et dix de der. [joueur adverse] ?",

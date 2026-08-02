@@ -70,10 +70,13 @@ function render() {
     const lastEl = document.getElementById('derniere-replique');
     if (lastEl) lastEl.innerText = last ? `${displayRole(gameState, last.role)} : ${last.text}` : '';
 
+    const sequenceActive = phase === 'playing' && gameState.sequenceScript && (gameState.sequenceIndex || 0) < gameState.sequenceScript.length;
+
     showOnly(
         phase === 'lobby' ? 'btn-lancer'
         : (phase === 'generique_debut' || phase === 'char_selection') ? 'zone-attente'
         : phase === 'presentation' ? 'btn-appuyez-ici-wrap'
+        : sequenceActive ? 'btn-appuyez-ici-wrap'
         : phase === 'playing' ? 'bar-jeu'
         : phase === 'kamoulox_declared' ? 'btn-conclure'
         : phase === 'ending_words' ? (Object.keys(gameState.mots || {}).length >= 2 ? 'btn-generique-final' : 'zone-attente')
@@ -87,6 +90,7 @@ function render() {
         setText('zone-attente', `En attente du petit mot (${Object.keys(gameState.mots || {}).length}/2)…`);
     }
     if (phase === 'presentation') renderPresentationStep();
+    if (sequenceActive) { renderSequenceStepAnim(); return; }
     if (phase === 'playing') renderJeuBar();
 }
 function showOnly(...ids) {
@@ -283,6 +287,48 @@ onValue(ref(db, 'gamestate/presAdvanceRequest'), (snap) => {
     if (snap.val()) { set(ref(db, 'gamestate/presAdvanceRequest'), null); advancePresentation(); }
 });
 
+function renderSequenceStepAnim() {
+    const script = gameState.sequenceScript || [];
+    const i = gameState.sequenceIndex || 0;
+    const line = script[i];
+    const btn = document.getElementById('btn-appuyez-ici');
+    const label = document.getElementById('presentation-segment');
+    if (label) label.innerText = '';
+    if (!line) return;
+    if (line.role === 'ANIM') {
+        btn.disabled = false; btn.classList.add('green'); btn.innerText = 'APPUYEZ ICI';
+        btn.onclick = () => advanceSequence();
+    } else {
+        btn.disabled = true; btn.classList.remove('green');
+        btn.innerText = `En attente de ${displayRole(gameState, line.role)}…`;
+        btn.onclick = null;
+    }
+}
+
+let seqAdvancing = false;
+async function advanceSequence() {
+    if (seqAdvancing) return;
+    seqAdvancing = true;
+    try {
+        const s = await fresh();
+        const script = s.sequenceScript || [];
+        const i = s.sequenceIndex || 0;
+        const line = script[i];
+        if (!line) return;
+        const isLast = i === script.length - 1;
+        const patchObj = Object.assign({ sequenceIndex: i + 1 }, addLog(s, line.role, line.text));
+        if (isLast) {
+            patchObj.sequenceScript = null;
+            patchObj.turn = s.sequenceAfterTurn != null ? s.sequenceAfterTurn : s.turn;
+            patchObj.contrePending = true;
+        }
+        await update(ref(db, 'gamestate'), patchObj);
+    } finally { seqAdvancing = false; }
+}
+onValue(ref(db, 'gamestate/sequenceAdvanceRequest'), (snap) => {
+    if (snap.val()) { set(ref(db, 'gamestate/sequenceAdvanceRequest'), null); advanceSequence(); }
+});
+
 // ---------- 5) Boucle principale ----------
 function hasSpoken(state) {
     const last = (state.history || [])[(state.history || []).length - 1];
@@ -337,7 +383,7 @@ function defiConditionnelEnAttente(s) {
 
 async function avancerTransition() {
     const s = await fresh();
-    if (!hasSpoken(s) && !s.courteAwaitingDecision) return;
+    if (!hasSpoken(s) && !s.courteAwaitingDecision && !s.contrePending) return;
     const cur = s.turn;
 
     const forced = defiConditionnelEnAttente(s);
@@ -513,6 +559,11 @@ onValue(ref(db, 'gamestate/tentativeRequest'), async (snap) => {
         const raw = pick(gameData.oppositions);
         const text = fillNames(raw, s, cur, adv);
         await update(ref(db, 'gamestate'), Object.assign({ turn: adv, oppositionFlashAt: Date.now() }, addLog(s, 'ANIM', text)));
+    } else if (t.type === 'forced_contre_adversaire_scripted' && t.echange) {
+        const roles = ['ANIM', cur, adv, cur, 'ANIM'];
+        const script = [{ role: adv, text: t.contre_force_texte || 'Je contre !' }]
+            .concat(t.echange.map((l, i) => ({ role: roles[i % roles.length], text: fillNames(l, s, cur, adv) })));
+        await update(ref(db, 'gamestate'), { sequenceScript: script, sequenceIndex: 0, sequenceAfterTurn: adv });
     } else if (t.type === 'forced_contre_adversaire' || t.type === 'forced_contre_adversaire_scripted') {
         const line = t.contre_force_texte || (gameData.je_contre && pick(gameData.je_contre)) || 'Je contre !';
         let hist = (s.history || []).concat([{ role: adv, text: line }]);
